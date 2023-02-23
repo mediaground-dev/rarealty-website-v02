@@ -1,0 +1,25 @@
+@use '../abstracts/colors' as *;
+
+.contact-banner {
+  background-color: #efefef;
+  max-width: 1188px;
+  margin: auto;
+  padding: 30px 130px;
+  margin-top: 30px;
+  margin-bottom: 68px;
+  color: $TEXT_DARK;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  h1 {
+    font-family: 'sofia-pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 150%;
+  }
+}

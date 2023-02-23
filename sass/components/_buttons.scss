@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+
+.btn-primary {
+  background-color: $PRIMARY_COLOR;
+  text-decoration: none;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+
+  color: $TEXT_LIGHT;
+
+  padding: 12px 24px;
+  border-radius: 94px;
+
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: $PRIMARY_COLOR;
+  text-decoration: none;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+
+  color: $TEXT_LIGHT;
+
+  border: 2px solid #ffffff;
+  padding: 10px 20px;
+  border-radius: 40% 40% 40% 40% / 100% 100% 100% 100%;
+}

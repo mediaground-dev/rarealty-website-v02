@@ -1,0 +1,126 @@
+@use '../abstracts/colors' as *;
+
+.card-collection {
+  max-width: 1440px;
+  margin: auto;
+  padding: 30px 130px;
+  color: $TEXT_DARK;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    font-family: 'sofia-pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 150%;
+    align-self: self-start;
+  }
+
+  .cards {
+    padding: 32px 0 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+
+    .card-small {
+      h1 {
+        padding: 14px 0px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 140%;
+      }
+
+      h2 {
+        padding-bottom: 14px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14.825px;
+        line-height: 150%;
+      }
+
+      .img-card-small-01 {
+        max-width: 240px;
+        height: 166px;
+        background-color: orange;
+      }
+    }
+  }
+
+  a {
+    padding: 32px 0px;
+    align-self: center;
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $TEXT_DARK;
+  }
+}
+
+.card-collection02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 32px 0px;
+
+  &-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 48px;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+
+      .card-img {
+        width: 100%;
+        height: 300px;
+        background-color: orange;
+      }
+
+      > h3 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        color: #868686;
+        margin: 16px 0px;
+      }
+
+      h1,
+      h1 > a {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 140%;
+      }
+    }
+  }
+
+  a {
+    padding: 32px 0px;
+    align-self: center;
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $TEXT_DARK;
+  }
+}

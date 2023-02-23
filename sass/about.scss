@@ -1,0 +1,113 @@
+@use './abstracts' as *;
+@use './components' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // text-decoration: none;
+}
+
+main {
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+
+  section {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  .img-with-text {
+    h1 {
+      color: $PRIMARY_COLOR;
+    }
+  }
+
+  .section-cards {
+    max-width: 1115px;
+    padding: 32px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+      max-width: 282px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+
+      .section-cards-img01 {
+        background-color: orange;
+      }
+
+      .section-cards-img02 {
+        background-color: orange;
+      }
+
+      .section-cards-img03 {
+        background-color: orange;
+      }
+
+      div {
+        width: 181px;
+        height: 223px;
+        padding-bottom: 14px;
+      }
+
+      h1 {
+        font-family: 'sofia-pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 150%;
+        color: $PRIMARY_COLOR;
+        padding-bottom: 7px;
+      }
+
+      p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        padding-bottom: 12px;
+        color: $TEXT_DARK;
+      }
+    }
+  }
+
+  .section-services {
+    max-width: 1440px;
+    padding: 32px 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > h1 {
+      font-family: 'sofia-pro';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 150%;
+      text-align: center;
+      color: $TEXT_DARK;
+      margin-bottom: 16px;
+    }
+
+    > p {
+      max-width: 786px;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      text-align: center;
+      color: $TEXT_DARK;
+      margin-bottom: 32px;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@use '../abstracts/colors' as *;
+
+header {
+  width: 100%;
+
+  .navbar {
+    max-width: 1440px;
+    margin: auto;
+
+    padding: 0px 112px;
+    height: 152px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &-logo {
+      width: 160px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      &-a {
+        display: block;
+        background-color: $PRIMARY_COLOR;
+
+        width: 48px;
+        height: 50px;
+      }
+
+      &-name {
+        width: 100px;
+        text-decoration: none;
+
+        font-family: "sofia-pro",sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 130.94%;
+
+        color: $PRIMARY_COLOR;
+      }
+    }
+
+    &-menu {
+      width: 32%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      a {
+        padding: 6px 0px;
+        text-decoration: none;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: $TEXT_DARK;
+      }
+
+      .selected {
+        box-shadow: inset 0px -4px 0px $SECONDARY_COLOR;
+      }
+    }
+  }
+}

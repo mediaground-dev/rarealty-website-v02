@@ -1,0 +1,74 @@
+@use './abstracts' as *;
+@use './components' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // text-decoration: none;
+}
+
+main {
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  color: $TEXT_DARK;
+
+  .section-legal {
+    max-width: 1440px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    > h1 {
+      font-family: 'sofia-pro';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 150%;
+      margin-bottom: 9px;
+    }
+
+    > h2 {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 150%;
+      margin-bottom: 42px;
+    }
+
+    &-menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+
+      margin-bottom: 42px;
+
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 140%;
+
+      div {
+        padding-bottom: 8px;
+      }
+
+      .selected {
+        box-shadow: inset 0px -4px 0px $SECONDARY_COLOR;
+      }
+    }
+
+    p {
+        max-width: 886px;
+        text-align: left;
+        margin-bottom: 80px;
+    }
+  }
+}

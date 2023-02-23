@@ -1,0 +1,24 @@
+@use './abstracts' as *;
+@use './components' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // text-decoration: none;
+}
+
+main {
+  font-family: 'Inter', sans-serif;
+  width: 100%; 
+  
+  section {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  .section-banner-img {
+    height: 613px;
+    background-color: orange;
+  }
+}

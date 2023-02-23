@@ -1,0 +1,38 @@
+@use '../abstracts/colors' as *;
+
+.select-block {
+  max-width: 1440px;
+  margin: auto;
+  padding: 32px 0px;
+  color: $TEXT_DARK;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 73px;
+
+  div > h1 {
+    padding: 0px 130px;
+  }
+
+  &-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+
+    div {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 140%;
+      color: $TEXT_DARK;
+      padding-bottom: 8px;
+    }
+
+    .selected {
+      box-shadow: inset 0px -4px 0px $SECONDARY_COLOR;
+    }
+  }
+}
