@@ -310,7 +310,7 @@ header .navbar-menu .selected {
   margin-bottom: 40px;
 }
 .img-with-text .image {
-  background-color: orange;
+  background-color: rgb(170, 170, 170);
   height: 490px;
   width: 48%;
 }
@@ -348,7 +348,7 @@ header .navbar-menu .selected {
   margin-bottom: 40px;
 }
 .img-with-text2 .image {
-  background-color: orange;
+  background-color: rgb(170, 170, 170);
   height: 490px;
   width: 48%;
   border-radius: 16px;
@@ -441,7 +441,7 @@ header .navbar-menu .selected {
 .card-collection .cards .card-small .img-card-small-01 {
   max-width: 240px;
   height: 166px;
-  background-color: orange;
+  background-color: rgb(170, 170, 170);
 }
 .card-collection a {
   padding: 32px 0px;
@@ -477,7 +477,7 @@ header .navbar-menu .selected {
 .card-collection02-grid .card .card-img {
   width: 100%;
   height: 300px;
-  background-color: orange;
+  background-color: rgb(170, 170, 170);
 }
 .card-collection02-grid .card > h3 {
   font-family: "Inter";
@@ -708,7 +708,7 @@ h1 {
 
 .btn-arrow:hover,
 .btn-arrow:active {
-  background-color: #d88639;
+  background-color: rgb(224, 224, 224);
 }
 
 .btn-arrow-left {
@@ -751,7 +751,7 @@ h1 {
   /* ====================== */
   padding: 4rem;
   position: absolute;
-  background-color: orange;
+  background-color: rgb(170, 170, 170);
   width: 100%;
   height: 36rem;
   transition: all 0.3s;

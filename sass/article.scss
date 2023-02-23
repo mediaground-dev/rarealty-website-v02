@@ -19,7 +19,7 @@ main {
 
   .section-banner-img {
     height: 613px;
-    background-color: orange;
+    background-color: rgb(170, 170, 170);
   }
 
   .section-article {
@@ -46,6 +46,8 @@ main {
     }
 
     &-content {
+      padding: 0px 130px;
+      
       h1 {
         font-family: 'sofia-pro';
         font-style: normal;
@@ -76,7 +78,7 @@ main {
       .article-img {
         width: 100%;
         height: 550px;
-        background-color: orange;
+        background-color: rgb(170, 170, 170);
         margin-bottom: 50px;
       }
 

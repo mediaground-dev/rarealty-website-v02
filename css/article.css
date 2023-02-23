@@ -310,7 +310,7 @@ header .navbar-menu .selected {
   margin-bottom: 40px;
 }
 .img-with-text .image {
-  background-color: orange;
+  background-color: rgb(170, 170, 170);
   height: 490px;
   width: 48%;
 }
@@ -348,7 +348,7 @@ header .navbar-menu .selected {
   margin-bottom: 40px;
 }
 .img-with-text2 .image {
-  background-color: orange;
+  background-color: rgb(170, 170, 170);
   height: 490px;
   width: 48%;
   border-radius: 16px;
@@ -441,7 +441,7 @@ header .navbar-menu .selected {
 .card-collection .cards .card-small .img-card-small-01 {
   max-width: 240px;
   height: 166px;
-  background-color: orange;
+  background-color: rgb(170, 170, 170);
 }
 .card-collection a {
   padding: 32px 0px;
@@ -477,7 +477,7 @@ header .navbar-menu .selected {
 .card-collection02-grid .card .card-img {
   width: 100%;
   height: 300px;
-  background-color: orange;
+  background-color: rgb(170, 170, 170);
 }
 .card-collection02-grid .card > h3 {
   font-family: "Inter";
@@ -708,7 +708,7 @@ h1 {
 
 .btn-arrow:hover,
 .btn-arrow:active {
-  background-color: #d88639;
+  background-color: rgb(224, 224, 224);
 }
 
 .btn-arrow-left {
@@ -751,7 +751,7 @@ h1 {
   /* ====================== */
   padding: 4rem;
   position: absolute;
-  background-color: orange;
+  background-color: rgb(170, 170, 170);
   width: 100%;
   height: 36rem;
   transition: all 0.3s;
@@ -800,7 +800,7 @@ main section {
 }
 main .section-banner-img {
   height: 613px;
-  background-color: orange;
+  background-color: rgb(170, 170, 170);
 }
 main .section-article {
   padding: 32px 0px;
@@ -820,6 +820,9 @@ main .section-article-time {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+}
+main .section-article-content {
+  padding: 0px 130px;
 }
 main .section-article-content h1 {
   font-family: "sofia-pro";
@@ -848,7 +851,7 @@ main .section-article-content h2 {
 main .section-article-content .article-img {
   width: 100%;
   height: 550px;
-  background-color: orange;
+  background-color: rgb(170, 170, 170);
   margin-bottom: 50px;
 }
 main .section-article-content .article-tags {
