@@ -27,6 +27,9 @@
     gap: 70px;
 
     .card-small {
+      background-repeat: no-repeat;
+      background-size: cover;
+
       h1 {
         padding: 14px 0px;
         font-family: 'Inter';
@@ -45,7 +48,7 @@
         line-height: 150%;
       }
 
-      .img-card-small-01 {
+      &-img {
         max-width: 240px;
         height: 166px;
         background-color: rgb(170, 170, 170);

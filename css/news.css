@@ -422,6 +422,10 @@ header .navbar-menu .selected {
   flex-direction: row;
   gap: 70px;
 }
+.card-collection .cards .card-small {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .card-collection .cards .card-small h1 {
   padding: 14px 0px;
   font-family: "Inter";
@@ -438,7 +442,7 @@ header .navbar-menu .selected {
   font-size: 14.825px;
   line-height: 150%;
 }
-.card-collection .cards .card-small .img-card-small-01 {
+.card-collection .cards .card-small-img {
   max-width: 240px;
   height: 166px;
   background-color: rgb(170, 170, 170);
