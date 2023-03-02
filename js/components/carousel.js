@@ -1,13 +1,41 @@
 "use strict";
+
+import { STRAPI_URL } from '../strapi-url.js';
+
 const arrowBtnLeft = document.querySelector(".btn-arrow-left");
 const arrowBtnRight = document.querySelector(".btn-arrow-right");
 
 const slides = document.querySelectorAll(".slide");
 const dotsContainer = document.querySelector(".dots");
 
+
+
+
 let curSlide = 0;
 
-// functions
+const strapiFetch = async () => {
+    const cmsArrayArticles = await fetch(`${STRAPI_URL}/api/blogs?sort[0]=id&fields[0]=title&fields[1]=overscript&populate[BannerImage][fields][0]=url&pagination[start]=0&pagination[limit]=3`)
+        .then((res) => {
+            return res.json();
+        })
+        .then((resJson) => {
+            const cmsArrayArticles = resJson.data;
+                    
+            cmsArrayArticles.forEach((article, index) => {
+                console.log(article)
+                const BannerImageURL = article.attributes.BannerImage.data.attributes.url;
+                document.querySelector('.slide-'+index).style.backgroundImage = `url(${BannerImageURL})`;
+                document.querySelector('#slide-title-'+index).innerHTML = article.attributes.Title;
+                document.querySelector('#slide-overscript-'+index).innerHTML = article.attributes.Overscript;
+            });
+        })
+        .catch(err => {
+            console.log(err);
+        });
+
+    return cmsArrayArticles;
+}
+
 const goToSlide = (slide) => {
     slides.forEach((s, i) => {
         s.style.transform = `translateX(${100 * (i - slide)}%)`;
@@ -45,12 +73,14 @@ const activateDot = (slide) => {
 };
 
 // inital
-const init = () => {
+const init = async () => {
     goToSlide(0);
     createDots();
     activateDot(0);
 };
+
 init();
+strapiFetch();
 
 // event listeners
 arrowBtnLeft.addEventListener("click", prevSlide);

@@ -750,15 +750,35 @@ h1 {
 .slide {
   /* === TO CENTER TEXT === */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
   /* ====================== */
   padding: 4rem;
   position: absolute;
-  background-color: rgb(170, 170, 170);
   width: 100%;
   height: 36rem;
   transition: all 0.3s;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide-title {
+  width: 465px;
+  font-family: "sofia-pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 120%;
+  color: #ffffff;
+}
+.slide-overscript {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  color: #ffffff;
+  margin: 12px 0px;
 }
 
 /* DOTS */
