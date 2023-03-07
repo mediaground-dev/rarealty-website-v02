@@ -1,71 +1,85 @@
-import { STRAPI_URL } from './strapi-url.js';
+import { fetchArticleById, fetchCardsByTag } from './utils/fetch-strapi.js';
 
-const docImgBanner = document.querySelector('#section-banner-img');
-const docTitle = document.querySelector('#article-title');
-const docSubtitle01 = document.querySelector('#article-subtitle01');
-const docSubtitle02 = document.querySelector('#article-subtitle02');
+const docImgBanner   = document.querySelector('#section-banner-img');
+const docTitle       = document.querySelector('#article-title');
+const docSubtitle01  = document.querySelector('#article-subtitle01');
+const docSubtitle02  = document.querySelector('#article-subtitle02');
 const docParagraph01 = document.querySelector('#article-p01');
 const docParagraph02 = document.querySelector('#article-p02');
 const docParagraph03 = document.querySelector('#article-p03');
 const docParagraph04 = document.querySelector('#article-p04');
-const docImgContent = document.querySelector('#section-content-img');
-const docTags = document.querySelector('#article-tags');
+const docImgContent  = document.querySelector('#section-content-img');
+const docTags        = document.querySelector('#article-tags');
 
-// const STRAPI_URL = 'https://strapi-production-e9a2.up.railway.app';
-const articleNumber = location.search.substring(1);
+const articleId = location.search.substring(1);
 
-// Show by order
-fetch(`${STRAPI_URL}/api/blogs?sort[0]=id&fields[0]=title`)
-    .then((res) => {
-        return res.json();
-    })
-    .then((data) => {
-        const showBlog = data.data[articleNumber].id;
+const articleData = await fetchArticleById(articleId);
 
-        fetch(`${STRAPI_URL}/api/blogs/${showBlog}?populate=*`)
-            .then(res => {
-                return res.json();
-            })
-            .then(resJson => {
-                const cmsBanner = resJson.data.attributes.BannerImage.data.attributes.formats.large.url;
-                docImgBanner.style.backgroundImage = `url(${cmsBanner})`;
+const cmsBanner = articleData.attributes.BannerImage.data.attributes.formats.large.url;
 
-                docTitle.innerHTML = resJson.data.attributes.Title;
-                docSubtitle01.innerHTML = resJson.data.attributes.Subtitle01;
-                docSubtitle02.innerHTML = resJson.data.attributes.Subtitle02;
-                docParagraph01.innerHTML = resJson.data.attributes.Paragraph01;
-                docParagraph02.innerHTML = resJson.data.attributes.Paragraph02;
-                docParagraph03.innerHTML = resJson.data.attributes.Paragraph03;
-                docParagraph04.innerHTML = resJson.data.attributes.Paragraph04;
+docImgBanner.style.backgroundImage = `url(${cmsBanner})`;
 
-                const cmsImgContent = resJson.data.attributes.ContentImage.data.attributes.formats.large.url;
-                docImgContent.style.backgroundImage = `url(${cmsImgContent})`;
+docTitle.innerHTML       = articleData.attributes.Title;
+docSubtitle01.innerHTML  = articleData.attributes.Subtitle01;
+docSubtitle02.innerHTML  = articleData.attributes.Subtitle02;
+docParagraph01.innerHTML = articleData.attributes.Paragraph01;
+docParagraph02.innerHTML = articleData.attributes.Paragraph02;
+docParagraph03.innerHTML = articleData.attributes.Paragraph03;
+docParagraph04.innerHTML = articleData.attributes.Paragraph04;
 
-                const cmsArrayTags = resJson.data.attributes.Tags.split(" ");
+const cmsImgContent = articleData.attributes.ContentImage.data.attributes.formats.large.url;
+docImgContent.style.backgroundImage = `url(${cmsImgContent})`;
 
-                cmsArrayTags.forEach(tag => {
-                    docTags.innerHTML += `<h4>${tag}</h4>`;
-                });
-            })
-            .catch(err => {
-                console.log(err);
-            });
-    })
+const cmsArrayTags = articleData.attributes.Tags.split(" ");
 
-//Show by ID of <a src= '?##'></a>
-// fetch(`${STRAPI_URL}/api/blogs/${articleNumber}?populate=*`)
-//     .then((res) => {
-//         return res.json();
-//     })
-//     .then((resJson) => {
-//         const cmsBanner = resJson.data.attributes.BannerImage.data[0].attributes.formats.large.url;
-//         const cmsTitle = resJson.data.attributes.Title;
+let numberOfTags;
 
-//         docBanner.style.backgroundImage = `url(${cmsBanner})`;
-//         docTitle.innerHTML = cmsTitle;
+cmsArrayTags.forEach((tag, index) => {
+    docTags.innerHTML += `<h4 id="Tag0${index + 1}" class="tag" tag="${tag}">${tag}</h4>`;
+    numberOfTags = index + 1;
+});
 
-//     })
-//     .catch(function () {
-//         // handle the error
-//     });
 
+// Related News Section //
+const docCardCollection = document.querySelector('#card-collection');
+const docTag01 = document.querySelector('#Tag01');
+
+docTag01.classList.add('tag-tab-selected');
+
+const tag01 = docTag01.getAttribute('tag');
+const strapiResponse = await fetchCardsByTag(tag01, 4);
+
+strapiResponse.forEach((article, index) => {
+    const CardImageURL = article.attributes.CardImage.data.attributes.url;
+    docCardCollection.innerHTML += `<div class="card-small">
+                                        <a href="./article.html?${index}">
+                                            <div style="background: url('${CardImageURL}')" class="card-small-img"></div>
+                                            <h1>${article.attributes.Title}</h1>
+                                            <h2>${article.attributes.Overscript}</h2>
+                                        </a>
+                                    </div>`;
+});
+
+// Add on click event that fetch news related to tag //
+document.querySelectorAll('.tag').forEach(element => {
+    element.addEventListener('click', async () => {
+        document.querySelector('.tag-tab-selected').classList.remove('tag-tab-selected');
+        element.classList.add('tag-tab-selected');
+
+        const tag = element.getAttribute('tag');
+        const strapiResponse = await fetchCardsByTag(tag, 4);
+
+        docCardCollection.innerHTML = '';
+
+        strapiResponse.forEach((article, index) => {
+            const CardImageURL = article.attributes.CardImage.data.attributes.url;
+            docCardCollection.innerHTML += `<div class="card-small">
+                                        <a href="./article.html?${index}">
+                                            <div style="background: url('${CardImageURL}')" class="card-small-img"></div>
+                                            <h1>${article.attributes.Title}</h1>
+                                            <h2>${article.attributes.Overscript}</h2>
+                                        </a>
+                                    </div>`;
+        });
+    });
+});

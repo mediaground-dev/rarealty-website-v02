@@ -418,13 +418,15 @@ header .navbar-menu .selected {
 }
 .card-collection .cards {
   padding: 32px 0 32px;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
   gap: 70px;
 }
 .card-collection .cards .card-small {
   background-repeat: no-repeat;
   background-size: cover;
+  width: 242px;
 }
 .card-collection .cards .card-small h1 {
   padding: 14px 0px;
@@ -471,12 +473,12 @@ header .navbar-menu .selected {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   gap: 48px;
+  align-items: flex-start;
 }
 .card-collection02-grid .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: start;
 }
 .card-collection02-grid .card .card-img {
   width: 100%;
@@ -502,7 +504,6 @@ header .navbar-menu .selected {
 }
 .card-collection02 a {
   padding: 32px 0px;
-  align-self: center;
   text-decoration: none;
   font-family: "Inter";
   font-style: normal;
@@ -880,21 +881,23 @@ main .section-article-content .article-img {
   margin-bottom: 50px;
 }
 main .section-article-content .article-tags {
-  margin: 74px 0px;
+  padding: 74px 0px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 56px;
+  cursor: pointer;
 }
 main .section-article-content .article-tags h4 {
+  padding: 10px 16px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
 }
-main .section-article-content .article-tags h4:nth-child(1) {
+main .section-article-content .article-tags .tag-tab-selected {
   background: #f4f4f4;
   border-radius: 36px;
   padding: 10px 16px;

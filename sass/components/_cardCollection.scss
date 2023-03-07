@@ -22,13 +22,18 @@
 
   .cards {
     padding: 32px 0 32px;
-    display: flex;
-    flex-direction: row;
+    // display: flex;
+    // flex-direction: row;
+    // gap: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
     gap: 70px;
 
     .card-small {
       background-repeat: no-repeat;
       background-size: cover;
+      width: 242px;
 
       h1 {
         padding: 14px 0px;
@@ -81,12 +86,12 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     gap: 48px;
+    align-items: flex-start;
 
     .card {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      align-items: start;
 
       .card-img {
         width: 100%;
@@ -117,7 +122,6 @@
 
   a {
     padding: 32px 0px;
-    align-self: center;
     text-decoration: none;
     font-family: 'Inter';
     font-style: normal;

@@ -8,13 +8,10 @@ const arrowBtnRight = document.querySelector(".btn-arrow-right");
 const slides = document.querySelectorAll(".slide");
 const dotsContainer = document.querySelector(".dots");
 
-
-
-
 let curSlide = 0;
 
 const strapiFetch = async () => {
-    const cmsArrayArticles = await fetch(`${STRAPI_URL}/api/blogs?sort[0]=id&fields[0]=title&fields[1]=overscript&populate[BannerImage][fields][0]=url&pagination[start]=0&pagination[limit]=3`)
+    const cmsArrayArticles = await fetch(`${STRAPI_URL}/api/blogs?&pagination[limit]=3&sort[0]=CarouselPosition&sort[1]=DisplayInCarousel&sort[2]=Date&fields[0]=title&fields[1]=overscript&populate[BannerImage][fields][0]=url`)
         .then((res) => {
             return res.json();
         })
@@ -22,7 +19,6 @@ const strapiFetch = async () => {
             const cmsArrayArticles = resJson.data;
                     
             cmsArrayArticles.forEach((article, index) => {
-                console.log(article)
                 const BannerImageURL = article.attributes.BannerImage.data.attributes.url;
                 document.querySelector('.slide-'+index).style.backgroundImage = `url(${BannerImageURL})`;
                 document.querySelector('#slide-title-'+index).innerHTML = article.attributes.Title;

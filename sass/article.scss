@@ -85,7 +85,7 @@ main {
       }
 
       .article-tags {
-        margin: 74px 0px;
+        padding: 74px 0px;
 
         display: flex;
         flex-direction: row;
@@ -93,7 +93,10 @@ main {
         align-items: center;
         gap: 56px;
 
+        cursor: pointer;
+
         h4 {
+          padding: 10px 16px;
           font-family: 'Inter';
           font-style: normal;
           font-weight: 500;
@@ -101,7 +104,7 @@ main {
           line-height: 150%;
         }
 
-        h4:nth-child(1) {
+        .tag-tab-selected {
           background: #f4f4f4;
           border-radius: 36px;
           padding: 10px 16px;

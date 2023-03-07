@@ -418,13 +418,15 @@ header .navbar-menu .selected {
 }
 .card-collection .cards {
   padding: 32px 0 32px;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
   gap: 70px;
 }
 .card-collection .cards .card-small {
   background-repeat: no-repeat;
   background-size: cover;
+  width: 242px;
 }
 .card-collection .cards .card-small h1 {
   padding: 14px 0px;
@@ -471,12 +473,12 @@ header .navbar-menu .selected {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   gap: 48px;
+  align-items: flex-start;
 }
 .card-collection02-grid .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: start;
 }
 .card-collection02-grid .card .card-img {
   width: 100%;
@@ -502,7 +504,6 @@ header .navbar-menu .selected {
 }
 .card-collection02 a {
   padding: 32px 0px;
-  align-self: center;
   text-decoration: none;
   font-family: "Inter";
   font-style: normal;
@@ -845,6 +846,12 @@ main .section-news-intro > p {
   font-size: 16px;
   line-height: 150%;
   margin-bottom: 50px;
+}
+main .section-news-intro .select-block-menu div {
+  cursor: pointer;
+}
+main .section-news-intro .select-block-menu .latest-menu-selected {
+  box-shadow: inset 0px -4px 0px #F08D28;
 }
 main .section-videos {
   background-color: #f4f4f4;
