@@ -87,6 +87,7 @@
     grid-template-rows: auto;
     gap: 48px;
     align-items: flex-start;
+    width: 100%;
 
     .card {
       display: flex;
@@ -130,4 +131,9 @@
     line-height: 150%;
     color: $TEXT_DARK;
   }
+
+  #btnMoreNews{
+    cursor: pointer;
+  }
+
 }

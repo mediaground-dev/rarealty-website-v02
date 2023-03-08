@@ -474,6 +474,7 @@ header .navbar-menu .selected {
   grid-template-rows: auto;
   gap: 48px;
   align-items: flex-start;
+  width: 100%;
 }
 .card-collection02-grid .card {
   display: flex;
@@ -511,6 +512,9 @@ header .navbar-menu .selected {
   font-size: 16px;
   line-height: 150%;
   color: #3d3b40;
+}
+.card-collection02 #btnMoreNews {
+  cursor: pointer;
 }
 
 .contact-banner {
