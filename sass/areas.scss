@@ -35,26 +35,25 @@ main {
       width: fit-content;
       align-self: flex-start;
       font-family: 'sofia-pro';
-font-style: normal;
-font-weight: 700;
-font-size: 26px;
-line-height: 150%;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 150%;
     }
 
     .select-block-menu {
       cursor: pointer;
-
     }
 
     .block-selected {
       display: block;
     }
-    
+
     .block-unselected {
       display: none;
     }
 
-    .menu-block-selected {
+    .area-tab-selected {
       box-shadow: inset 0px -4px 0px $SECONDARY_COLOR;
     }
   }

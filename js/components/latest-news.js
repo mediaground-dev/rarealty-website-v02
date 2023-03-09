@@ -46,10 +46,7 @@ document.querySelectorAll('.tag-menu-tab').forEach(element => {
 });
 
 document.querySelector('#btnMoreNews').addEventListener('click', async () => {
-
-
     const strapiResponse = await fetchCardsByDate(pageSize, 2);
-  
 
     strapiResponse.forEach((article, index) => {
         const CardImageURL = article.attributes.CardImage.data.attributes.url;
@@ -70,3 +67,7 @@ document.querySelector('#btnMoreNews').addEventListener('click', async () => {
 //     const tag = docTabSelected.getAttribute('tag'); => docTabSelected be css selected class
 //     renderCollectionByTag(tag);
 // })
+
+
+
+// TODO sacar el boton view-more si son menos de tantos articulos

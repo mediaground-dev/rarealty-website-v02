@@ -352,6 +352,8 @@ header .navbar-menu .selected {
   height: 490px;
   width: 48%;
   border-radius: 16px;
+  background-size: cover !important;
+  background-position: center !important;
 }
 
 .video-with-text {
@@ -424,8 +426,6 @@ header .navbar-menu .selected {
   gap: 70px;
 }
 .card-collection .cards .card-small {
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 242px;
 }
 .card-collection .cards .card-small h1 {
@@ -448,6 +448,8 @@ header .navbar-menu .selected {
   max-width: 240px;
   height: 166px;
   background-color: rgb(170, 170, 170);
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
 }
 .card-collection a {
   padding: 32px 0px;
@@ -855,7 +857,7 @@ main .select-block .block-selected {
 main .select-block .block-unselected {
   display: none;
 }
-main .select-block .menu-block-selected {
+main .select-block .area-tab-selected {
   box-shadow: inset 0px -4px 0px #F08D28;
 }
 
