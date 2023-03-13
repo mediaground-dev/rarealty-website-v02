@@ -30,6 +30,7 @@ main {
   .select-block {
     max-width: 1440px;
     margin: auto;
+    min-height: 1200px;
 
     div > h1 {
       width: fit-content;

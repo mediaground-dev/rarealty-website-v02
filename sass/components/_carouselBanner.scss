@@ -93,24 +93,26 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
 
-  &-title {
-    width: 465px;
-    font-family: 'sofia-pro';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 120%;
-    color: #ffffff;
-  }
+  a {
+    .slide-title {
+      width: 465px;
+      font-family: 'sofia-pro';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 120%;
+      color: #ffffff;
+    }
 
-  &-overscript {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 120%;
-    color: #ffffff;
-    margin: 12px 0px;
+    .slide-overscript {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 120%;
+      color: #ffffff;
+      margin: 12px 0px;
+    }
   }
 }
 

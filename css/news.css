@@ -516,6 +516,7 @@ header .navbar-menu .selected {
   color: #3d3b40;
 }
 .card-collection02 #btnMoreNews {
+  padding: 16px;
   cursor: pointer;
 }
 
@@ -769,7 +770,7 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.slide-title {
+.slide a .slide-title {
   width: 465px;
   font-family: "sofia-pro";
   font-style: normal;
@@ -778,7 +779,7 @@ h1 {
   line-height: 120%;
   color: #ffffff;
 }
-.slide-overscript {
+.slide a .slide-overscript {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -856,7 +857,7 @@ main .section-news-intro > p {
 main .section-news-intro .select-block-menu div {
   cursor: pointer;
 }
-main .section-news-intro .select-block-menu .latest-menu-selected {
+main .section-news-intro .select-block-menu .tag-tab-selected {
   box-shadow: inset 0px -4px 0px #F08D28;
 }
 main .section-videos {

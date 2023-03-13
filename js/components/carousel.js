@@ -1,6 +1,6 @@
 "use strict";
 
-import { STRAPI_URL } from '../strapi-url.js';
+import { fetchCarouselContent } from "../utils/fetch-strapi.js";
 
 const arrowBtnLeft = document.querySelector(".btn-arrow-left");
 const arrowBtnRight = document.querySelector(".btn-arrow-right");
@@ -11,23 +11,21 @@ const dotsContainer = document.querySelector(".dots");
 let curSlide = 0;
 
 const strapiFetch = async () => {
-    const cmsArrayArticles = await fetch(`${STRAPI_URL}/api/blogs?&pagination[limit]=3&sort[0]=CarouselPosition&sort[1]=DisplayInCarousel&sort[2]=Date&fields[0]=title&fields[1]=overscript&populate[BannerImage][fields][0]=url`)
-        .then((res) => {
-            return res.json();
-        })
-        .then((resJson) => {
-            const cmsArrayArticles = resJson.data;
-                    
-            cmsArrayArticles.forEach((article, index) => {
-                const BannerImageURL = article.attributes.BannerImage.data.attributes.url;
-                document.querySelector('.slide-'+index).style.backgroundImage = `url(${BannerImageURL})`;
-                document.querySelector('#slide-title-'+index).innerHTML = article.attributes.Title;
-                document.querySelector('#slide-overscript-'+index).innerHTML = article.attributes.Overscript;
-            });
-        })
-        .catch(err => {
-            console.log(err);
-        });
+    const cmsArrayArticles = await fetchCarouselContent();
+
+    cmsArrayArticles.forEach((article, index) => {
+        const BannerImageURL = article.attributes.BannerImage.data.attributes.url;
+        document.querySelector('.slide-' + index).style.backgroundImage = `url(${BannerImageURL})`;
+    });
+
+    document.querySelectorAll('.slide').forEach( (element, index )=> {
+        element.innerHTML = `
+         <a href="./article.html?${cmsArrayArticles[index].id}">
+            <h1 class="slide-title">${cmsArrayArticles[index].attributes.Title}</h1>
+            <h3 class="slide-overscript">${cmsArrayArticles[index].attributes.Overscript}</h3>
+         </a>
+        `;
+    })
 
     return cmsArrayArticles;
 }

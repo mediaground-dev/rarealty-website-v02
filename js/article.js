@@ -13,29 +13,40 @@ const docTags = document.querySelector('#article-tags');
 
 const articleId = location.search.substring(1);
 
-const articleData = await fetchArticleById(articleId);
+const articleContent = await fetchArticleById(articleId);
 
-const cmsBanner = articleData.attributes.BannerImage.data.attributes.formats.large.url;
+const cmsBanner = articleContent.attributes.BannerImage.data.attributes.url;
 
 docImgBanner.style.backgroundImage = `url(${cmsBanner})`;
 
-docTitle.innerHTML = articleData.attributes.Title;
-docSubtitle01.innerHTML = articleData.attributes.Subtitle01;
-docSubtitle02.innerHTML = articleData.attributes.Subtitle02;
-docParagraph01.innerHTML = articleData.attributes.Paragraph01;
-docParagraph02.innerHTML = articleData.attributes.Paragraph02;
-docParagraph03.innerHTML = articleData.attributes.Paragraph03;
-docParagraph04.innerHTML = articleData.attributes.Paragraph04;
+docTitle.innerHTML = articleContent.attributes.Title;
+docSubtitle01.innerHTML = articleContent.attributes.Subtitle01;
+docSubtitle02.innerHTML = articleContent.attributes.Subtitle02;
+docParagraph01.innerHTML = articleContent.attributes.Paragraph01;
+docParagraph02.innerHTML = articleContent.attributes.Paragraph02;
+docParagraph03.innerHTML = articleContent.attributes.Paragraph03;
+docParagraph04.innerHTML = articleContent.attributes.Paragraph04;
 
-const cmsImgContent = articleData.attributes.ContentImage.data.attributes.formats.large.url;
+const cmsImgContent = articleContent.attributes.ContentImage.data.attributes.url;
 docImgContent.style.backgroundImage = `url(${cmsImgContent})`;
 
-const cmsArrayTags = articleData.attributes.Tags.split(" ");
+// const cmsArrayTags = articleContent.attributes.Tags.data.split(" ");
+
+let cmsArrayTags = [];
+
+articleContent.attributes.Tags.data.forEach( tag => {
+    cmsArrayTags.push({
+        id: tag.id, 
+        name: tag.attributes.TagName
+    }); 
+});
+
+console.log(cmsArrayTags)
 
 let numberOfTags;
 
 cmsArrayTags.forEach((tag, index) => {
-    docTags.innerHTML += `<h4 id="Tag0${index + 1}" class="tag" tag="${tag}">${tag}</h4>`;
+    docTags.innerHTML += `<h4 id="Tag0${index + 1}" class="tag" tag="${tag.id}">${tag.name}</h4>`;
     numberOfTags = index + 1;
 });
 

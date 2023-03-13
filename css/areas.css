@@ -516,6 +516,7 @@ header .navbar-menu .selected {
   color: #3d3b40;
 }
 .card-collection02 #btnMoreNews {
+  padding: 16px;
   cursor: pointer;
 }
 
@@ -769,7 +770,7 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.slide-title {
+.slide a .slide-title {
   width: 465px;
   font-family: "sofia-pro";
   font-style: normal;
@@ -778,7 +779,7 @@ h1 {
   line-height: 120%;
   color: #ffffff;
 }
-.slide-overscript {
+.slide a .slide-overscript {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -838,6 +839,7 @@ main .image {
 main .select-block {
   max-width: 1440px;
   margin: auto;
+  min-height: 1200px;
 }
 main .select-block div > h1 {
   width: fit-content;

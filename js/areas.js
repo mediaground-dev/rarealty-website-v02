@@ -1,20 +1,8 @@
-import { fetchAreaById, fetchAreaNames, fetchCardsByTag, fetchFillCardCollection } from "./utils/fetch-strapi.js";
+import { fetchAreaById, fetchAreaNames, fetchFillCardCollection } from "./utils/fetch-strapi.js";
 
 const docAreaTabMenu = document.querySelector('#areaTabMenu');
 const docAreaSelectedContent = document.querySelector('#areaSelectedContent');
 const docCardCollection = document.querySelector('#card-collection');
-
-const areaNames = await fetchAreaNames();
-
-areaNames.forEach((area, index) => {
-    if (index === 0) {
-        docAreaTabMenu.innerHTML += `<div id="${area.id}" class="area-tab area-tab-selected">${area.attributes.Name}</div>`;
-    } else {
-        docAreaTabMenu.innerHTML += `<div id="${area.id}" class="area-tab">${area.attributes.Name}</div>`;
-    }
-});
-
-const areaFirstContent = await fetchAreaById(areaNames[0].id);
 
 const renderAreaContent = (areaContent) => {
     const {
@@ -57,13 +45,13 @@ const renderAreaContent = (areaContent) => {
         </div>`;
 };
 
-const renderCardCollection = (areaArticlesContent) => {
-    areaArticlesContent.forEach((article) => {
+const renderCardCollection = (areaCardsContent) => {
+    areaCardsContent.forEach(article => {
         const imageURL = article.attributes.CardImage.data.attributes.url;
-        docCardCollection.innerHTML += 
+        docCardCollection.innerHTML +=
             `<div class="card-small">
                 <a href="./article.html?${article.id}">
-                <div style="background: url('${imageURL}')" class="card-small-img"></div>
+                <div style="background: url('${imageURL}')" class="card-small-img" loading="lazy"></div>
                 <h1>${article.attributes.Title}</h1>
                 <h2>${article.attributes.Overscript}</h2>
                 </a>
@@ -71,51 +59,75 @@ const renderCardCollection = (areaArticlesContent) => {
     });
 };
 
+const areaNames = await fetchAreaNames();
+
+areaNames.forEach((area, index) => {
+    if (index === 0) {
+        docAreaTabMenu.innerHTML += `<div id="${area.id}" class="area-tab area-tab-selected">${area.attributes.Name}</div>`;
+    } else {
+        docAreaTabMenu.innerHTML += `<div id="${area.id}" class="area-tab">${area.attributes.Name}</div>`;
+    }
+});
+
+const areaFirstContent = await fetchAreaById(areaNames[0].id);
 renderAreaContent(areaFirstContent);
 
-const areaArticlesContent = areaFirstContent.attributes.Articles.data;
-renderCardCollection(areaArticlesContent);
+const areaCardsContent = areaFirstContent.attributes.Articles.data;
+renderCardCollection(areaCardsContent);
 
 // Fill Card Collection
-if (areaArticlesContent.length < 4) {
-    const pageSize = 4 - areaArticlesContent.length;
+if (areaCardsContent.length < 4) {
+    const pageSize = 4 - areaCardsContent.length;
     const articleIds = [];
 
-    areaArticlesContent.forEach(article => {
+    areaCardsContent.forEach(article => {
         articleIds.push(article.id);
     })
 
-    const othersArticleContent =  await fetchFillCardCollection(articleIds, pageSize);
-
+    const othersArticleContent = await fetchFillCardCollection(articleIds, pageSize);
     renderCardCollection(othersArticleContent);
-}  
+}
+
+// Store in Session the content of the other Areas
+areaNames.forEach(async area => {
+    const areaContent = await fetchAreaById(area.id);
+    sessionStorage.setItem(`AreaContent-${area.id}`, JSON.stringify(areaContent));
+
+    const areaCardsContent = areaContent.attributes.Articles.data;
+
+    // Fill Card Collection
+    if (areaCardsContent.length < 4) {
+        const pageSize = 4 - areaCardsContent.length;
+        const articleIds = [];
+
+        areaCardsContent.forEach(article => {
+            articleIds.push(article.id);
+        })
+
+        const othersArticleContent = await fetchFillCardCollection(articleIds, pageSize);
+        sessionStorage.setItem(`OtherCards-${area.id}`, JSON.stringify(othersArticleContent));
+    }
+});
 
 document.querySelectorAll('.area-tab').forEach(docAreaTab => {
-    docAreaTab.addEventListener('click', async () => {
+    docAreaTab.addEventListener('click', () => {
         docAreaSelectedContent.innerHTML = '';
         docCardCollection.innerHTML = '';
 
         document.querySelector('.area-tab-selected').classList.remove('area-tab-selected');
         docAreaTab.classList.add('area-tab-selected');
 
-        const areaContent = await fetchAreaById(docAreaTab.id);
+        const areaContent = JSON.parse(sessionStorage.getItem(`AreaContent-${docAreaTab.id}`));
         renderAreaContent(areaContent);
 
-        const areaArticlesContent = areaContent.attributes.Articles.data;
-        renderCardCollection(areaArticlesContent);
+        // Card Collection Related News
+        const areaCardsContent = areaContent.attributes.Articles.data;
+        renderCardCollection(areaCardsContent);
 
         // Fill Card Collection
-        if (areaArticlesContent.length < 4) {
-            const pageSize = 4 - areaArticlesContent.length;
-            const articleIds = [];
-
-            areaArticlesContent.forEach(article => {
-                articleIds.push(article.id);
-            })
-
-            const othersArticleContent =  await fetchFillCardCollection(articleIds, pageSize);
-
+        const othersArticleContent = JSON.parse(sessionStorage.getItem(`OtherCards-${docAreaTab.id}`));
+        if (othersArticleContent !== null) {
             renderCardCollection(othersArticleContent);
-        }  
+        }
     });
 });
