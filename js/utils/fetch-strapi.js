@@ -4,11 +4,11 @@ export const fetchCardsByDate = async (pageSize = 4, page = 1) => {
     const res = await fetch(`${STRAPI_URL}/api/blogs?pagination[page]=${page}&pagination[pageSize]=${pageSize}&sort[0]=Date%3Adesc&fields[0]=title&fields[1]=overscript&populate[CardImage][fields][0]=url`)
     const resObject = await res.json();
     
-    return resObject.data;
+    return resObject;
 };
 
 export const fetchAreaNames = async () => {
-    const res = await fetch(`${STRAPI_URL}/api/areas?fields[0]=Name`);
+    const res = await fetch(`${STRAPI_URL}/api/areas?sort[0]=Name&fields[0]=Name`);
     const resObject = await res.json();
 
     return resObject.data;

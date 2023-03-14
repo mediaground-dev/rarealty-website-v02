@@ -516,6 +516,7 @@ header .navbar-menu .selected {
   color: #3d3b40;
 }
 .card-collection02 #btnMoreNews {
+  display: none;
   padding: 16px;
   cursor: pointer;
 }
