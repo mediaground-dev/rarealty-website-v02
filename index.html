@@ -6,14 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RA | Realtor</title>
-    <link rel="icon" type="image/x-icon" href="./assets/logos/logo-mediaground.png">
+    <link rel="icon" type="image/x-icon" href="./assets/logos/logo-ra.png">
 
     <link rel="stylesheet" href="./css/home.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 
@@ -28,13 +27,13 @@
 
                 <div class="navbar-menu">
                     <a class="selected" href="./">Home</a>
-                    <a href="./about.html">About</a>
-                    <a href="./areas.html">Areas</a>
-                    <a href="./news.html">News</a>
+                    <a class="btn-navbar-ra" href="./about.html">About</a>
+                    <a class="btn-navbar-ra" href="./areas.html">Areas</a>
+                    <a class="btn-navbar-ra" href="./news.html">News</a>
                 </div>
 
                 <div class="navbar-contact">
-                    <a class="btn-primary" href="./contact.html">Contact</a>
+                    <a class="btn-primary-ra fw-medium" href="./contact.html">Contact</a>
                 </div>
             </div>
         </header>
@@ -49,10 +48,16 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue commodo nibh, vitae ultricies
                     tellus porta ut. Etiam nulla turpis, scelerisque sit amet pellentesque nec, sodales sit amet quam.
                 </p>
-                <a class="btn-primary" href="./about.html">About us ></a>
+
+                <a class="btn-primary-ra" href="./about.html">
+                    Sign up
+                    <div class="arrow-wrapper">
+                        <div class="arrow"></div>
+                    </div>
+                </a>
             </div>
 
-            <div class="image"></div>
+            <div class="image meet-ra-img"></div>
         </section>
 
         <section class="video-with-text">
@@ -62,7 +67,18 @@
 
             <iframe width="1188px" height="577px" src="https://www.youtube.com/embed/tgbNymZ7vqY">
             </iframe>
-            <a href="./areas.html">Explore featured neighborhoods ></a>
+
+            <a class="btn-more-ra" href="./areas.html">
+                Explore featured neighborhoods
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15px" width="15px"
+                    class="icon">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"
+                        stroke="#292D32"
+                        d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008">
+                    </path>
+                </svg>
+            </a>
+
         </section>
 
         <section class="card-collection">
@@ -70,70 +86,90 @@
 
             <div id="card-collection" class="cards"></div>
 
-            <a href="./areas.html">Explore featured neighborhoods ></a>
+            <a class="btn-more-ra" href="./areas.html">
+                Read more news
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15px" width="15px"
+                    class="icon">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"
+                        stroke="#292D32"
+                        d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008">
+                    </path>
+                </svg>
+            </a>
 
             <script src="./js/components/cardCollectionByDate.js" type="module" defer></script>
         </section>
 
-        <section class="contact-banner">
-            <h1>Need Help?</h1>
-            <a class="btn-primary" href="./">Schedule a meeting ></a>
+        <section class="contact-banner-section">
+            <div class="contact-banner-lh-img"></div>
+
+            <div class="contact-banner-block">
+                <h1>Need Help?</h1>
+
+                <a class="btn-primary-ra" href="./contact.html">
+                    Schedule a meeting
+                    <div class="arrow-wrapper">
+                        <div class="arrow"></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="contact-banner-rh-img"></div>
         </section>
 
         <footer class="footer">
-            <div class="footer-up">
-                <div class="footer-up-subscribe">
-                    <h1>Subscribe to our newsletter</h1>
-                    <div>
-                        <input id="subscribe" type="text" placeholder="Enter your email">
-                        <a class="btn-secondary" href="./">Subscribe</a>
-                    </div>
-                    <p>By subscribing you agree with our Privacy Policy and provide consent to receive updates from our
-                        company.</p>
+            <div class="footer-subscribe">
+                <h1>Subscribe to our newsletter</h1>
+                <div>
+                    <input id="subscribe" type="text" placeholder="Enter your email">
+
+                    <a class="btn-primary-ra btn-border-white" href="./contact.html">
+                        Subscribe
+                    </a>
                 </div>
+                <p>By subscribing you agree with our Privacy Policy and provide consent to receive updates from our
+                    company.</p>
+            </div>
 
-                <div class="footer-up-nav">
-                    <div>
-                        <a href="./about.html">About</a>
-                        <a href="./contact.html">Meet RA</a>
-                        <a href="./services.html">Services</a>
-                    </div>
-
-                    <div>
-                        <a href="./areas.html">Areas</a>
-                        <a href="./areas.html">Neighborhood 1</a>
-                        <a href="./areas.html">Neighborhood 2</a>
-                        <a href="./areas.html">Neighborhood 3</a>
-                        <a href="./areas.html">Neighborhood 4</a>
-                    </div>
-                    <div>
-                        <a href="./news.html">News</a>
-                        <a href="./news.html">Latest news</a>
-                        <a href="./news.html">Latest videos</a>
-                        <a href="./news.html">Social media</a>
-                    </div>
+            <div class="footer-nav">
+                <div>
+                    <a class="footer-nav-title" href="./about.html">About</a>
+                    <a href="./contact.html">Meet RA</a>
+                    <a href="./services.html">Services</a>
+                </div>
+                <div>
+                    <a class="footer-nav-title" href="./areas.html">Areas</a>
+                    <a href="./areas.html">Neighborhood 1</a>
+                    <a href="./areas.html">Neighborhood 2</a>
+                    <a href="./areas.html">Neighborhood 3</a>
+                    <a href="./areas.html">Neighborhood 4</a>
+                </div>
+                <div>
+                    <a class="footer-nav-title" href="./news.html">News</a>
+                    <a href="./news.html">Latest news</a>
+                    <a href="./news.html">Latest videos</a>
+                    <a href="./news.html">Social media</a>
                 </div>
             </div>
 
-            <div class="footer-down">
-                <div class="footer-down-social">
-                    <div>
-                        <a class="icon-tweeter" href='./'></a>
-                        <a class="icon-instagram" href='./'></a>
-                        <a class="icon-youtube" href='./'></a>
-                    </div>
-
-                    <p>Copyright © 2023 Mediaground.</p>
+            <div class="footer-social">
+                <div class="footer-social-icons">
+                    <a class="icon-twitter" href='./'></a>
+                    <a class="icon-instagram" href='./'></a>
+                    <a class="icon-youtube" href='./'></a>
                 </div>
 
-                <div class="footer-down-legal">
-                    <h1>Legal</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a href="./legal.html">Read more</a></p>
-                </div>
+                <p>Copyright © 2023 Mediaground.</p>
+            </div>
+
+            <div class="footer-legal">
+                <h1>Legal</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a
+                        href="./legal.html">Read more</a></p>
             </div>
         </footer>
     </main>

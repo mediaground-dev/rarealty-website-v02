@@ -13,12 +13,22 @@ main {
   width: 100%; 
   
   section {
-    max-width: 1440px;
+    // max-width: 1440px;
     margin: auto;
   }
 
   .section-banner-img {
     height: 613px;
-    background-color: rgb(170, 170, 170);
+    background-image: url('../assets/images/home-heroimage.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .meet-ra-img{
+    background-image: url('../assets/images/home-meetra.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top, center;
   }
 }

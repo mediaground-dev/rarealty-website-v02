@@ -1,36 +1,213 @@
 @use '../abstracts' as *;
 
-.btn-primary {
-  background-color: $PRIMARY_COLOR;
-  text-decoration: none;
+// .btn-primary {
+//   background-color: $PRIMARY_COLOR;
+//   text-decoration: none;
 
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
+//   font-family: 'Inter';
+//   font-style: normal;
+//   font-weight: 400;
+//   font-size: 16px;
+//   line-height: 24px;
 
-  color: $TEXT_LIGHT;
+//   color: $TEXT_LIGHT;
 
+//   padding: 12px 24px;
+//   border-radius: 25px;
+
+//   cursor: pointer;
+// }
+
+// .btn-primary:hover {
+//   background-color: $PRIMARY_COLOR_HOV;
+// }
+
+// .btn-primary:active {
+//   background-color: $PRIMARY_COLOR_ACT;
+// }
+
+// .btn-secondary {
+//   background-color: $PRIMARY_COLOR;
+//   text-decoration: none;
+
+//   font-family: 'Inter';
+//   font-style: normal;
+//   font-weight: 400;
+//   font-size: 16px;
+//   line-height: 150%;
+
+//   color: $TEXT_LIGHT;
+
+//   border: 2px solid #ffffff;
+//   padding: 10px 20px;
+//   border-radius: 40% 40% 40% 40% / 100% 100% 100% 100%;
+// }
+
+.btn-primary-ra {
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+
+  background: $PRIMARY_COLOR;
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+
+  width: fit-content;
+  border: 0;
+  border-radius: 25px;
   padding: 12px 24px;
-  border-radius: 94px;
 
-  cursor: pointer;
-}
-
-.btn-secondary {
-  background-color: $PRIMARY_COLOR;
   text-decoration: none;
-
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 150%;
-
+  line-height: 24px;
   color: $TEXT_LIGHT;
-
-  border: 2px solid #ffffff;
-  padding: 10px 20px;
-  border-radius: 40% 40% 40% 40% / 100% 100% 100% 100%;
 }
+
+.btn-primary-ra .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-primary-ra .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: $PRIMARY_COLOR;
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+.btn-primary-ra .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid $TEXT_LIGHT;
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+.btn-primary-ra:hover {
+  background-color: $PRIMARY_COLOR_HOV;
+}
+
+.btn-primary-ra:hover .arrow {
+  background: $TEXT_LIGHT;
+}
+
+.btn-primary-ra:hover .arrow:before {
+  right: 0;
+}
+
+.btn-primary-ra:active {
+  background-color: $PRIMARY_COLOR_ACT;
+}
+
+.btn-border-white {
+  border: 2px solid #ffffff;
+}
+
+
+
+.btn-navbar-ra {
+  position: relative;
+  background: none;
+}
+
+.btn-navbar-ra:focus:after,
+.btn-navbar-ra:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.btn-navbar-ra:after {
+  content: "";
+  pointer-events: none;
+  bottom: 0px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  background-color: $SECONDARY_COLOR;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+.btn-more-ra {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: none;
+  position: relative;
+  background-color: transparent;
+  transition: .2s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0.6;
+
+  align-self: center;
+  text-decoration: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color:  #0B0B0B;
+}
+
+.btn-more-ra::after {
+  content: '';
+  // border-bottom: 3px double rgb(214, 207, 113);
+  width: 0;
+  height: 100%;
+  position: absolute;
+  margin-top: -5px;
+  top: 0;
+  left: 5px;
+  visibility: hidden;
+  opacity: 1;
+  transition: .2s linear;
+}
+
+.btn-more-ra .icon {
+  transform: translateX(0%);
+  transition: .2s linear;
+  animation: attention 1.2s linear infinite;
+  width: 24px;
+  height: 24px;
+}
+
+.btn-more-ra:hover::after {
+  visibility: visible;
+  opacity: 0.7;
+  width: 90%;
+}
+
+.btn-more-ra:hover {
+  letter-spacing: 2px;
+  opacity: 1;
+}
+
+.btn-more-ra:hover > .icon {
+  transform: translateX(30%);
+  animation: none;
+}
+
+@keyframes attention {
+  0% {
+    transform: translateX(0%);
+  }
+
+  50% {
+    transform: translateX(30%);
+  }
+}
+

@@ -4,7 +4,9 @@ const docCardCollection = document.querySelector('#card-collection');
 
 const strapiResponse = await fetchCardsByDate();
 
-strapiResponse.forEach((article) => {
+console.log(strapiResponse)
+
+strapiResponse.data.forEach((article) => {
     const CardImageURL = article.attributes.CardImage.data.attributes.url;
     docCardCollection.innerHTML += `<div class="card-small">
                                         <a href="./article.html?${article.id}">

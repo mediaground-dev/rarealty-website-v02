@@ -8,7 +8,7 @@ header {
     margin: auto;
 
     padding: 0px 112px;
-    height: 152px;
+    height: 98px;
 
     display: flex;
     flex-direction: row;
@@ -24,7 +24,10 @@ header {
 
       &-a {
         display: block;
-        background-color: $PRIMARY_COLOR;
+        // background-color: $PRIMARY_COLOR;
+        background-image: url('../../assets/logos/logo-ra.png');
+        background-repeat: no-repeat;
+        background-position: center;
 
         width: 48px;
         height: 50px;

@@ -7,175 +7,190 @@
   padding: 80px;
   color: $TEXT_LIGHT;
 
-  &-up {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+  grid-template-rows: 1fr 1f;
+  row-gap : 64px;
+  column-gap: 48px;
 
-    &-subscribe {
-      width: 50%;
-      margin-right: 80px;
+  &-subscribe {
+    align-self: center;
+    justify-self: start;
 
-      h1 {
+    width: 100%;
+
+    h1 {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      color: $TEXT_LIGHT;
+      padding-bottom: 16px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      input {
+        width: 100%;
+        margin-right: 16px;
+        padding-bottom: 16px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #ffffff;
+        outline: none;
+        
+        font-family: 'Inter';
+        font-size: 16px;
+        font-weight: 400;
+        color: #bababa;
+      }
+    }
+
+    p {
+      max-width: 390px;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 150%;
+      padding-top: 16px;
+    }
+  }
+
+  &-social {
+    align-self: end;
+    justify-self: start;
+
+    &-icons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      a {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-size: contain;
+        margin: 36px 4px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .icon-twitter {
+        background-image: url('../../assets/icons/footer-twitter.svg');
+      }
+
+      .icon-instagram {
+        background-image: url('../../assets/icons/footer-insta.svg');
+      }
+
+      .icon-youtube {
+        background-image: url('../../assets/icons/footer-youtube.svg');
+        height: 32px;
+        width: 29px;
+        
+      }
+    }
+
+    p {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: #ffffff;
+    }
+  }
+
+  &-nav {
+    align-self: end;
+    justify-self: start;
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10%;
+    align-items: start;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .footer-nav-title {
+        text-decoration: none;
+        padding-bottom: 24px;
+
         font-family: 'Inter';
         font-style: normal;
         font-weight: 600;
         font-size: 16px;
         line-height: 150%;
-        color: $TEXT_LIGHT;
-        padding-bottom: 16px;
+        color: #ffffff;
+        transition: 0.2s ease-out 100ms;
       }
 
-      div {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
-        input {
-          width: 470px;
-          margin-right: 16px;
-          padding-bottom: 16px;
-          background-color: transparent;
-          color: #ffffff;
-          border: none;
-          border-bottom: 1px solid #ffffff;
-        }
+      .footer-nav-title:hover {
+        font-weight: 700;
       }
 
-      p {
-        max-width: 390px;
+      a {
+        text-decoration: none;
+        padding-bottom: 24px;
+
         font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
-        font-size: 12px;
+        font-size: 16px;
         line-height: 150%;
-        padding-top: 16px;
+        color: #ffffff;
+
+        transition: 0.2s ease-out 100ms;
       }
-    }
 
-    &-nav {
-      width: 50%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-
-      div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        // align-items: flex-start;
-
-        a:nth-child(1) {
-          text-decoration: none;
-          padding-bottom: 24px;
-
-          font-family: 'Inter';
-          font-style: normal;
-          font-weight: 600;
-          font-size: 16px;
-          line-height: 150%;
-          color: #ffffff;
-        }
-
-        a {
-          text-decoration: none;
-          padding-bottom: 24px;
-
-          font-family: 'Inter';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 150%;
-          color: #ffffff;
-        }
+      a:hover {
+        font-weight: 500;
       }
     }
   }
 
-  &-down {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  &-legal {
+    align-self: end;
+    justify-self: start;
 
-    &-social {
-      width: 50%;
-      margin-right: 80px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: end;
-      align-items: start;
-
-      div {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
-        a {
-          display: block;
-          width: 30px;
-          height: 30px;
-          background-size: contain;
-          margin: 40px 0;
-        }
-
-        .icon-tweeter {
-          background-image: url('../../assets/icons/icon-twitter.png');
-        }
-
-        .icon-instagram {
-          background-image: url('../../assets/icons/icon-insta.png');
-        }
-
-        .icon-youtube {
-          background-image: url('../../assets/icons/icon-insta.png');
-        }
-      }
-
-      p {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 150%;
-        color: #ffffff;
-      }
+    h1 {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      color: #ffffff;
+      margin-bottom: 16px;
     }
 
-    &-legal {
-      width: 50%;
+    p {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 150%;
+      color: #f3f3f3;
 
-      h1 {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 150%;
-        color: #ffffff;
-        margin-bottom: 16px;
+      a {
+        text-decoration: underline;
+        color: #f3f3f3;
       }
 
-      p {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 150%;
-        color: #f3f3f3;
-
-        a{
-          text-decoration: underline;
-          color: #f3f3f3;
-        }
-
-        a:visited, a:hover, a:active {
-          color: inherit;
-        }
+      a:visited,
+      a:hover,
+      a:active {
+        color: inherit;
       }
     }
   }

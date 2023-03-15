@@ -1,25 +1,62 @@
 @use '../abstracts/colors' as *;
 
-.contact-banner {
-  background-color: #efefef;
-  max-width: 1188px;
-  margin: auto;
-  padding: 30px 130px;
-  margin-top: 30px;
-  margin-bottom: 68px;
-  color: $TEXT_DARK;
-
+.contact-banner-section {
+  position: relative;
+  width: 100%;
+  height: 340px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 50px;
 
-  h1 {
-    font-family: 'sofia-pro';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 150%;
+  .contact-banner-block {
+    position: relative;
+    z-index: 0;
+
+    background-color: #efefef;
+    min-width: 1188px;
+    // margin: auto;
+    padding: 30px 130px;
+    margin-top: 30px;
+    margin-bottom: 68px;
+    border-radius: 16px;
+
+    color: $TEXT_DARK;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    h1 {
+      font-family: 'sofia-pro';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 150%;
+    }
+  }
+
+  .contact-banner-lh-img,
+  .contact-banner-rh-img {
+    // background-color: red;
+    height: 300px;
+    width: 100%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+
+  .contact-banner-lh-img {
+    position: relative;
+    left: 100px;
+    background-image: url('../../assets/images/home-needhelp-izquierda.svg');
+    z-index: 2;
+  }
+  .contact-banner-rh-img {
+    background-image: url('../../assets/images/home-needhelp-derecha.svg');
+    z-index: -1;
   }
 }
