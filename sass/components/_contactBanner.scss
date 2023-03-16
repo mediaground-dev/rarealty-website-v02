@@ -40,22 +40,27 @@
 
   .contact-banner-lh-img,
   .contact-banner-rh-img {
-    // background-color: red;
-    height: 300px;
-    width: 100%;
+    background-color: rgba(255, 0, 0, 0.247);
+
 
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: top;
   }
 
   .contact-banner-lh-img {
-    position: relative;
-    left: 100px;
+    position: absolute;
+    left: 38px;
+    height: 262px;
+    width: 431px;
     background-image: url('../../assets/images/home-needhelp-izquierda.svg');
     z-index: 2;
   }
   .contact-banner-rh-img {
+    position: absolute;
+    right: -68px;
+    height: 303px;
+    width: 603px;
     background-image: url('../../assets/images/home-needhelp-derecha.svg');
     z-index: -1;
   }

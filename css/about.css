@@ -134,7 +134,7 @@
   left: 50%;
   position: absolute;
   width: 0%;
-  height: 4px;
+  height: 3px;
   background-color: #F08D28;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
@@ -158,6 +158,7 @@
   font-weight: 400;
   font-size: 16px;
   color: #0B0B0B;
+  height: 16px;
 }
 
 .btn-more-ra::after {
@@ -177,8 +178,8 @@
   transform: translateX(0%);
   transition: 0.2s linear;
   animation: attention 1.2s linear infinite;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
 }
 
 .btn-more-ra:hover::after {
@@ -205,6 +206,10 @@
     transform: translateX(30%);
   }
 }
+footer {
+  background-color: rgba(255, 0, 0, 0.329);
+}
+
 .footer {
   background-color: #1C4394;
   max-width: 1440px;
@@ -372,8 +377,10 @@
 
 header {
   width: 100%;
+  background-color: rgba(139, 247, 112, 0.329);
 }
 header .navbar {
+  background-color: rgb(255, 255, 255);
   max-width: 1440px;
   margin: auto;
   padding: 0px 112px;
@@ -431,7 +438,7 @@ header .navbar-menu .selected {
 .img-with-text {
   max-width: 1440px;
   margin: auto;
-  padding: 30px 130px;
+  padding: 32px 130px;
   color: #3d3b40;
   display: flex;
   flex-direction: row;
@@ -442,7 +449,7 @@ header .navbar-menu .selected {
   width: 48%;
 }
 .img-with-text .content h1 {
-  margin-bottom: 16px;
+  margin-bottom: 32px;
   font-family: "sofia-pro";
   font-style: normal;
   font-weight: 700;
@@ -455,10 +462,9 @@ header .navbar-menu .selected {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 .img-with-text .image {
-  background-color: rgb(170, 170, 170);
   height: 490px;
   width: 48%;
 }
@@ -466,7 +472,7 @@ header .navbar-menu .selected {
 .img-with-text2 {
   max-width: 1440px;
   margin: auto;
-  padding: 30px 130px;
+  padding: 40px 130px;
   color: #3d3b40;
   display: flex;
   flex-direction: row;
@@ -507,7 +513,7 @@ header .navbar-menu .selected {
 .video-with-text {
   max-width: 1440px;
   margin: auto;
-  padding: 30px 130px;
+  padding: 32px 130px;
   color: #3d3b40;
   display: flex;
   flex-direction: column;
@@ -520,7 +526,7 @@ header .navbar-menu .selected {
   font-weight: 700;
   font-size: 32px;
   line-height: 150%;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 .video-with-text p {
   max-width: 584px;
@@ -529,12 +535,14 @@ header .navbar-menu .selected {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
+  margin-bottom: 32px;
 }
 .video-with-text iframe {
   height: 577px;
   align-self: center;
-  margin: 32px 0 60px 0;
+  margin-bottom: 32px;
   box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.32);
+  border-style: none !important;
   border-radius: 16px;
 }
 .video-with-text a {
@@ -544,56 +552,54 @@ header .navbar-menu .selected {
 .card-collection {
   max-width: 1440px;
   margin: auto;
-  padding: 30px 130px;
+  padding: 32px 130px;
   color: #3d3b40;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 }
-.card-collection h1 {
+.card-collection-h1 {
   font-family: "sofia-pro";
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 150%;
-  align-self: self-start;
+  margin-bottom: 32px;
 }
 .card-collection .cards {
-  padding: 32px 0 32px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  gap: 70px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 32px;
 }
-.card-collection .cards .card-small {
+.card-collection .cards-small {
   width: 242px;
 }
-.card-collection .cards .card-small h1 {
-  padding: 14px 0px;
+.card-collection .cards-small-h1 {
+  padding: 16px 0px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 140%;
+  color: #000000;
 }
-.card-collection .cards .card-small h2 {
-  padding-bottom: 14px;
+.card-collection .cards-small-h2 {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 14.825px;
   line-height: 150%;
+  color: #000000;
 }
-.card-collection .cards .card-small-img {
+.card-collection .cards-small-img {
   max-width: 240px;
   height: 166px;
-  background-color: rgb(170, 170, 170);
+  border-radius: 9px;
   background-repeat: no-repeat !important;
   background-size: cover !important;
+  background-position: center !important;
 }
 .card-collection a {
-  padding: 32px 0px;
   align-self: center;
   text-decoration: none;
   font-family: "Inter";
@@ -627,7 +633,10 @@ header .navbar-menu .selected {
 .card-collection02-grid .card .card-img {
   width: 100%;
   height: 300px;
-  background-color: rgb(170, 170, 170);
+  border-radius: 9px;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
 }
 .card-collection02-grid .card > h3 {
   font-family: "Inter";
@@ -645,16 +654,11 @@ header .navbar-menu .selected {
   font-weight: 500;
   font-size: 22px;
   line-height: 140%;
+  text-decoration: none;
+  color: #3d3b40;
 }
 .card-collection02 a {
-  padding: 32px 0px;
   text-decoration: none;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  color: #3d3b40;
 }
 .card-collection02 #btnMoreNews {
   display: none;
@@ -696,19 +700,24 @@ header .navbar-menu .selected {
 }
 .contact-banner-section .contact-banner-lh-img,
 .contact-banner-section .contact-banner-rh-img {
-  height: 300px;
-  width: 100%;
+  background-color: rgba(255, 0, 0, 0.247);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: top;
 }
 .contact-banner-section .contact-banner-lh-img {
-  position: relative;
-  left: 100px;
+  position: absolute;
+  left: 38px;
+  height: 262px;
+  width: 431px;
   background-image: url("../../assets/images/home-needhelp-izquierda.svg");
   z-index: 2;
 }
 .contact-banner-section .contact-banner-rh-img {
+  position: absolute;
+  right: -68px;
+  height: 303px;
+  width: 603px;
   background-image: url("../../assets/images/home-needhelp-derecha.svg");
   z-index: -1;
 }
@@ -716,7 +725,7 @@ header .navbar-menu .selected {
 .contact-form {
   max-width: 1440px;
   margin: auto;
-  padding: 32px 126px;
+  padding: 80px 126px;
   color: #3d3b40;
   display: flex;
   flex-direction: row;
@@ -788,16 +797,15 @@ header .navbar-menu .selected {
   margin-left: 80px;
 }
 .contact-form-blocks {
-  width: 25%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 40px;
 }
 .contact-form-blocks div {
-  background-color: red;
-  padding: 48px 25px;
-  background: #ffffff;
+  width: 100%;
+  padding: 48px 48px;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   display: flex;
@@ -817,14 +825,11 @@ header .navbar-menu .selected {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-}
-.contact-form-blocks div > a {
-  align-self: center;
-  margin: 38px 0px 0px 0px;
+  padding: 32px 0px;
 }
 .contact-form-blocks div > a > img {
-  display: block;
-  width: 176px;
+  width: 100%;
+  border-radius: 30px;
 }
 
 .select-block {
@@ -834,14 +839,13 @@ header .navbar-menu .selected {
   color: #3d3b40;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  gap: 73px;
 }
 .select-block div > h1 {
   padding: 0px 130px;
 }
 .select-block-menu {
+  padding-bottom: 32px;
   display: flex;
   flex-direction: row;
   gap: 32px;
@@ -854,8 +858,10 @@ header .navbar-menu .selected {
   line-height: 140%;
   color: #3d3b40;
   padding-bottom: 8px;
+  box-shadow: inset 0px -1px 0px #d9d9d9;
 }
 .select-block-menu .selected {
+  color: #0b0b0b;
   box-shadow: inset 0px -4px 0px #F08D28;
 }
 
@@ -1001,8 +1007,18 @@ main section {
   max-width: 1440px;
   margin: auto;
 }
+main .padding-top-64 {
+  padding-top: 64px;
+}
 main .img-with-text h1 {
   color: #1C4394;
+}
+main .about-meetra-img {
+  height: 613px;
+  background-image: url("../assets/images/about-meetra.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 }
 main .section-cards {
   max-width: 1115px;
@@ -1021,13 +1037,22 @@ main .section-cards div {
   text-align: center;
 }
 main .section-cards div .section-cards-img01 {
-  background-color: rgb(170, 170, 170);
+  background-image: url("../assets/images/about-passion.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 main .section-cards div .section-cards-img02 {
-  background-color: rgb(170, 170, 170);
+  background-image: url("../assets/images/about-focus.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 main .section-cards div .section-cards-img03 {
-  background-color: rgb(170, 170, 170);
+  background-image: url("../assets/images/about-empathy.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 main .section-cards div div {
   width: 181px;
@@ -1054,7 +1079,7 @@ main .section-cards div p {
 }
 main .section-services {
   max-width: 1440px;
-  padding: 32px 0px;
+  padding: 32px 0px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1067,7 +1092,7 @@ main .section-services > h1 {
   line-height: 150%;
   text-align: center;
   color: #3d3b40;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 main .section-services > p {
   max-width: 786px;
@@ -1078,7 +1103,7 @@ main .section-services > p {
   line-height: 150%;
   text-align: center;
   color: #3d3b40;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 /*# sourceMappingURL=about.css.map */

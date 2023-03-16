@@ -1,8 +1,13 @@
 @use '../abstracts/colors' as *;
 
+footer {
+  // background-color: $PRIMARY_COLOR;
+  background-color: rgba(255, 0, 0, 0.329);
+}
+
 .footer {
   background-color: $PRIMARY_COLOR;
-  max-width: 1440px;
+  max-width: 1440px; 
   margin: auto;
   padding: 80px;
   color: $TEXT_LIGHT;

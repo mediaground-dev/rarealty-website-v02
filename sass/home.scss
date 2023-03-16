@@ -10,8 +10,8 @@
 
 main {
   font-family: 'Inter', sans-serif;
-  width: 100%; 
-  
+  width: 100%;
+
   section {
     // max-width: 1440px;
     margin: auto;
@@ -21,12 +21,14 @@ main {
     height: 613px;
     background-image: url('../assets/images/home-heroimage.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-color: rgba(255, 0, 0, 0.336);
+    margin-bottom: 32px;
   }
 
-  .meet-ra-img{
-    background-image: url('../assets/images/home-meetra.jpg');
+  .meet-ra-img {
+    background-image: url('../assets/images/about-meetra.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top, center;

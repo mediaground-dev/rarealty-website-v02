@@ -4,7 +4,7 @@
 .img-with-text {
   max-width: 1440px;
   margin: auto;
-  padding: 30px 130px;
+  padding: 32px 130px;
   color: $TEXT_DARK;
 
   display: flex;
@@ -17,7 +17,7 @@
     // margin-right: 80px;
 
     h1 {
-      margin-bottom: 16px;
+      margin-bottom: 32px;
       font-family: 'sofia-pro';
       font-style: normal;
       font-weight: 700;
@@ -31,14 +31,13 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 150%;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
   }
 
   .image {
-    background-color: rgb(170, 170, 170);
+    // background-color: rgb(170, 170, 170);
     height: 490px;
-
     width: 48%;
   }
 }
@@ -46,7 +45,7 @@
 .img-with-text2 {
   max-width: 1440px;
   margin: auto;
-  padding: 30px 130px;
+  padding: 40px 130px;
   color: $TEXT_DARK;
 
   display: flex;

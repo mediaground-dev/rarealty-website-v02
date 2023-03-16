@@ -12,6 +12,10 @@ main {
   font-family: 'Inter', sans-serif;
   width: 100%;
 
+  .padding-top-64 {
+    padding-top: 64px;
+  }
+
   .video-with-text {
     h1 {
       color: $PRIMARY_COLOR;
@@ -30,7 +34,7 @@ main {
   .select-block {
     max-width: 1440px;
     margin: auto;
-    min-height: 1200px;
+    // min-height: 1200px;
 
     div > h1 {
       width: fit-content;
@@ -55,6 +59,7 @@ main {
     }
 
     .area-tab-selected {
+      color: #0b0b0b;
       box-shadow: inset 0px -4px 0px $SECONDARY_COLOR;
     }
   }

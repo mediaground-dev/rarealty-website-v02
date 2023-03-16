@@ -49,11 +49,11 @@ const renderCardCollection = (areaCardsContent) => {
     areaCardsContent.forEach(article => {
         const imageURL = article.attributes.CardImage.data.attributes.url;
         docCardCollection.innerHTML +=
-            `<div class="card-small">
+            `<div class="cards-small">
                 <a href="./article.html?${article.id}">
-                <div style="background: url('${imageURL}')" class="card-small-img" loading="lazy"></div>
-                <h1>${article.attributes.Title}</h1>
-                <h2>${article.attributes.Overscript}</h2>
+                    <div style="background: url('${imageURL}')" class="cards-small-img" loading="lazy"></div>
+                    <h1 class="cards-small-h1">${article.attributes.Title}</h1>
+                    <h2 class="cards-small-h2">${article.attributes.Overscript}</h2>
                 </a>
             </div>`;
     });

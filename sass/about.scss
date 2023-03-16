@@ -17,10 +17,22 @@ main {
     margin: auto;
   }
 
+  .padding-top-64 {
+    padding-top: 64px;
+  }
+
   .img-with-text {
     h1 {
       color: $PRIMARY_COLOR;
     }
+  }
+
+  .about-meetra-img {
+    height: 613px;
+    background-image: url('../assets/images/about-meetra.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
   }
 
   .section-cards {
@@ -40,15 +52,27 @@ main {
       text-align: center;
 
       .section-cards-img01 {
-        background-color: rgb(170, 170, 170);
+        // background-color: rgb(170, 170, 170);
+        background-image: url('../assets/images/about-passion.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
       }
 
       .section-cards-img02 {
-        background-color: rgb(170, 170, 170);
+        // background-color: rgb(170, 170, 170);
+        background-image: url('../assets/images/about-focus.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
       }
 
       .section-cards-img03 {
-        background-color: rgb(170, 170, 170);
+        // background-color: rgb(170, 170, 170);
+        background-image: url('../assets/images/about-empathy.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
       }
 
       div {
@@ -81,7 +105,7 @@ main {
 
   .section-services {
     max-width: 1440px;
-    padding: 32px 0px;
+    padding: 32px 0px 40px;
 
     display: flex;
     flex-direction: column;
@@ -95,7 +119,7 @@ main {
       line-height: 150%;
       text-align: center;
       color: $TEXT_DARK;
-      margin-bottom: 16px;
+      margin-bottom: 32px;
     }
 
     > p {
@@ -107,7 +131,7 @@ main {
       line-height: 150%;
       text-align: center;
       color: $TEXT_DARK;
-      margin-bottom: 32px;
+      margin-bottom: 40px;
     }
   }
 }
