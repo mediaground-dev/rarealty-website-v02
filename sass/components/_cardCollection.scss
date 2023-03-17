@@ -79,6 +79,7 @@
   margin: 32px 0px;
 
   &-grid {
+    padding-bottom: 32px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;

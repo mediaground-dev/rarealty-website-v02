@@ -4,8 +4,6 @@ const docCardCollection = document.querySelector('#card-collection');
 
 const strapiResponse = await fetchCardsByDate();
 
-console.log(strapiResponse)
-
 strapiResponse.data.forEach((article) => {
     const CardImageURL = article.attributes.CardImage.data.attributes.url;
     docCardCollection.innerHTML += `<div class="cards-small">

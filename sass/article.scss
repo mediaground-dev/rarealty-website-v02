@@ -17,140 +17,169 @@ main {
     margin: auto;
   }
 
-  .section-banner-img {
-    height: 613px;
-    background-color: rgb(170, 170, 170);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  .section-banner {
+    position: relative;
 
-  .section-article {
-    padding: 32px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .article-banner-img {
+      background-color: rgb(170, 170, 170);
+      height: 613px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 
-    &-time {
+    .article-banner-caption {
+      padding: 32px 130px;
       width: fit-content;
-      padding: 9px 18px;
-      background: #ffffff;
-      margin: 32px 0px;
-
-      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3),
-        0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      border-radius: 23.5191px;
+      position: absolute;
+      right: 0px;
 
       font-family: 'Inter';
       font-style: normal;
-      font-weight: 500;
+      font-weight: 400;
       font-size: 16px;
-      line-height: 19px;
+      line-height: 150%;
+
+      color: #3d3b40;
     }
+  }
 
-    &-content {
-      padding: 0px 130px;
-      
-      h1 {
-        font-family: 'sofia-pro';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 150%;
-        text-align: center;
-        margin-bottom: 87px;
-      }
+  .section-article {
+    position: relative;
+    padding: 32px 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 
-      p {
+    .article-tags {
+      padding: 32px 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      gap: 12px;
+
+      div {
+        padding: 8px 14px;
+        background: #f4f4f4;
+        border-radius: 30px;
+
         font-family: 'Inter';
         font-style: normal;
         font-weight: 500;
-        font-size: 16px;
+        font-size: 13.1813px;
         line-height: 150%;
+        color: #000000;
       }
+    }
 
-      h2 {
-        font-family: 'sofia-pro';
+    .article-date-and-time{
+      width: 100%;
+      padding-bottom: 16px;
+      margin-bottom: 32px;
+      display: flex;
+      flex-direction: row;
+
+      border-bottom: solid 1px #CBCBCB;
+      
+      .article-date {
+        padding-right: 64px;
+      }
+    }
+
+    .article-content-img {
+      // background-color: rgb(170, 170, 170);
+      width: 100%;
+      height: 613px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 10px;
+    }
+
+    .article-content-caption {
+      padding: 32px 0px;
+      width: fit-content;
+      align-self: flex-end;
+
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #3d3b40;
+    }
+
+    h1 {
+      padding-bottom: 32px;
+      font-family: 'sofia-pro';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 150%;
+      color: #3d3b40;
+    }
+
+    p {
+      padding-bottom: 32px;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #0b0b0b;
+    }
+
+    h2 {
+      padding-bottom: 32px;
+      font-family: 'sofia-pro';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 150%;
+      color: #3d3b40;
+    }
+  }
+
+  .section-share {
+    padding: 72px 130px 32px 130px;
+
+    .article-share {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h5 {
+        font-family: 'Inter';
         font-style: normal;
-        font-weight: 700;
-        font-size: 26px;
-        line-height: 150%;
-        padding: 32px 0px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 140%;
+        padding-bottom: 16px;
       }
 
-      .article-img {
-        width: 100%;
-        height: 550px;
-        // background-color: rgb(170, 170, 170);
-        margin-bottom: 50px;
-        background-size: cover;
-        background-position: center;
-      }
-
-      .article-tags {
-        padding: 74px 0px;
-
+      &-icons {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
-        gap: 56px;
+        gap: 24px;
 
-        cursor: pointer;
-
-        h4 {
-          padding: 10px 16px;
-          font-family: 'Inter';
-          font-style: normal;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 150%;
+        a {
+          display: block;
+          // background-color: $PRIMARY_COLOR;
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          background-repeat: no-repeat;
+          background-position: center;
         }
 
-        .tag-tab-selected {
-          background: #f4f4f4;
-          border-radius: 36px;
-          padding: 10px 16px;
+        .icon-twitter {
+          background-image: url('../assets/icons/footer-twitter.svg');
         }
-      }
-
-      .article-share {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        h5 {
-          font-family: 'Inter';
-          font-style: normal;
-          font-weight: 600;
-          font-size: 20px;
-          line-height: 140%;
-          padding: 16px 0px;
+        .icon-instagram {
+          background-image: url('../assets/icons/footer-insta.svg');
         }
-
-        &-icons {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          gap: 24px;
-
-          a {
-            display: block;
-            background-color: $PRIMARY_COLOR;
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background-position: center;
-          }
-
-          .icon-tweeter {
-            background-image: url('../assets/icons/icon-twitter.png');
-          }
-          .icon-instagram {
-            background-image: url('../assets/icons/icon-insta.png');
-          }
-          .icon-youtube {
-            background-image: url('../assets/icons/icon-twitter.png');
-          }
+        .icon-youtube {
+          background-image: url('../assets/icons/footer-youtube.svg');
         }
       }
     }

@@ -18,11 +18,19 @@ const strapiFetch = async () => {
         document.querySelector('.slide-' + index).style.backgroundImage = `url(${BannerImageURL})`;
     });
 
+    // document.querySelectorAll('.slide').forEach( (element, index )=> {
+    //     element.innerHTML = `
+    //      <a href="./article.html?${cmsArrayArticles[index].id}">
+    //         <h1 class="slide-title">${cmsArrayArticles[index].attributes.Title}</h1>
+    //         <h3 class="slide-overscript">${cmsArrayArticles[index].attributes.Overscript}</h3>
+    //      </a>
+    //     `;
+    // })
+    
     document.querySelectorAll('.slide').forEach( (element, index )=> {
         element.innerHTML = `
          <a href="./article.html?${cmsArrayArticles[index].id}">
             <h1 class="slide-title">${cmsArrayArticles[index].attributes.Title}</h1>
-            <h3 class="slide-overscript">${cmsArrayArticles[index].attributes.Overscript}</h3>
          </a>
         `;
     })

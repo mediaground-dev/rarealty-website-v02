@@ -206,6 +206,27 @@
     transform: translateX(30%);
   }
 }
+.btn-share-ra {
+  background-color: #1C4394;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-share-ra:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.btn-share-ra:active {
+  transform: translateY(-1px);
+}
+
 footer {
   background-color: rgba(255, 0, 0, 0.329);
 }
@@ -278,7 +299,6 @@ footer {
   display: block;
   width: 30px;
   height: 30px;
-  background-size: contain;
   margin: 36px 4px;
   background-repeat: no-repeat;
   background-position: center;
@@ -618,6 +638,7 @@ header .navbar-menu .selected {
   margin: 32px 0px;
 }
 .card-collection02-grid {
+  padding-bottom: 32px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
@@ -845,7 +866,6 @@ header .navbar-menu .selected {
   padding: 0px 130px;
 }
 .select-block-menu {
-  padding-bottom: 32px;
   display: flex;
   flex-direction: row;
   gap: 32px;
@@ -902,13 +922,13 @@ h1 {
 
 .btn-arrow-left {
   top: 48%;
-  left: 0;
+  left: 64px;
   transform: translate(-50%, -50%);
 }
 
 .btn-arrow-right {
   top: 48%;
-  right: 0;
+  right: 64px;
   transform: translate(50%, -50%);
 }
 
@@ -937,7 +957,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  align-items: start;
+  align-items: center;
   /* ====================== */
   padding: 4rem;
   position: absolute;
@@ -947,14 +967,18 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.slide a {
+  text-decoration: none;
+}
 .slide a .slide-title {
-  width: 465px;
+  width: 720px;
   font-family: "sofia-pro";
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
   line-height: 120%;
   color: #ffffff;
+  text-align: center;
 }
 .slide a .slide-overscript {
   font-family: "Inter";
@@ -981,16 +1005,16 @@ h1 {
   height: 1.2rem;
   border-radius: 50%;
   border: none;
-  background-color: #3a52d6;
+  background-color: #ffffff;
   cursor: pointer;
 }
 
 .dot:hover {
-  background-color: #1C4394;
+  background-color: rgb(224, 224, 224);
 }
 
 .dot--active {
-  background-color: #1C4394;
+  background-color: #F08D28;
 }
 
 * {
@@ -1028,6 +1052,7 @@ main .select-block div > h1 {
   font-weight: 700;
   font-size: 26px;
   line-height: 150%;
+  padding-top: 32px;
 }
 main .select-block .select-block-menu {
   cursor: pointer;

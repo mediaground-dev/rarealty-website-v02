@@ -14,14 +14,14 @@ main {
   color: $TEXT_DARK;
 
   .section-banner {
-    max-width: 1180px;
+    max-width: 1440px;
     margin: auto;
-    padding: 32px 0px;
+    padding-bottom: 32px;
   }
   .section-news {
     max-width: 1280px;
     margin: auto;
-    padding: 32px 0px;
+   padding: 32px 0px;
 
     &-intro {
       > h1 {
@@ -30,7 +30,7 @@ main {
         font-weight: 700;
         font-size: 26px;
         line-height: 150%;
-        margin-bottom: 24px;
+        margin-bottom: 32px;
       }
 
       > p {
@@ -40,7 +40,7 @@ main {
         font-weight: 400;
         font-size: 16px;
         line-height: 150%;
-        margin-bottom: 50px;
+        margin-bottom: 32px;
       }
 
       .select-block-menu {
@@ -75,7 +75,7 @@ main {
         font-weight: 700;
         font-size: 26px;
         line-height: 150%;
-        padding: 50px 0px 16px 0px;
+        padding: 32px 0px;
       }
 
       > p {
@@ -85,13 +85,13 @@ main {
         font-weight: 400;
         font-size: 16px;
         line-height: 150%;
+        padding-bottom: 32px;
       }
 
       .videos-block {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 32px 0px;
 
         &-main {
           width: 65%;
@@ -116,7 +116,7 @@ main {
       }
 
       > a {
-        padding: 32px 0px;
+        padding-top: 32px;
         align-self: center;
         text-decoration: none;
         font-family: 'Inter';

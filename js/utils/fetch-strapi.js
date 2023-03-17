@@ -56,7 +56,7 @@ export const fetchCardsByTag = async (tagId, pageSize = 4) => {
 };
 
 export const fetchArticleById = async (articleId) => {
-    const res = await fetch(`${STRAPI_URL}/api/blogs/${articleId}?populate[BannerImage][fields][0]=url&populate[ContentImage][fields][1]=url&populate[Tags][fields][3]=TagName`)
+    const res = await fetch(`${STRAPI_URL}/api/blogs/${articleId}?populate[BannerImage][fields][0]=url&populate[BannerImage][fields][1]=caption&populate[ContentImage][fields][0]=url&populate[ContentImage][fields][1]=caption&populate[Tags][fields][3]=TagName`)
     const articleObject = await res.json();
 
     return articleObject.data;

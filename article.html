@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RA | Realtor</title>
-    <!-- <link rel="icon" type="image/x-icon" href="./assets/logos/logo-mediaground.png"> -->
+    <link rel="icon" type="image/x-icon" href="./assets/logos/logo-ra.png">
 
     <link rel="stylesheet" href="./css/article.css">
 
@@ -25,67 +25,97 @@
                 </div>
 
                 <div class="navbar-menu">
-                    <a href="./">Home</a>
-                    <a href="./about.html">About</a>
-                    <a href="./areas.html">Areas</a>
-                    <a href="./news.html">News</a>
+                    <a class="btn-navbar-ra" href="./">Home</a>
+                    <a class="btn-navbar-ra" href="./about.html">About</a>
+                    <a class="btn-navbar-ra" href="./areas.html">Areas</a>
+                    <a class="btn-navbar-ra" href="./news.html">News</a>
                 </div>
 
                 <div class="navbar-contact">
-                    <a class="btn-primary" href="./contact.html">Contact</a>
+                    <a class="btn-primary-ra fw-medium" href="./contact.html">Contact</a>
                 </div>
             </div>
         </header>
 
         <section class="section-banner">
-            <div id="section-banner-img" class="section-banner-img"></div>
+            <div id="article-banner-img" class="article-banner-img"></div>
+            <div id="article-banner-caption" class="article-banner-caption"></div>
         </section>
 
         <section class="section-article">
-            <div class="section-article-time">
-                7 minutes reading
+            <div id="article-tags" class="article-tags"></div>
+
+            <h1 id="article-title"></h1>
+
+            <p id="article-intro"></p>
+
+            <div class="article-date-and-time">
+                <div id="article-date" class="article-date">
+                    <div class="calendar-logo"></div>
+                </div>
+
+                <div id="article-time" class="article-time">
+                    <div class="calendar-logo"></div>
+                </div>
             </div>
 
-            <div class="section-article-content">
-                <h1 id="article-title"></h1>
-                <p id="article-p01"></p>
-                </br>
-                <p id="article-p02"></p>
+            <h2 id="article-subtitle01"></h2>
 
-                <h2 id="article-subtitle01"></h2>
-                <p id="article-p03"></p>
+            <p id="article-p01"></p>
+            <p id="article-p02"></p>
 
-                <h2 id="article-subtitle02"></h2>
-                <div id="section-content-img" class="article-img"></div>
-                <p id="article-p04"></p>
+            <h2 id="article-subtitle02"></h2>
+            <div id="article-content-img" class="article-content-img"></div>
+            <div id="article-content-caption" class="article-content-caption"></div>
 
-                <div id="article-tags" class="article-tags"></div>
+            <p id="article-p03"></p>
+            <p id="article-p04"></p>
+        </section>
 
-                <div class="article-share">
-                    <h5>Share</h5>
+        <section class="section-share">
+            <div class="article-share">
+                <h5>Share</h5>
 
-                    <div class="article-share-icons">
-                        <a class="icon-tweeter" href='./'></a>
-                        <a class="icon-instagram" href='./'></a>
-                        <a class="icon-youtube" href='./'></a>
-                    </div>
+                <div class="article-share-icons">
+                    <a href='./' class="btn-share-ra icon-twitter"></a>
+                    <a href='./' class="btn-share-ra icon-instagram"></a>
+                    <a href='./' class="btn-share-ra icon-youtube"></a>
                 </div>
             </div>
         </section>
 
         <section class="card-collection">
-            <h1>Related news</h1>
+            <h1 class="card-collection-h1">Related news</h1>
 
             <div id="card-collection" class="cards"></div>
 
-            <a href="./">Explore featured neighborhoods ></a>
-
-            <!-- <script src="./js/components/card-collection-by-tags.js" type="module"></script> -->
+            <a class="btn-more-ra" href="./news.html">
+                Read more news
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15px" width="15px"
+                    class="icon">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"
+                        stroke="#292D32"
+                        d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008">
+                    </path>
+                </svg>
+            </a>
         </section>
 
-        <section class="contact-banner">
-            <h1>Need Help?</h1>
-            <a class="btn-primary" href="./">Schedule a meeting ></a>
+        <section class="contact-banner-section">
+            <div class="contact-banner-lh-img"></div>
+
+            <div class="contact-banner-block">
+                <h1>Need Help?</h1>
+
+                <a class="btn-primary-ra" href="./contact.html">
+                    Schedule a meeting
+                    <div class="arrow-wrapper">
+                        <div class="arrow"></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="contact-banner-rh-img"></div>
         </section>
 
         <footer class="footer">

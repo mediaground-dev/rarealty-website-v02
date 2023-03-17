@@ -42,13 +42,13 @@ h1 {
 
 .btn-arrow-left {
   top: 48%;
-  left: 0;
+  left: 64px;
   transform: translate(-50%, -50%);
 }
 
 .btn-arrow-right {
   top: 48%;
-  right: 0;
+  right: 64px;
   transform: translate(50%, -50%);
 }
 
@@ -77,7 +77,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  align-items: start;
+  align-items: center;
   /* ====================== */
   padding: 4rem;
 
@@ -94,14 +94,17 @@ h1 {
   background-size: cover;
 
   a {
+    text-decoration: none;
+
     .slide-title {
-      width: 465px;
+      width: 720px;
       font-family: 'sofia-pro';
       font-style: normal;
       font-weight: 700;
       font-size: 32px;
       line-height: 120%;
       color: #ffffff;
+      text-align: center;
     }
 
     .slide-overscript {
@@ -135,15 +138,15 @@ h1 {
   border-radius: 50%;
   border: none;
 
-  background-color: #3a52d6;
+  background-color: #ffffff;
 
   cursor: pointer;
 }
 
 .dot:hover {
-  background-color: $PRIMARY_COLOR;
+  background-color: rgb(224, 224, 224);
 }
 
 .dot--active {
-  background-color: $PRIMARY_COLOR;
+  background-color: #F08D28;
 }
