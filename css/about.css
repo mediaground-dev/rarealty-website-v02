@@ -134,7 +134,7 @@
   left: 50%;
   position: absolute;
   width: 0%;
-  height: 3px;
+  height: 4px;
   background-color: #F08D28;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
@@ -158,6 +158,7 @@
   font-weight: 400;
   font-size: 16px;
   color: #0B0B0B;
+  text-transform: uppercase;
   height: 16px;
 }
 
@@ -210,15 +211,15 @@
   background-color: #1C4394;
   border: none;
   border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 15px #1C4394;
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
 }
 
 .btn-share-ra:hover {
-  background-color: #23c483;
-  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  background-color: #1E4DAE;
+  box-shadow: 0px 15px 20px #1E4DAE;
   color: #fff;
   transform: translateY(-7px);
 }
@@ -228,7 +229,7 @@
 }
 
 footer {
-  background-color: rgba(255, 0, 0, 0.329);
+  background-color: #1C4394;
 }
 
 .footer {
@@ -239,7 +240,6 @@ footer {
   color: #FFFFFF;
   display: grid;
   grid-template-columns: 5fr 4fr;
-  grid-template-rows: 1fr 1f;
   row-gap: 64px;
   column-gap: 48px;
 }
@@ -397,7 +397,6 @@ footer {
 
 header {
   width: 100%;
-  background-color: rgba(139, 247, 112, 0.329);
 }
 header .navbar {
   background-color: rgb(255, 255, 255);
@@ -666,7 +665,7 @@ header .navbar-menu .selected {
   font-size: 18px;
   line-height: 120%;
   color: #868686;
-  margin: 16px 0px;
+  margin-bottom: 16px;
 }
 .card-collection02-grid .card h1,
 .card-collection02-grid .card h1 > a {
@@ -677,6 +676,7 @@ header .navbar-menu .selected {
   line-height: 140%;
   text-decoration: none;
   color: #3d3b40;
+  margin: 16px 0px;
 }
 .card-collection02 a {
   text-decoration: none;
@@ -700,7 +700,7 @@ header .navbar-menu .selected {
   position: relative;
   z-index: 0;
   background-color: #efefef;
-  min-width: 1188px;
+  min-width: 1180px;
   padding: 30px 130px;
   margin-top: 30px;
   margin-bottom: 68px;

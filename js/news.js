@@ -16,19 +16,19 @@ const renderCardCollection = (allTagsContent => {
             `<a href="./article.html?${article.id}">
                 <div class="card card-0${index + 1}">
                     <div style="background: url('${imageURL}')" class="card-img"></div>
-                    <h3>${article.attributes.Overscript}</h3>
                     <h1>${article.attributes.Title}</h1>
+                    <h3 class="cards-small-h2">${article.attributes.ReadingTime} minutes reading</h3>
                 </div>
             </a>`;
     });
 });
 
-docTagTabMenu.innerHTML += `<div id="allTagsTab" tag="All" class="tag-tab tag-tab-selected">All</div>`;
+docTagTabMenu.innerHTML += `<div id="allTagsTab" tag="All" class="tag-tab tag-tab-selected btn-navbar-ra">All</div>`;
 
 const tags = await fetchTags();
 
 tags.forEach(tag => {
-    docTagTabMenu.innerHTML += `<div id="${tag.id}" class="tag-tab" tag="Tag01">${tag.attributes.TagName}</div>`;
+    docTagTabMenu.innerHTML += `<div id="${tag.id}" class="tag-tab btn-navbar-ra" tag="Tag01">${tag.attributes.TagName}</div>`;
 });
 
 const allTagsCardsContent = await fetchCardsByDate(pageSize, pageOne);

@@ -4,6 +4,7 @@ const docImgBanner     = document.querySelector('#article-banner-img');
 const docCaptionBanner = document.querySelector('#article-banner-caption');
 
 const docTags  = document.querySelector('#article-tags');
+const docAreas = document.querySelector('#article-areas');
 const docTitle = document.querySelector('#article-title');
 const docIntro = document.querySelector('#article-intro');
 
@@ -33,6 +34,11 @@ cmsArrayTags.forEach(tag => {
     docTags.innerHTML += `<div id="tag.id">${tag.attributes.TagName}</div>`;
 });
 
+const cmsArrayAreas = articleContent.attributes.Areas.data;
+cmsArrayAreas.forEach(area => {
+    docAreas.innerHTML += `<div id="tag.id">${area.attributes.Name}</div>`;
+});
+
 docImgBanner.style.backgroundImage = `url(${cmsBannerURL})`;
 docCaptionBanner.innerHTML = cmsBannerCaption;
 
@@ -60,20 +66,7 @@ docCaptionContent.innerHTML = cmsContentCaption;
 const docCardCollection = document.querySelector('#card-collection');
 
 const cardRender = (strapiResponse) => {
-    // console.log(strapiResponse)
-    strapiResponse.data.forEach((article, index) => {
-    //     const CardImageURL = article.attributes.CardImage.data.attributes.url;
-    //     docCardCollection.innerHTML += 
-    //         `<div class="card-small">
-    //             <a href="./article.html?${index}">
-    //                 <div style="background: url('${CardImageURL}')" class="card-small-img"></div>
-    //                 <h1>${article.attributes.Title}</h1>
-    //                 <h2>${article.attributes.Overscript}</h2>
-    //             </a>
-    //         </div>`;
-    // });
-
-    // areaCardsContent.forEach(article => {
+    strapiResponse.data.forEach(article => {
         const imageURL = article.attributes.CardImage.data.attributes.url;
         docCardCollection.innerHTML +=
             `<div class="cards-small">
@@ -88,25 +81,3 @@ const cardRender = (strapiResponse) => {
 
 const strapiResponse = await fetchCardsByDate();
 cardRender(strapiResponse);
-
-// const docTag01 = document.querySelector('#Tag01');
-// docTag01.classList.add('tag-tab-selected');
-// const tag01 = docTag01.getAttribute('tag');
-// const strapiResponse = await fetchCardsByTag(tag01, 4);
-
-
-
-// Add on click event that fetch news related to tag //
-// document.querySelectorAll('.tag').forEach(element => {
-//     element.addEventListener('click', async () => {
-//         document.querySelector('.tag-tab-selected').classList.remove('tag-tab-selected');
-//         element.classList.add('tag-tab-selected');
-
-//         const tag = element.getAttribute('tag');
-//         const strapiResponse = await fetchCardsByTag(tag, 4);
-
-//         docCardCollection.innerHTML = '';
-
-//         cardRender(strapiResponse);
-//     });
-// });

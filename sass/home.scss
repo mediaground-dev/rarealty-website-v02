@@ -18,12 +18,13 @@ main {
   }
 
   .section-banner-img {
-    height: 613px;
+    width: 1440px;
+    margin: auto;
+    height: 576px;
     background-image: url('../assets/images/home-heroimage.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
-    background-color: rgba(255, 0, 0, 0.336);
     margin-bottom: 32px;
   }
 

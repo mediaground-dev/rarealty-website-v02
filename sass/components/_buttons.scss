@@ -1,48 +1,5 @@
 @use '../abstracts' as *;
 
-// .btn-primary {
-//   background-color: $PRIMARY_COLOR;
-//   text-decoration: none;
-
-//   font-family: 'Inter';
-//   font-style: normal;
-//   font-weight: 400;
-//   font-size: 16px;
-//   line-height: 24px;
-
-//   color: $TEXT_LIGHT;
-
-//   padding: 12px 24px;
-//   border-radius: 25px;
-
-//   cursor: pointer;
-// }
-
-// .btn-primary:hover {
-//   background-color: $PRIMARY_COLOR_HOV;
-// }
-
-// .btn-primary:active {
-//   background-color: $PRIMARY_COLOR_ACT;
-// }
-
-// .btn-secondary {
-//   background-color: $PRIMARY_COLOR;
-//   text-decoration: none;
-
-//   font-family: 'Inter';
-//   font-style: normal;
-//   font-weight: 400;
-//   font-size: 16px;
-//   line-height: 150%;
-
-//   color: $TEXT_LIGHT;
-
-//   border: 2px solid #ffffff;
-//   padding: 10px 20px;
-//   border-radius: 40% 40% 40% 40% / 100% 100% 100% 100%;
-// }
-
 .btn-primary-ra {
   --arrow-width: 10px;
   --arrow-stroke: 2px;
@@ -136,7 +93,7 @@
   left: 50%;
   position: absolute;
   width: 0%;
-  height: 3px;
+  height: 4px;
   background-color: $SECONDARY_COLOR;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
@@ -161,6 +118,7 @@
   font-weight: 400;
   font-size: 16px;
   color:  #0B0B0B;
+  text-transform: uppercase;
 
   height: 16px;
 }
@@ -223,15 +181,15 @@
   background-color: $PRIMARY_COLOR;
   border: none;
   border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 15px $PRIMARY_COLOR;
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
 }
 
 .btn-share-ra:hover {
-  background-color: #23c483;
-  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  background-color: $PRIMARY_COLOR_HOV;
+  box-shadow: 0px 15px 20px $PRIMARY_COLOR_HOV;
   color: #fff;
   transform: translateY(-7px);
 }

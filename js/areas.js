@@ -53,7 +53,7 @@ const renderCardCollection = (areaCardsContent) => {
                 <a href="./article.html?${article.id}">
                     <div style="background: url('${imageURL}')" class="cards-small-img" loading="lazy"></div>
                     <h1 class="cards-small-h1">${article.attributes.Title}</h1>
-                    <h2 class="cards-small-h2">${article.attributes.Overscript}</h2>
+                    <h2 class="cards-small-h2">${article.attributes.ReadingTime} minutes reading</h2>
                 </a>
             </div>`;
     });
@@ -63,9 +63,9 @@ const areaNames = await fetchAreaNames();
 
 areaNames.forEach((area, index) => {
     if (index === 0) {
-        docAreaTabMenu.innerHTML += `<div id="${area.id}" class="area-tab area-tab-selected">${area.attributes.Name}</div>`;
+        docAreaTabMenu.innerHTML += `<div id="${area.id}" class="area-tab area-tab-selected btn-navbar-ra">${area.attributes.Name}</div>`;
     } else {
-        docAreaTabMenu.innerHTML += `<div id="${area.id}" class="area-tab">${area.attributes.Name}</div>`;
+        docAreaTabMenu.innerHTML += `<div id="${area.id}" class="area-tab btn-navbar-ra">${area.attributes.Name}</div>`;
     }
 });
 

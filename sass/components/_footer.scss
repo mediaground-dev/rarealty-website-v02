@@ -1,8 +1,7 @@
 @use '../abstracts/colors' as *;
 
 footer {
-  // background-color: $PRIMARY_COLOR;
-  background-color: rgba(255, 0, 0, 0.329);
+  background-color: $PRIMARY_COLOR;
 }
 
 .footer {
@@ -14,7 +13,6 @@ footer {
 
   display: grid;
   grid-template-columns: 5fr 4fr;
-  grid-template-rows: 1fr 1f;
   row-gap : 64px;
   column-gap: 48px;
 

@@ -19,9 +19,10 @@ main {
     padding-bottom: 32px;
   }
   .section-news {
-    max-width: 1280px;
+    width: 1440px;
+    padding: 32px 130px;
     margin: auto;
-   padding: 32px 0px;
+    // padding: 32px 0px;
 
     &-intro {
       > h1 {
@@ -58,10 +59,10 @@ main {
   .section-videos {
     background-color: #f4f4f4;
     width: 100%;
-    padding: 32px 0px;
-
+    
     &-content {
-      max-width: 1280px;
+      max-width: 1440px;
+      padding: 32px 130px;
       margin: auto;
 
       display: flex;
@@ -89,13 +90,13 @@ main {
       }
 
       .videos-block {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 80px;
+        margin: auto;
 
         &-main {
-          width: 65%;
-
           iframe {
             height: 440px;
             box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.32);
@@ -104,14 +105,17 @@ main {
         }
 
         &-column {
-          width: 25%;
-
           iframe {
             height: 138px;
             box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.32);
             border-radius: 16px;
             margin-bottom: 12px;
           }
+        }
+
+        &-more {
+          margin: auto;
+          padding: 16px 0px;
         }
       }
 
@@ -131,9 +135,9 @@ main {
   }
 
   .section-social {
-    max-width: 1280px;
+    max-width: 1440px;
+      padding: 32px 130px;
     margin: auto;
-    padding: 32px 0px;
 
     > h1 {
       font-family: 'sofia-pro';
