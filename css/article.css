@@ -311,8 +311,6 @@ footer {
 }
 .footer-social-icons .icon-youtube {
   background-image: url("../../assets/icons/footer-youtube.svg");
-  height: 32px;
-  width: 29px;
 }
 .footer-social p {
   font-family: "Inter";
@@ -640,9 +638,8 @@ header .navbar-menu .selected {
   padding-bottom: 32px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
   gap: 48px;
-  align-items: flex-start;
+  align-content: start;
   width: 100%;
 }
 .card-collection02-grid .card {
@@ -667,8 +664,7 @@ header .navbar-menu .selected {
   color: #868686;
   margin-bottom: 16px;
 }
-.card-collection02-grid .card h1,
-.card-collection02-grid .card h1 > a {
+.card-collection02-grid .card h1 {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -680,6 +676,12 @@ header .navbar-menu .selected {
 }
 .card-collection02 a {
   text-decoration: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #3d3b40;
 }
 .card-collection02 #btnMoreNews {
   display: none;
@@ -1092,10 +1094,31 @@ main .section-article .article-date-and-time {
   margin-bottom: 32px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   border-bottom: solid 1px #cbcbcb;
 }
 main .section-article .article-date-and-time .article-date {
-  padding-right: 64px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 64px;
+}
+main .section-article .article-date-and-time .article-date .calendar-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background-image: url("../assets/icons/calendar-24x24px.png");
+}
+main .section-article .article-date-and-time .article-time {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+main .section-article .article-date-and-time .article-time .timer-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background-image: url("../assets/icons/clock-24x24px.png");
 }
 main .section-article .article-content-img {
   width: 100%;

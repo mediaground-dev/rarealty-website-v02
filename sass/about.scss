@@ -21,6 +21,15 @@ main {
     padding-top: 64px;
   }
 
+  .quotation-marks{
+    position: relative;
+    margin-top: 64px;
+    left: -32px;
+    width: 53px;
+    height: 53px;
+    background-image: url('../assets/icons/quotation-marks-53x53px.png');
+  }
+
   .img-with-text {
     h1 {
       color: $PRIMARY_COLOR;

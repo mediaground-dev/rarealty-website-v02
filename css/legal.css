@@ -311,8 +311,6 @@ footer {
 }
 .footer-social-icons .icon-youtube {
   background-image: url("../../assets/icons/footer-youtube.svg");
-  height: 32px;
-  width: 29px;
 }
 .footer-social p {
   font-family: "Inter";
@@ -640,9 +638,8 @@ header .navbar-menu .selected {
   padding-bottom: 32px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
   gap: 48px;
-  align-items: flex-start;
+  align-content: start;
   width: 100%;
 }
 .card-collection02-grid .card {
@@ -667,8 +664,7 @@ header .navbar-menu .selected {
   color: #868686;
   margin-bottom: 16px;
 }
-.card-collection02-grid .card h1,
-.card-collection02-grid .card h1 > a {
+.card-collection02-grid .card h1 {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -680,6 +676,12 @@ header .navbar-menu .selected {
 }
 .card-collection02 a {
   text-decoration: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #3d3b40;
 }
 .card-collection02 #btnMoreNews {
   display: none;
@@ -1030,11 +1032,12 @@ main {
 }
 main .section-legal {
   max-width: 1440px;
+  min-height: 730px;
   margin: auto;
   padding: 54px 0px 80px 0px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   text-align: center;
 }
@@ -1067,16 +1070,19 @@ main .section-legal-menu {
   font-size: 20px;
   line-height: 140%;
 }
-main .section-legal-menu div {
+main .section-legal-menu .tab-menu {
+  cursor: pointer;
   padding-bottom: 8px;
 }
-main .section-legal-menu .selected {
+main .section-legal-menu .tab-selected {
   box-shadow: inset 0px -4px 0px #F08D28;
 }
-main .section-legal p {
+main .section-legal .legal-tab-content {
+  margin-bottom: 80px;
+}
+main .section-legal .legal-tab-content p {
   max-width: 886px;
   text-align: left;
-  margin-bottom: 80px;
 }
 
 /*# sourceMappingURL=legal.css.map */

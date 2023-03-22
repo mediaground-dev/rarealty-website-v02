@@ -311,8 +311,6 @@ footer {
 }
 .footer-social-icons .icon-youtube {
   background-image: url("../../assets/icons/footer-youtube.svg");
-  height: 32px;
-  width: 29px;
 }
 .footer-social p {
   font-family: "Inter";
@@ -640,9 +638,8 @@ header .navbar-menu .selected {
   padding-bottom: 32px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
   gap: 48px;
-  align-items: flex-start;
+  align-content: start;
   width: 100%;
 }
 .card-collection02-grid .card {
@@ -667,8 +664,7 @@ header .navbar-menu .selected {
   color: #868686;
   margin-bottom: 16px;
 }
-.card-collection02-grid .card h1,
-.card-collection02-grid .card h1 > a {
+.card-collection02-grid .card h1 {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -680,6 +676,12 @@ header .navbar-menu .selected {
 }
 .card-collection02 a {
   text-decoration: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #3d3b40;
 }
 .card-collection02 #btnMoreNews {
   display: none;
@@ -1033,6 +1035,14 @@ main section {
 }
 main .padding-top-64 {
   padding-top: 64px;
+}
+main .quotation-marks {
+  position: relative;
+  margin-top: 64px;
+  left: -32px;
+  width: 53px;
+  height: 53px;
+  background-image: url("../assets/icons/quotation-marks-53x53px.png");
 }
 main .img-with-text h1 {
   color: #1C4394;

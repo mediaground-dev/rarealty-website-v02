@@ -87,11 +87,34 @@ main {
       margin-bottom: 32px;
       display: flex;
       flex-direction: row;
-
+align-items: center;
       border-bottom: solid 1px #cbcbcb;
 
       .article-date {
-        padding-right: 64px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 64px;
+
+        .calendar-logo {
+          width: 24px;
+          height: 24px;
+          margin-right: 8px;
+          background-image: url('../assets/icons/calendar-24x24px.png');
+        }
+      }
+
+      .article-time {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        .timer-logo {
+          width: 24px;
+          height: 24px;
+          margin-right: 8px;
+          background-image: url('../assets/icons/clock-24x24px.png');
+        }
       }
     }
 

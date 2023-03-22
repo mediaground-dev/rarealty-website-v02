@@ -45,8 +45,8 @@ docCaptionBanner.innerHTML = cmsBannerCaption;
 docTitle.innerHTML =  articleContent.attributes.Title;
 docIntro.innerHTML =  articleContent.attributes.Intro;
 
-docDate.innerHTML  = `Published on ${articleContent.attributes.Date}`;
-docReadingTime.innerHTML = `${articleContent.attributes.ReadingTime} minutes reading`;
+docDate.innerHTML        += `Published on ${articleContent.attributes.Date}`;
+docReadingTime.innerHTML += `${articleContent.attributes.ReadingTime} minutes reading`;
 
 docSubtitle01.innerHTML  = articleContent.attributes.Subtitle01;
 docSubtitle02.innerHTML  = articleContent.attributes.Subtitle02;
@@ -73,7 +73,7 @@ const cardRender = (strapiResponse) => {
                 <a href="./article.html?${article.id}">
                     <div style="background: url('${imageURL}')" class="cards-small-img" loading="lazy"></div>
                     <h1 class="cards-small-h1">${article.attributes.Title}</h1>
-                    <h2 class="cards-small-h2">${article.attributes.Overscript}</h2>
+                    <h2 class="cards-small-h2">${article.attributes.ReadingTime} minutes reading</h2>
                 </a>
             </div>`;
     });

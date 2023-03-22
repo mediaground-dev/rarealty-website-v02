@@ -36,7 +36,7 @@ renderCardCollection(allTagsCardsContent.data);
 sessionStorage.setItem(`AllTagsCardContent`, JSON.stringify(allTagsCardsContent));
 
 if (allTagsCardsContent.meta.pagination.pageCount > 1) {
-    btnMoreNews.style.display = 'block';
+    btnMoreNews.style.display = 'flex';
 
     const allTagsCardsContent2 = await fetchCardsByDate(pageSize, pageTwo);
     sessionStorage.setItem(`AllTagsCardContent2`, JSON.stringify(allTagsCardsContent2));
