@@ -76,17 +76,17 @@ const areaCardsContent = areaFirstContent.attributes.Articles.data;
 renderCardCollection(areaCardsContent);
 
 // Fill Card Collection
-if (areaCardsContent.length < 4) {
-    const pageSize = 4 - areaCardsContent.length;
-    const articleIds = [];
+// if (areaCardsContent.length < 4) {
+//     const pageSize = 4 - areaCardsContent.length;
+//     const articleIds = [];
 
-    areaCardsContent.forEach(article => {
-        articleIds.push(article.id);
-    })
+//     areaCardsContent.forEach(article => {
+//         articleIds.push(article.id);
+//     })
 
-    const othersArticleContent = await fetchFillCardCollection(articleIds, pageSize);
-    renderCardCollection(othersArticleContent);
-}
+//     const othersArticleContent = await fetchFillCardCollection(articleIds, pageSize);
+//     renderCardCollection(othersArticleContent);
+// }
 
 // Store in Session the content of the other Areas
 areaNames.forEach(async area => {
@@ -96,17 +96,17 @@ areaNames.forEach(async area => {
     const areaCardsContent = areaContent.attributes.Articles.data;
 
     // Fill Card Collection
-    if (areaCardsContent.length < 4) {
-        const pageSize = 4 - areaCardsContent.length;
-        const articleIds = [];
+    // if (areaCardsContent.length < 4) {
+    //     const pageSize = 4 - areaCardsContent.length;
+    //     const articleIds = [];
 
-        areaCardsContent.forEach(article => {
-            articleIds.push(article.id);
-        })
+    //     areaCardsContent.forEach(article => {
+    //         articleIds.push(article.id);
+    //     })
 
-        const othersArticleContent = await fetchFillCardCollection(articleIds, pageSize);
-        sessionStorage.setItem(`OtherCards-${area.id}`, JSON.stringify(othersArticleContent));
-    }
+    //     const othersArticleContent = await fetchFillCardCollection(articleIds, pageSize);
+    //     sessionStorage.setItem(`OtherCards-${area.id}`, JSON.stringify(othersArticleContent));
+    // }
 });
 
 document.querySelectorAll('.area-tab').forEach(docAreaTab => {
@@ -125,9 +125,9 @@ document.querySelectorAll('.area-tab').forEach(docAreaTab => {
         renderCardCollection(areaCardsContent);
 
         // Fill Card Collection
-        const othersArticleContent = JSON.parse(sessionStorage.getItem(`OtherCards-${docAreaTab.id}`));
-        if (othersArticleContent !== null) {
-            renderCardCollection(othersArticleContent);
-        }
+        // const othersArticleContent = JSON.parse(sessionStorage.getItem(`OtherCards-${docAreaTab.id}`));
+        // if (othersArticleContent !== null) {
+        //     renderCardCollection(othersArticleContent);
+        // }
     });
 });

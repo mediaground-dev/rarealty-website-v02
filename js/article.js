@@ -1,4 +1,4 @@
-import { fetchArticleById, fetchCardsByTag, fetchCardsByDate } from './utils/fetch-strapi.js';
+import { fetchArticleById, fetchCardsByDate } from './utils/fetch-strapi.js';
 
 const docImgBanner     = document.querySelector('#article-banner-img');
 const docCaptionBanner = document.querySelector('#article-banner-caption');

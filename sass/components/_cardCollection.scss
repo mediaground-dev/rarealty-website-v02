@@ -21,7 +21,8 @@
 
   .cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
+    gap: 72px;
     padding-bottom: 32px;
 
     &-small {
@@ -43,7 +44,7 @@
         font-weight: 500;
         font-size: 14.825px;
         line-height: 150%;
-        color: #000000;
+        color: #868686;
       }
 
       &-img {

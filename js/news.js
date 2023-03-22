@@ -33,8 +33,6 @@ tags.forEach(tag => {
 
 const allTagsCardsContent = await fetchCardsByDate(pageSize, pageOne);
 
-console.log(allTagsCardsContent)
-
 renderCardCollection(allTagsCardsContent.data);
 sessionStorage.setItem(`AllTagsCardContent`, JSON.stringify(allTagsCardsContent));
 
@@ -45,6 +43,8 @@ if (allTagsCardsContent.meta.pagination.pageCount > 1) {
     sessionStorage.setItem(`AllTagsCardContent2`, JSON.stringify(allTagsCardsContent2));
 
     btnMoreNews.addEventListener('click', () => {
+
+        console.log(allTagsCardsContent2)
         renderCardCollection(allTagsCardsContent2.data);
         btnMoreNews.style.display = 'none';
     });
@@ -61,18 +61,19 @@ tags.forEach(async tag => {
         sessionStorage.setItem(`tagCardContent-${tag.id}-p2`, JSON.stringify(tagCardContent2));
     }
 
+    console.log(tagCardContent)
     // If cards are less than 6, fetch others card by date to fill
-    if (tagCardContent.length < pageSize) {
-        const pageSizeFill = pageSize - tagCardContent.length;
-        const articleIds = [];
+    // if (tagCardContent.length < pageSize) {
+    //     const pageSizeFill = pageSize - tagCardContent.length;
+    //     const articleIds = [];
 
-        tagCardContent.forEach(article => {
-            articleIds.push(article.id);
-        })
+    //     tagCardContent.forEach(article => {
+    //         articleIds.push(article.id);
+    //     })
 
-        const othersArticleContent = await fetchFillCardCollection(articleIds, pageSizeFill);
-        sessionStorage.setItem(`OtherCards-${tag.id}`, JSON.stringify(othersArticleContent));
-    }
+    //     const othersArticleContent = await fetchFillCardCollection(articleIds, pageSizeFill);
+    //     sessionStorage.setItem(`OtherCards-${tag.id}`, JSON.stringify(othersArticleContent));
+    // }
 });
 
 document.querySelectorAll('.tag-tab').forEach(docTagTab => {
