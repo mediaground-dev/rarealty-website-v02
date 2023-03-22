@@ -64,4 +64,37 @@ main {
       box-shadow: inset 0px -4px 0px $SECONDARY_COLOR;
     }
   }
+
+  .section-height {
+    position: relative;
+    width: 1440px;
+    height: 275px;
+    margin: auto;
+
+    .contact-banner-lh-img,
+    .contact-banner-rh-img {
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: top;
+    }
+
+    .contact-banner-lh-img {
+      position: absolute;
+      top: -40px;
+      left: -76px;
+      width: 341px;
+      height: 331px;
+      background-image: url('../assets/images/areas-vector-left.png');
+      z-index: -1;
+    }
+    .contact-banner-rh-img {
+      position: absolute;
+      top: 0px;
+      right: -20px;
+      width: 432px;
+      height: 304px;
+      background-image: url('../assets/images/areas-vector-right.png');
+      z-index: 2;
+    }
+  }
 }

@@ -1,6 +1,7 @@
 @use '../abstracts/colors' as *;
 
 .contact-form {
+  position: relative;
   max-width: 1440px;
   margin: auto;
   padding: 80px 126px;
@@ -10,6 +11,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
 
   &-fields {
     width: 55%;
@@ -96,7 +98,8 @@
     div {
       width: 100%;
       padding: 48px 48px;
-  
+      background: white;
+
       box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
       border-radius: 12px;
 
@@ -123,11 +126,23 @@
     }
 
     div > a {
-      
       & > img {
         width: 100%;
         border-radius: 30px;
       }
     }
+  }
+
+  .contact-vector {
+
+    position: absolute;
+    top: 34px;
+    right: -58px;
+    width: 681px;
+    height: 882px;
+    background-image: url("../../assets//images/contact-vector.png");
+    z-index: -4;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }

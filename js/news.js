@@ -32,6 +32,9 @@ tags.forEach(tag => {
 });
 
 const allTagsCardsContent = await fetchCardsByDate(pageSize, pageOne);
+
+console.log(allTagsCardsContent)
+
 renderCardCollection(allTagsCardsContent.data);
 sessionStorage.setItem(`AllTagsCardContent`, JSON.stringify(allTagsCardsContent));
 

@@ -59,7 +59,7 @@ main {
   .section-videos {
     background-color: #f4f4f4;
     width: 100%;
-    
+
     &-content {
       max-width: 1440px;
       padding: 32px 130px;
@@ -135,8 +135,9 @@ main {
   }
 
   .section-social {
+    position: relative;
     max-width: 1440px;
-      padding: 32px 130px;
+    padding: 32px 130px;
     margin: auto;
 
     > h1 {
@@ -187,6 +188,17 @@ main {
           // width: 368px;
         }
       }
+    }
+
+    .social-vector {
+      position: absolute;
+      bottom: -25px;
+      left: 0px;
+      width: 1440px;
+      height: 250px;
+      background-image: url('../assets/images/news-socialmedia-vector.png');
+      background-repeat: no-repeat;
+      z-index: -1;
     }
   }
 }

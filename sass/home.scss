@@ -34,4 +34,37 @@ main {
     background-size: cover;
     background-position: top, center;
   }
+
+  .section-height {
+    position: relative;
+    width: 1440px;
+    height: 275px;
+    margin: auto;
+    
+    .contact-banner-lh-img,
+    .contact-banner-rh-img {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
+    }
+
+    .contact-banner-lh-img {
+      position: absolute;
+      top: 0px;
+      left: -14px;
+      width: 400px;
+      height: 280px;
+      background-image: url('../assets/images/home-vector-left.png');
+      z-index: 2;
+    }
+    .contact-banner-rh-img {
+      position: absolute;
+      top: -80px;
+      right: -41px;
+      width: 270px;
+      height: 364px;
+      background-image: url('../assets/images/home-vector-right.png');
+      z-index: -1;
+    }
+  }
 }

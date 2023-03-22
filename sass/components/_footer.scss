@@ -5,6 +5,8 @@ footer {
 }
 
 .footer {
+  position: relative;
+  z-index: 4;
   background-color: $PRIMARY_COLOR;
   max-width: 1440px; 
   margin: auto;
