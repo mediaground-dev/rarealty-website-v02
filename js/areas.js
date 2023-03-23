@@ -60,14 +60,25 @@ const renderCardCollection = (areaCardsContent) => {
 };
 
 const areaNames = await fetchAreaNames();
+const areaSelectedId = location.search.substring(1);
 
-areaNames.forEach((area, index) => {
-    if (index === 0) {
-        docAreaTabMenu.innerHTML += `<div id="${area.id}" class="area-tab area-tab-selected btn-navbar-ra">${area.attributes.Name}</div>`;
-    } else {
-        docAreaTabMenu.innerHTML += `<div id="${area.id}" class="area-tab btn-navbar-ra">${area.attributes.Name}</div>`;
-    }
-});
+if (areaSelectedId === '') {
+    areaNames.forEach((area, index) => {
+        if (index === 0) {
+            docAreaTabMenu.innerHTML += `<div id="${area.id}" class="area-tab area-tab-selected btn-navbar-ra">${area.attributes.Name}</div>`;
+        } else {
+            docAreaTabMenu.innerHTML += `<div id="${area.id}" class="area-tab btn-navbar-ra">${area.attributes.Name}</div>`;
+        }
+    });
+} else {
+    areaNames.forEach(area => {
+        if (areaSelectedId == area.id) {
+            docAreaTabMenu.innerHTML += `<div id="${area.id}" class="area-tab area-tab-selected btn-navbar-ra">${area.attributes.Name}</div>`;
+        } else {
+            docAreaTabMenu.innerHTML += `<div id="${area.id}" class="area-tab btn-navbar-ra">${area.attributes.Name}</div>`;
+        }
+    });
+}
 
 const areaFirstContent = await fetchAreaById(areaNames[0].id);
 renderAreaContent(areaFirstContent);

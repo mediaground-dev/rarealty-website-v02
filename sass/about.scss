@@ -21,7 +21,7 @@ main {
     padding-top: 64px;
   }
 
-  .quotation-marks{
+  .quotation-marks {
     position: relative;
     margin-top: 64px;
     left: -32px;
@@ -141,6 +141,21 @@ main {
       text-align: center;
       color: $TEXT_DARK;
       margin-bottom: 40px;
+    }
+
+    .img-services-01,
+    .img-services-02 {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .img-services-01 {
+      background-image: url('../assets/images/services-01-buy.jpg');
+    }
+   
+    .img-services-02 {
+      background-image: url('../assets/images/services-02-invest.jpg');
     }
   }
 }

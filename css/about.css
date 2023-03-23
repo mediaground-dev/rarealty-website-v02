@@ -1135,5 +1135,17 @@ main .section-services > p {
   color: #3d3b40;
   margin-bottom: 40px;
 }
+main .section-services .img-services-01,
+main .section-services .img-services-02 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+main .section-services .img-services-01 {
+  background-image: url("../assets/images/services-01-buy.jpg");
+}
+main .section-services .img-services-02 {
+  background-image: url("../assets/images/services-02-invest.jpg");
+}
 
 /*# sourceMappingURL=about.css.map */
