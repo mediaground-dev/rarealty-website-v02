@@ -57,6 +57,17 @@
         background-size: cover !important;
         background-position: center !important;
       }
+
+      &-img-error {
+        max-width: 240px;
+        height: 166px;
+        border-radius: 9px;
+        background-color: rgb(170, 170, 170) !important;
+
+        background-repeat: no-repeat !important;
+        background-size: 80px !important;
+        background-position: center !important;
+      }
     }
   }
 
@@ -109,7 +120,6 @@
         line-height: 120%;
         color: #868686;
         margin-bottom: 16px;
-        
       }
 
       h1 {
@@ -133,8 +143,8 @@
     font-size: 16px;
     line-height: 150%;
     color: $TEXT_DARK;
-  } 
-  
+  }
+
   #btnMoreNews {
     display: none;
     padding: 16px;

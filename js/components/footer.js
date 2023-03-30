@@ -4,8 +4,12 @@ const docFooterAreaLinks = document.querySelector('#footer-area-links');
 
 const areaNames = await fetchAreaNames();
 
-areaNames.forEach(area => {
-    docFooterAreaLinks.innerHTML += `
+if (!areaNames) {
+    docFooterAreaLinks.innerHTML += '<a>Areas Not Found</a>'
+} else {
+    areaNames.forEach(area => {
+        docFooterAreaLinks.innerHTML += `
         <a href="./areas.html?${area.id}#section-areas">${area.attributes.Name}</a>
     `;
-});
+    });
+}

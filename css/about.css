@@ -489,16 +489,15 @@ header .navbar-menu .selected {
 }
 
 .img-with-text2 {
-  max-width: 1440px;
-  margin: auto;
-  padding: 40px 130px;
   color: #3d3b40;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 52px;
 }
 .img-with-text2 .content {
-  width: 48%;
+  flex-basis: 520px;
+  flex-shrink: 1;
   padding: 32px 0px;
   display: flex;
   flex-direction: column;
@@ -521,9 +520,10 @@ header .navbar-menu .selected {
   margin-bottom: 40px;
 }
 .img-with-text2 .image {
+  flex-basis: 520px;
+  flex-shrink: 1;
   background-color: rgb(170, 170, 170);
   height: 490px;
-  width: 48%;
   border-radius: 16px;
   background-size: cover !important;
   background-position: center !important;
@@ -618,6 +618,15 @@ header .navbar-menu .selected {
   border-radius: 9px;
   background-repeat: no-repeat !important;
   background-size: cover !important;
+  background-position: center !important;
+}
+.card-collection .cards-small-img-error {
+  max-width: 240px;
+  height: 166px;
+  border-radius: 9px;
+  background-color: rgb(170, 170, 170) !important;
+  background-repeat: no-repeat !important;
+  background-size: 80px !important;
   background-position: center !important;
 }
 .card-collection a {
@@ -1029,6 +1038,11 @@ main section {
   max-width: 1440px;
   margin: auto;
 }
+main .section-std {
+  max-width: 1440px;
+  margin: auto;
+  padding: 32px 130px;
+}
 main .padding-top-64 {
   padding-top: 64px;
 }
@@ -1108,8 +1122,6 @@ main .section-cards div p {
   color: #3d3b40;
 }
 main .section-services {
-  max-width: 1440px;
-  padding: 32px 0px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;

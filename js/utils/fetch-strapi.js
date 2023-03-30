@@ -1,17 +1,27 @@
 const STRAPI_URL = 'https://strapi-production-74d1.up.railway.app';
+// const STRAPI_URL = 'https://strapi-production-74wwd1.up.railway.app';
 
 export const fetchCardsByDate = async (pageSize = 4, page = 1) => {
-    const res = await fetch(`${STRAPI_URL}/api/blogs?pagination[page]=${page}&pagination[pageSize]=${pageSize}&sort[0]=Date%3Adesc&fields[0]=title&fields[0]=Title&fields[1]=ReadingTime&populate[CardImage][fields][0]=url`)
-    const resObject = await res.json();
-    
-    return resObject;
+    try {
+        const res = await fetch(`${STRAPI_URL}/api/blogs?pagination[page]=${page}&pagination[pageSize]=${pageSize}&sort[0]=Date%3Adesc&fields[0]=title&fields[0]=Title&fields[1]=ReadingTime&populate[CardImage][fields][0]=url`)
+        const resObject = await res.json();
+        return resObject;
+    } catch (error) {
+        console.log('STRAPI-ERROR', error);
+        return false;
+    }
 };
 
 export const fetchAreaNames = async () => {
-    const res = await fetch(`${STRAPI_URL}/api/areas?sort[0]=Name&fields[0]=Name`);
-    const resObject = await res.json();
+    try {
+        const res = await fetch(`${STRAPI_URL}/api/areas?sort[0]=Name&fields[0]=Name`);
+        const resObject = await res.json();
 
-    return resObject.data;
+        return resObject.data;
+    } catch (error) {
+        console.log('STRAPI-ERROR', error);
+        return false;
+    }
 };
 
 export const fetchAreaById = async (id) => {
@@ -24,7 +34,7 @@ export const fetchAreaById = async (id) => {
 export const fetchFillCardCollection = async (articleIds, pageSize = 4) => {
     let filterIds = '';
 
-    articleIds.forEach( (id, index) => {
+    articleIds.forEach((id, index) => {
         filterIds += `&filters[id][$notIn][${index}]=${id}`
     });
 
@@ -35,17 +45,25 @@ export const fetchFillCardCollection = async (articleIds, pageSize = 4) => {
 };
 
 export const fetchCarouselContent = async (pageSize = 3) => {
-    const res = await fetch(`${STRAPI_URL}/api/blogs?pagination[pageSize]=${pageSize}&sort[0]=CarouselPosition&sort[1]=DisplayInCarousel&sort[2]=Date&fields[0]=title&fields[1]=overscript&populate[BannerImage][fields][0]=url`)
-    const resObject = await res.json();
-
-    return resObject.data;
+    try {
+        const res = await fetch(`${STRAPI_URL}/api/blogs?pagination[pageSize]=${pageSize}&sort[0]=CarouselPosition&sort[1]=DisplayInCarousel&sort[2]=Date&fields[0]=title&fields[1]=overscript&populate[BannerImage][fields][0]=url`)
+        const resObject = await res.json();
+        return resObject.data;
+    } catch (error) {
+        console.log('STRAPI-ERROR', error);
+        return false;
+    }
 };
 
 export const fetchTags = async () => {
-    const res = await fetch(`${STRAPI_URL}/api/tags?fields[0]=TagName`)
-    const resObject = await res.json();
-
-    return resObject.data;
+    try {
+        const res = await fetch(`${STRAPI_URL}/api/tags?fields[0]=TagName`)
+        const resObject = await res.json();
+        return resObject.data;
+    } catch (error) {
+        console.log('STRAPI-ERROR', error);
+        return false;
+    }
 };
 
 export const fetchCardsByTag = async (tagId, pageSize = 4) => {
@@ -58,6 +76,5 @@ export const fetchCardsByTag = async (tagId, pageSize = 4) => {
 export const fetchArticleById = async (articleId) => {
     const res = await fetch(`${STRAPI_URL}/api/blogs/${articleId}?populate[BannerImage][fields][0]=url&populate[BannerImage][fields][1]=caption&populate[ContentImage][fields][0]=url&populate[ContentImage][fields][1]=caption&populate[Tags][fields][3]=TagName&populate[Areas][fields][4]=Name`)
     const articleObject = await res.json();
-    console.log(articleObject)
     return articleObject.data;
 }

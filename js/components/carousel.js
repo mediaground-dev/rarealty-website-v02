@@ -13,30 +13,27 @@ let curSlide = 0;
 const strapiFetch = async () => {
     const cmsArrayArticles = await fetchCarouselContent();
 
-    cmsArrayArticles.forEach((article, index) => {
-        const BannerImageURL = article.attributes.BannerImage.data.attributes.url;
-        document.querySelector('.slide-' + index).style.backgroundImage = `url(${BannerImageURL})`;
-    });
+    if (!cmsArrayArticles) {
+        for (let index = 0; index < 3; index++) {
+            document.querySelector('.slide-' + index).style.backgroundImage = "url('../../assets/images/img-error.png')";
+            document.querySelector('.slide-' + index).style.backgroundSize = "140px 140px";
+        }
+    } else {
+        cmsArrayArticles.forEach((article, index) => {
+            const BannerImageURL = article.attributes.BannerImage.data.attributes.url;
+            document.querySelector('.slide-' + index).style.backgroundImage = `url(${BannerImageURL})`;
+        });
 
-    // document.querySelectorAll('.slide').forEach( (element, index )=> {
-    //     element.innerHTML = `
-    //      <a href="./article.html?${cmsArrayArticles[index].id}">
-    //         <h1 class="slide-title">${cmsArrayArticles[index].attributes.Title}</h1>
-    //         <h3 class="slide-overscript">${cmsArrayArticles[index].attributes.Overscript}</h3>
-    //      </a>
-    //     `;
-    // })
-    
-    document.querySelectorAll('.slide').forEach( (element, index )=> {
-        element.innerHTML = `
-         <a href="./article.html?${cmsArrayArticles[index].id}">
-            <h1 class="slide-title">${cmsArrayArticles[index].attributes.Title}</h1>
-         </a>
-        `;
-    })
+        document.querySelectorAll('.slide').forEach((element, index) => {
+            element.innerHTML = `
+                <a href="./article.html?${cmsArrayArticles[index].id}">
+                    <h1 class="slide-title">${cmsArrayArticles[index].attributes.Title}</h1>
+                </a>`;
+        })
 
-    return cmsArrayArticles;
-}
+        // return cmsArrayArticles;
+    }
+};
 
 const goToSlide = (slide) => {
     slides.forEach((s, i) => {
