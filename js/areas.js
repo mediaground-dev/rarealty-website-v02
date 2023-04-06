@@ -109,7 +109,7 @@ const renderAreaContent = (areaContent) => {
         const secondDivBlock = document.querySelector('#area-content-block-02');
         secondDivBlock.insertBefore(imgDiv, secondDivBlock.firstChild);
     } else {
-        const HighlightImage02 = areaContent.attributes.HighlightImage01.data.attributes.url;
+        const HighlightImage02 = areaContent.attributes.HighlightImage02.data.attributes.url;
         const imgDiv = document.createElement("div");
         imgDiv.className = 'areas-image'
         imgDiv.style.backgroundImage =  `url('${HighlightImage02}')`;

@@ -1081,19 +1081,19 @@ main .section-cards div {
   text-align: center;
 }
 main .section-cards div .section-cards-img01 {
-  background-image: url("../assets/images/about-passion.png");
+  background-image: url("../assets/images/ra-transparency-icon.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
 main .section-cards div .section-cards-img02 {
-  background-image: url("../assets/images/about-focus.png");
+  background-image: url("../assets/images/ra-integrity-icon.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
 main .section-cards div .section-cards-img03 {
-  background-image: url("../assets/images/about-empathy.png");
+  background-image: url("../assets/images/ra-commitment-icon.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1154,10 +1154,10 @@ main .section-services .img-services-02 {
   background-position: center;
 }
 main .section-services .img-services-01 {
-  background-image: url("../assets/images/services-01-buy.jpg");
+  background-image: url("../assets/images/ra-services-01-orange.png");
 }
 main .section-services .img-services-02 {
-  background-image: url("../assets/images/services-02-invest.jpg");
+  background-image: url("../assets/images/ra-services-02-blue.png");
 }
 
 /*# sourceMappingURL=about.css.map */
