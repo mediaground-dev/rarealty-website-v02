@@ -4,7 +4,7 @@ const STRAPI_URL = 'https://strapi-production-74d1.up.railway.app';
 export const fetchCardsByDate = async (pageSize = 4, page = 1) => {
     try {
         const res = await fetch(`${STRAPI_URL}/api/blogs?pagination[page]=${page}&pagination[pageSize]=${pageSize}&sort[0]=Date%3Adesc&fields[0]=title&fields[0]=Title&fields[1]=ReadingTime&populate[CardImage][fields][0]=url`)
-        const resObject = await res.json();
+        const resObject = await res.json();        
         return resObject;
     } catch (error) {
         console.log('STRAPI-ERROR', error);

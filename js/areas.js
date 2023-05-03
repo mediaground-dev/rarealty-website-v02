@@ -167,10 +167,14 @@ if (!areaNames) {
     renderAreaContentFake();
     renderFakeCardCollection();
 } else {
-    const areaSelectedId = location.search.substring(1);
+    let areaSelectedId = location.search.substring(1);
+
+    if(!areaSelectedId) {
+        areaSelectedId=areaNames[0].id;
+    }
 
     //---- FILL AREAS MENU TAB ----//
-    if (areaSelectedId === '') {
+    if (areaSelectedId === 0) {
         areaNames.forEach((area, index) => {
             if (index === 0) {
                 docAreaTabMenu.innerHTML += `<div id="${area.id}" class="area-tab area-tab-selected btn-navbar-ra">${area.attributes.Name}</div>`;
@@ -210,7 +214,7 @@ if (!areaNames) {
     });
 
     //---- AREA SELECTED CONTENT ----//
-    const areaFirstContent = await fetchAreaById(areaNames[0].id);
+    const areaFirstContent = await fetchAreaById(areaSelectedId);
     renderAreaContent(areaFirstContent);
 
     //---- AREA CARD RELATED CONTENT ----//
@@ -243,8 +247,6 @@ if (!areaNames) {
 
             // Card Collection Related News
             const areaCardsContent = areaContent.attributes.Articles.data;
-
-            console.log(areaCardsContent)
             renderCardCollection(areaCardsContent);
 
             // Fill Card Collection
