@@ -5,7 +5,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // text-decoration: none;
 }
 
 main {
@@ -34,6 +33,10 @@ main {
     margin-bottom: 32px;
   }
 
+  .meet-ra-img-mobile {
+    display: none;
+  }
+
   .meet-ra-img {
     background-image: url('../assets/images/about-meetra.png');
     background-repeat: no-repeat;
@@ -41,12 +44,20 @@ main {
     background-position: top, center;
   }
 
+  .iframe-01-desk {
+    display: block;
+  }
+
+  .iframe-01-mobile {
+    display: none;
+  }
+
   .section-height {
     position: relative;
     width: 1440px;
     height: 275px;
     margin: auto;
-    
+
     .contact-banner-lh-img,
     .contact-banner-rh-img {
       background-repeat: no-repeat;
@@ -71,6 +82,64 @@ main {
       height: 364px;
       background-image: url('../assets/images/home-vector-right.png');
       z-index: -1;
+    }
+  }
+}
+
+@media screen and (max-width: $BREAKPOINT_TABLET) {
+  main {
+    width: auto;
+    overflow: hidden;
+
+    .section-banner {
+      .section-banner-img {
+        height: 440px;
+        margin-bottom: 40px;
+        background-image: url('../assets/images/home-heroimage.png');
+      }
+    }
+
+    .meet-ra-img-mobile {
+      display: block;
+      align-self: center;
+
+      width: 312px;
+      height: 312px;
+      margin-bottom: 24px;
+
+      background-image: url('../assets/images/about-meetra.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top, center;
+      border-radius: 16px;
+    }
+
+    .iframe-01-desk {
+      display: none;
+    }
+
+    .iframe-01-mobile {
+      display: block;
+    }
+
+    .section-height {
+      width: 100%;
+      height: fit-content;
+
+      .contact-banner-lh-img {
+        top: 200px;
+        left: -30px;
+        width: 186px;
+        height: 128px;
+      }
+    
+      .contact-banner-rh-img {
+        top: 148px;
+        right: -81px;
+        width: 142px;
+        height: 182px;
+        z-index: 2;
+      }
     }
   }
 }
