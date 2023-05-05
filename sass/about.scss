@@ -205,6 +205,11 @@ main {
 
     .section-cards {
       flex-direction: column;
+
+      div {
+        width: 80%;
+        max-width: 440px;
+      }
     }
 
     .section-std {

@@ -949,6 +949,7 @@ header .navbar-mobile {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: start;
 }
 .card-collection-h1 {
   font-family: "sofia-pro";
@@ -959,8 +960,10 @@ header .navbar-mobile {
   margin-bottom: 32px;
 }
 .card-collection .cards {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  gap: 38px;
+  justify-content: center;
   padding-bottom: 32px;
 }
 .card-collection .cards-small {
@@ -1160,7 +1163,7 @@ header .navbar-mobile {
     font-size: 16px;
   }
 }
-.contact-form {
+.contact-form-desk {
   position: relative;
   max-width: 1440px;
   margin: auto;
@@ -1171,14 +1174,14 @@ header .navbar-mobile {
   justify-content: space-between;
   align-items: center;
 }
-.contact-form-fields {
+.contact-form-desk-fields {
   width: 55%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
 }
-.contact-form-fields > h1 {
+.contact-form-desk-fields > h1 {
   font-family: "sofia-pro";
   font-style: normal;
   font-weight: 700;
@@ -1187,7 +1190,7 @@ header .navbar-mobile {
   color: #1C4394;
   margin-bottom: 25px;
 }
-.contact-form-fields > p {
+.contact-form-desk-fields > p {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -1195,7 +1198,7 @@ header .navbar-mobile {
   line-height: 150%;
   margin-bottom: 65px;
 }
-.contact-form-fields .form-input {
+.contact-form-desk-fields .form-input {
   width: 100%;
   border: 1px solid #d1d1d1;
   border-radius: 20px;
@@ -1207,7 +1210,7 @@ header .navbar-mobile {
   font-size: 16px;
   line-height: 20px;
 }
-.contact-form-fields textarea {
+.contact-form-desk-fields textarea {
   width: 100%;
   resize: none;
   padding: 16px;
@@ -1221,13 +1224,13 @@ header .navbar-mobile {
   border: 1px solid #d1d1d1;
   border-radius: 20px;
 }
-.contact-form-fields div {
+.contact-form-desk-fields div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.contact-form-fields div p {
+.contact-form-desk-fields div p {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -1235,14 +1238,14 @@ header .navbar-mobile {
   line-height: 150%;
   margin-left: 80px;
 }
-.contact-form-blocks {
+.contact-form-desk-blocks {
   width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 40px;
 }
-.contact-form-blocks div {
+.contact-form-desk-blocks div {
   width: 100%;
   padding: 48px 48px;
   background: white;
@@ -1252,14 +1255,14 @@ header .navbar-mobile {
   flex-direction: column;
   align-items: start;
 }
-.contact-form-blocks div h1 {
+.contact-form-desk-blocks div h1 {
   font-family: "sofia-pro";
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 120%;
 }
-.contact-form-blocks div p {
+.contact-form-desk-blocks div p {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -1267,11 +1270,11 @@ header .navbar-mobile {
   line-height: 150%;
   padding: 32px 0px;
 }
-.contact-form-blocks div > a > img {
+.contact-form-desk-blocks div > a > img {
   width: 100%;
   border-radius: 30px;
 }
-.contact-form .contact-vector {
+.contact-form-desk .contact-vector {
   position: absolute;
   top: 34px;
   right: -58px;
@@ -1283,6 +1286,135 @@ header .navbar-mobile {
   background-size: contain;
 }
 
+.contact-form-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1199px) {
+  .contact-form-desk {
+    display: none;
+  }
+  .contact-form-mobile {
+    display: block;
+    width: 100%;
+    padding: 64px 24px;
+  }
+  .contact-form-mobile-blocks {
+    padding: 32px 24px;
+    gap: 24px;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+  }
+  .contact-form-mobile-blocks div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .contact-form-mobile-blocks div h1 {
+    font-family: "sofia-pro";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 150%;
+    color: #3d3b40;
+  }
+  .contact-form-mobile-blocks div p {
+    padding: 24px 0px;
+    word-wrap: break-word;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #3d3b40;
+  }
+  .contact-form-mobile-blocks div a {
+    align-self: center;
+  }
+  .contact-form-mobile-blocks div a > img {
+    width: 100%;
+    max-width: 360px;
+    border-radius: 30px;
+  }
+  .contact-form-mobile-fields {
+    width: 100%;
+    padding: 120px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .contact-form-mobile-fields > h1 {
+    margin-bottom: 16px;
+    font-family: "sofia-pro";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    color: #3d3b40;
+  }
+  .contact-form-mobile-fields .form-input {
+    width: 100%;
+    border: 1px solid #d1d1d1;
+    border-radius: 20px;
+    padding: 16px;
+    margin-bottom: 32px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .contact-form-mobile-fields textarea {
+    width: 100%;
+    resize: none;
+    padding: 16px;
+    margin-bottom: 42px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    background: #f1f1f5;
+    border: 1px solid #d1d1d1;
+    border-radius: 16px;
+  }
+  .contact-form-mobile-fields div {
+    width: 100%;
+    max-width: 360px;
+    align-self: center;
+  }
+  .contact-form-mobile-fields div input {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .contact-form-mobile-fields .form-res-ok p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+  }
+  .contact-form-mobile .send-email-mobile {
+    width: 100%;
+    padding: 46px 24px;
+    background: #ffffff;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+  }
+  .contact-form-mobile .send-email-mobile > h1 {
+    margin-bottom: 24px;
+    font-family: "sofia-pro";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 150%;
+    color: #3d3b40;
+  }
+}
 .select-block {
   max-width: 1440px;
   margin: auto;
