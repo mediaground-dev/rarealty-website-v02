@@ -183,17 +183,28 @@ main {
     }
 
     .section-areas {
+
       &-tab-menu {
-        width: fit-content;
+        // width: fit-content;
         padding: 32px 0px;
         justify-content: start;
         gap: 16px;
 
         font-size: 18px;
 
+        overflow-y: scroll;
+        padding-bottom: 24px;
+        scrollbar-width: none;
+        scroll-snap-type: x proximity;
+
         .area-tab {
           width: max-content;
+          white-space: nowrap;
         }
+      }
+
+      &-tab-menu::-webkit-scrollbar {
+        width: 0px;
       }
 
       &-content {
@@ -202,15 +213,14 @@ main {
         }
 
         .areas-block {
-
           #area-content-block-01 {
-             flex-direction: column-reverse;
+            flex-direction: column-reverse;
           }
-          
+
           #area-content-block-02 {
-             flex-direction: column;
+            flex-direction: column;
           }
-         
+
           .areas-img-text {
             gap: 0;
 

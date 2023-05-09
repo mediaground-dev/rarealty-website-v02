@@ -219,7 +219,6 @@ main {
         > h1 {
           font-size: 33px;
           color: #1c4394;
-
           margin-bottom: 24px;
         }
 
@@ -232,10 +231,8 @@ main {
 
           overflow-y: scroll;
           padding-bottom: 24px;
-          scrollbar-width: 0px;
-          scroll-snap-type: x proximity;
-
-          
+          scrollbar-width: none;
+          scroll-snap-type: x proximity;  
         }
         
         .select-block-menun::-webkit-scrollbar {

@@ -1793,6 +1793,9 @@ main .section-social .social-vector {
     scrollbar-width: none;
     scroll-snap-type: x proximity;
   }
+  main .section-news-intro .select-block-menun::-webkit-scrollbar {
+    width: 0px;
+  }
   main .section-videos {
     background-color: #fff;
   }
