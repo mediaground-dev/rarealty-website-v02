@@ -232,8 +232,14 @@ main {
 
           overflow-y: scroll;
           padding-bottom: 24px;
-          scrollbar-width: none;
+          scrollbar-width: 0px;
           scroll-snap-type: x proximity;
+
+          
+        }
+        
+        .select-block-menun::-webkit-scrollbar {
+            width: 0px;
         }
       }
     }
