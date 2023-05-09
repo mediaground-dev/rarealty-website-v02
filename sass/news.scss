@@ -229,6 +229,11 @@ main {
 
         .select-block-menu {
           margin-bottom: 32px;
+
+          overflow-y: scroll;
+          padding-bottom: 24px;
+          scrollbar-width: none;
+          scroll-snap-type: x proximity;
         }
       }
     }
@@ -268,7 +273,6 @@ main {
           &-column {
             display: none;
           }
-
         }
       }
     }
@@ -278,7 +282,7 @@ main {
       max-width: 1440px;
       padding: 0px 24px 64px 24px;
       margin: auto;
-  
+
       > h1 {
         font-size: 28px;
         margin-bottom: 32px;
@@ -286,11 +290,11 @@ main {
 
       &-block {
         flex-direction: column;
-  
+
         .social-instagram {
           width: 100%;
         }
-  
+
         .social-tweeter {
           width: 100%;
         }
