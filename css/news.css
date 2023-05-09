@@ -1109,6 +1109,29 @@ header .navbar-mobile {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1199px) {
+  .card-collection02-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-evenly;
+  }
+  .card-collection02-grid .card {
+    width: 310px;
+  }
+  .card-collection02-grid .card .card-img {
+    width: 310px;
+    height: 217px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+  }
+  .card-collection02-grid .card > h1 {
+    margin: 0px 0px 8px 0px;
+  }
+  .card-collection02-grid .card > h3 {
+    margin: 0;
+  }
+}
 .contact-banner-section {
   position: relative;
   width: 100%;
@@ -1741,6 +1764,81 @@ main .section-social .social-vector {
   background-image: url("../assets/images/news-socialmedia-vector.png");
   background-repeat: no-repeat;
   z-index: -1;
+}
+
+@media screen and (max-width: 1199px) {
+  main {
+    width: auto;
+    overflow: hidden;
+  }
+  main .section-banner {
+    padding-bottom: 40px;
+  }
+  main .section-news {
+    width: 100%;
+    padding: 0px 24px 120px 24px;
+  }
+  main .section-news-intro > h1 {
+    font-size: 33px;
+    color: #1c4394;
+    margin-bottom: 24px;
+  }
+  main .section-news-intro > p {
+    margin-bottom: 80px;
+  }
+  main .section-news-intro .select-block-menu {
+    margin-bottom: 32px;
+  }
+  main .section-videos {
+    background-color: #fff;
+  }
+  main .section-videos-content {
+    padding: 0px 24px 120px 24px;
+  }
+  main .section-videos-content > h1 {
+    font-size: 28px;
+    padding: 0px;
+    margin-bottom: 24px;
+  }
+  main .section-videos-content > p {
+    padding: 0px;
+    margin-bottom: 32px;
+  }
+  main .section-videos-content .videos-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 100%;
+  }
+  main .section-videos-content .videos-block-main {
+    margin-bottom: 35px;
+  }
+  main .section-videos-content .videos-block-main iframe {
+    width: 100%;
+    height: 592px;
+  }
+  main .section-videos-content .videos-block-column {
+    display: none;
+  }
+  main .section-social {
+    position: relative;
+    max-width: 1440px;
+    padding: 0px 24px 64px 24px;
+    margin: auto;
+  }
+  main .section-social > h1 {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+  main .section-social-block {
+    flex-direction: column;
+  }
+  main .section-social-block .social-instagram {
+    width: 100%;
+  }
+  main .section-social-block .social-tweeter {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=news.css.map */

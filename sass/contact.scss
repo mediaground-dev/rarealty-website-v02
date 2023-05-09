@@ -1,0 +1,48 @@
+@use './abstracts' as *;
+@use './components' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // text-decoration: none;
+}
+
+main {
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+
+  .section-intro-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $BREAKPOINT_TABLET) {
+  main {
+    width: auto;
+    overflow: hidden;
+
+    .section-intro-mobile {
+      display: block;
+      padding: 32px 24px 56px 24px;
+
+      > h1 {
+        font-family: 'sofia-pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 33px;
+        line-height: 150%;
+        color: #1c4394;
+      }
+
+      > p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #3d3b40;
+      }
+    }
+  }
+}

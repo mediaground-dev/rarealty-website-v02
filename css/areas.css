@@ -1109,6 +1109,29 @@ header .navbar-mobile {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1199px) {
+  .card-collection02-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-evenly;
+  }
+  .card-collection02-grid .card {
+    width: 310px;
+  }
+  .card-collection02-grid .card .card-img {
+    width: 310px;
+    height: 217px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+  }
+  .card-collection02-grid .card > h1 {
+    margin: 0px 0px 8px 0px;
+  }
+  .card-collection02-grid .card > h3 {
+    margin: 0;
+  }
+}
 .contact-banner-section {
   position: relative;
   width: 100%;
