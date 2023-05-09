@@ -233,9 +233,11 @@ main {
           padding-bottom: 24px;
           scrollbar-width: none;
           scroll-snap-type: x proximity;  
+          -ms-overflow-style: none;
         }
         
         .select-block-menun::-webkit-scrollbar {
+          display: none;
             width: 0px;
         }
       }
