@@ -13,6 +13,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
+    <style>
+        /* html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        } */
+
+        /* .swiper {
+            width: 100%;
+            height: 100%;
+        } */
+
+        .swiper-slide {
+            /* text-align: center; */
+            /* font-size: 18px; */
+            background: #fff;
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
+        }
+
+        .swiper-slide img {
+            /* display: block; */
+            /* width: 100%; */
+            /* height: 100%; */
+            /* object-fit: cover; */
+        }
+    </style>
 </head>
 
 <body>
@@ -87,6 +130,21 @@
 
                 <script src="./js/components/carousel.js" type="module" defer></script>
                 <!-- https://codepen.io/czesster -->
+            </div>
+
+            <div class="carousel-mobile">
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide-m slide-m-0"></div>
+                        <div class="swiper-slide slide-m slide-m-1"></div>
+                        <div class="swiper-slide slide-m slide-m-2"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <script src="./js/components/carouselNewsMobile.js" type="module" defer></script>
+            </div>
         </section>
 
         <section id="section-news" class="section-news">
@@ -395,6 +453,18 @@
     </main>
 
     <script src="./js/components/navbar.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
 </body>
 
 </html>

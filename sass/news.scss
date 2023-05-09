@@ -16,6 +16,10 @@ main {
     max-width: 1440px;
     margin: auto;
     padding-bottom: 32px;
+
+    .carousel-mobile {
+      display: none;
+    }
   }
   .section-news {
     width: 1440px;
@@ -209,6 +213,19 @@ main {
 
     .section-banner {
       padding-bottom: 40px;
+
+      .carousel {
+        display: none;
+       }
+
+      .carousel-mobile {
+        display: block;
+
+        .slide-m {
+          height: 80vw;
+          max-height: 480px;
+        }
+       }
     }
 
     .section-news {
@@ -232,13 +249,13 @@ main {
           overflow-y: scroll;
           padding-bottom: 24px;
           scrollbar-width: none;
-          scroll-snap-type: x proximity;  
+          scroll-snap-type: x proximity;
           -ms-overflow-style: none;
         }
-        
+
         .select-block-menun::-webkit-scrollbar {
           display: none;
-            width: 0px;
+          width: 0px;
         }
       }
     }
