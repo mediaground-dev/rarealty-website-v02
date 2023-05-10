@@ -1795,10 +1795,14 @@ main .section-social-block {
   align-items: center;
 }
 main .section-social-block .social-instagram {
-  width: 30%;
+  width: 50vw;
+  max-width: 400px;
+  min-width: 324px;
 }
 main .section-social-block .social-tweeter {
-  width: 32%;
+  width: 50vw;
+  max-width: 400px;
+  min-width: 324px;
 }
 main .section-social .social-vector {
   position: absolute;
@@ -1896,12 +1900,17 @@ main .section-social .social-vector {
   }
   main .section-social-block {
     flex-direction: column;
+    align-items: center;
   }
   main .section-social-block .social-instagram {
-    width: 100%;
+    width: 50vw;
+    max-width: 400px;
+    min-width: 324px;
   }
   main .section-social-block .social-tweeter {
-    width: 100%;
+    width: 50vw;
+    max-width: 400px;
+    min-width: 324px;
   }
 }
 
