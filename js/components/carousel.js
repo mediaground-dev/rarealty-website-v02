@@ -101,11 +101,13 @@ const strapiFetchMobile = async () => {
         for (let index = 0; index < 3; index++) {
             document.querySelector('.slide-m-' + index).style.backgroundImage = "url('../../assets/images/img-error.png')";
             document.querySelector('.slide-m-' + index).style.backgroundSize = "140px 140px";
+            document.querySelector('.slide-m-' + index).style.backgroundPosition = "center";
         }
     } else {
         cmsArrayArticles.forEach((article, index) => {
             const BannerImageURL = article.attributes.BannerImage.data.attributes.url;
             document.querySelector('.slide-m-' + index).style.backgroundImage = `url(${BannerImageURL})`;
+            document.querySelector('.slide-m-' + index).style.backgroundPosition = "center";
         });
 
         document.querySelectorAll('.slide-m').forEach((element, index) => {
