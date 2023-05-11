@@ -1853,7 +1853,7 @@ main .section-social .social-vector {
     scroll-snap-type: x proximity;
     -ms-overflow-style: none;
   }
-  main .section-news-intro .select-block-menun::-webkit-scrollbar {
+  main .section-news-intro .select-block-menu::-webkit-scrollbar {
     display: none;
     width: 0px;
   }
