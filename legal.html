@@ -20,7 +20,7 @@
 <body>
     <main>
         <header>
-            <div class="navbar">
+            <div class="navbar-desktop">
                 <div class="navbar-logo">
                     <a class="navbar-logo-a" href="./"></a>
                     <a class="navbar-logo-name" href="./">REAL STATE SIMPLIFIED</a>
@@ -35,6 +35,31 @@
 
                 <div class="navbar-contact">
                     <a class="btn-primary-ra fw-medium" href="./contact.html">Contact</a>
+                </div>
+            </div>
+
+            <div class="navbar-mobile">
+                <div class="navbar-visible">
+                    <div class="navbar-logo">
+                        <a class="navbar-logo-a" href="./"></a>
+                        <a class="navbar-logo-name" href="./">REAL STATE SIMPLIFIED</a>
+                    </div>
+
+                    <div class="hamburguer-menu">
+                        <div class="icon nav-icon-4">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-menu-m">
+                    <a class="" href="./">Home</a>
+                    <a class="" href="./about.html">About</a>
+                    <a class="" href="./areas.html">Areas</a>
+                    <a class="" href="./news.html">News</a>
+                    <a class="" href="./contact.html">Contact</a>
                 </div>
             </div>
         </header>
@@ -53,8 +78,8 @@
         </section>
 
         <footer>
-            <div class="footer">
-                <div class="footer-subscribe">
+            <div class="footer-desk">
+                <div class="footer-desk-subscribe">
                     <h1>Subscribe to our newsletter</h1>
                     <div>
                         <input id="subscribe" type="text" placeholder="Enter your email">
@@ -67,7 +92,7 @@
                         company.</p>
                 </div>
 
-                <div class="footer-nav">
+                <div class="footer-desk-nav">
                     <div>
                         <a class="footer-nav-title" href="./about.html">About</a>
                         <a href="./about.html">Meet RA</a>
@@ -94,6 +119,49 @@
                     <p>Copyright © 2023 Mediaground.</p>
                 </div>
 
+                <div class="footer-desk-legal">
+                    <h1>Legal</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a
+                            href="./legal.html">Read more</a></p>
+                </div>
+            </div>
+
+            <div class="footer-mobile">
+                <div class="footer-social">
+                    <div class="footer-social-icons">
+                        <a class="icon-twitter" href='./'></a>
+                        <a class="icon-instagram" href='https://www.instagram.com/rarealtydmv/'></a>
+                        <a class="icon-youtube" href='https://www.youtube.com/channel/UCOiIRrCM9jWci5EaNLVp2-Q'></a>
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+                    <a href="./">Home</a>
+                    <a href="./areas.html">Areas</a>
+                    <a href="./news.html">News</a>
+                    <a href="./about.html">About</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+
+                <div class="footer-subscribe">
+                    <h1>Subscribe to our newsletter</h1>
+                    <div>
+                        <input id="subscribe" type="text" placeholder="Enter your email">
+
+                        <a class="btn-primary-ra btn-border-white" href="./contact.html">
+                            Subscribe
+                        </a>
+                    </div>
+                    <p>
+                        By subscribing you agree with our Privacy Policy and provide consent to receive updates from our
+                        company.
+                    </p>
+                </div>
+
                 <div class="footer-legal">
                     <h1>Legal</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -110,6 +178,9 @@
 
         <script src="./js/legal.js" type="module"></script>
     </main>
+
+    <script src="./js/components/navbar.js"></script>
+
 </body>
 
 </html>

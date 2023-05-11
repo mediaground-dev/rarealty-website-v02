@@ -1,8 +1,9 @@
 import { fetchAreaById, fetchAreaNames, fetchFillCardCollection } from "./utils/fetch-strapi.js";
 
 const docAreaTabMenu = document.querySelector('#areaTabMenu');
-const docAreaSelectedContent = document.querySelector('#areaSelectedContent');
-const docCardCollection = document.querySelector('#card-collection');
+const docAreaSelectedContent  = document.querySelector('#areaSelectedContent');
+const docCardCollectionDesk   = document.querySelector('#card-collection-desk');
+const docCardCollectionMobile = document.querySelector('#card-collection-mobile');
 
 const renderAreaContentFake = () => {
     docAreaSelectedContent.innerHTML =
@@ -121,9 +122,10 @@ const renderAreaContent = (areaContent) => {
 
 const renderCardCollection = (areaCardsContent) => {
     areaCardsContent.forEach(article => {
+        // DESK
         // IF CARD IMAGE HAS NOT BEEN LOADED
         if (article.attributes.CardImage.data === null) {
-            docCardCollection.innerHTML +=
+            docCardCollectionDesk.innerHTML +=
                 `<div class="cards-small">
                     <a href="./article.html?${article.id}">
                         <div style="background: url('../../assets/images/img-error.png');" class="cards-small-img-error"></div>
@@ -133,7 +135,7 @@ const renderCardCollection = (areaCardsContent) => {
                 </div>`;
         } else {
             const cardImageURL = article.attributes.CardImage.data.attributes.url;
-            docCardCollection.innerHTML +=
+            docCardCollectionDesk.innerHTML +=
                 `<div class="cards-small">
                     <a href="./article.html?${article.id}">
                         <div style="background: url('${cardImageURL}')" class="cards-small-img"></div>
@@ -142,18 +144,55 @@ const renderCardCollection = (areaCardsContent) => {
                     </a>
                 </div>`;
         }
+        // MOBILE
+        // IF CARD IMAGE HAS NOT BEEN LOADED
+        if (article.attributes.CardImage.data === null) {
+            docCardCollectionMobile.innerHTML +=
+                `<div class="swiper-slide">
+                    <div class="cards-small">
+                        <a href="./article.html?${article.id}">
+                            <div style="background: url('../../assets/images/img-error.png');" class="cards-small-img-error"></div>
+                            <h1 class="cards-small-h1">${article.attributes.Title}</h1>
+                            <h2 class="cards-small-h2">${article.attributes.ReadingTime} minutes reading</h2>
+                        </a>
+                    </div>
+                </div>`;
+        } else {
+            const cardImageURL = article.attributes.CardImage.data.attributes.url;
+            docCardCollectionMobile.innerHTML +=
+                `<div class="swiper-slide">
+                    <div class="cards-small">
+                        <a href="./article.html?${article.id}">
+                            <div style="background: url('${cardImageURL}')" class="cards-small-img"></div>
+                            <h1 class="cards-small-h1">${article.attributes.Title}</h1>
+                            <h2 class="cards-small-h2">${article.attributes.ReadingTime} minutes reading</h2>
+                        </a>
+                    </div>
+                </div>`;
+        }
     });
 };
 
 const renderFakeCardCollection = () => {
     for (let index = 0; index < 4; index++) {
-        docCardCollection.innerHTML +=
+        docCardCollectionDesk.innerHTML +=
             `<div class="cards-small">
                 <a>
                     <div style="background: url('../../assets/images/img-error.png');" class="cards-small-img-error"></div>
                     <h1 class="cards-small-h1">Title</h1>
                     <h2 class="cards-small-h2"> 0 minutes reading</h2>
                 </a>
+            </div>`;
+        
+        docCardCollectionMobile.innerHTML +=
+            `<div class="swiper-slide">
+                <div class="cards-small">
+                    <a>
+                        <div style="background: url('../../assets/images/img-error.png');" class="cards-small-img-error"></div>
+                        <h1 class="cards-small-h1">Title</h1>
+                        <h2 class="cards-small-h2"> 0 minutes reading</h2>
+                    </a>
+                </div>
             </div>`;
     }
 };
@@ -236,8 +275,9 @@ if (!areaNames) {
 
     document.querySelectorAll('.area-tab').forEach(docAreaTab => {
         docAreaTab.addEventListener('click', () => {
-            docAreaSelectedContent.innerHTML = '';
-            docCardCollection.innerHTML = '';
+            docAreaSelectedContent.innerHTML  = '';
+            docCardCollectionDesk.innerHTML   = '';
+            docCardCollectionMobile.innerHTML = '';
 
             document.querySelector('.area-tab-selected').classList.remove('area-tab-selected');
             docAreaTab.classList.add('area-tab-selected');
@@ -257,47 +297,3 @@ if (!areaNames) {
         });
     });
 }
-
-// //---- AREA SELECTED CONTENT ----//
-// const areaFirstContent = await fetchAreaById(areaNames[0].id);
-// renderAreaContent(areaFirstContent);
-
-// //---- AREA CARD RELATED CONTENT ----//
-// const areaCardsContent = areaFirstContent.attributes.Articles.data;
-// renderCardCollection(areaCardsContent);
-
-// // Fill Card Collection
-// // if (areaCardsContent.length < 4) {
-// //     const pageSize = 4 - areaCardsContent.length;
-// //     const articleIds = [];
-
-// //     areaCardsContent.forEach(article => {
-// //         articleIds.push(article.id);
-// //     })
-
-// //     const othersArticleContent = await fetchFillCardCollection(articleIds, pageSize);
-// //     renderCardCollection(othersArticleContent);
-// // }
-
-// document.querySelectorAll('.area-tab').forEach(docAreaTab => {
-//     docAreaTab.addEventListener('click', () => {
-//         docAreaSelectedContent.innerHTML = '';
-//         docCardCollection.innerHTML = '';
-
-//         document.querySelector('.area-tab-selected').classList.remove('area-tab-selected');
-//         docAreaTab.classList.add('area-tab-selected');
-
-//         const areaContent = JSON.parse(sessionStorage.getItem(`AreaContent-${docAreaTab.id}`));
-//         renderAreaContent(areaContent);
-
-//         // Card Collection Related News
-//         const areaCardsContent = areaContent.attributes.Articles.data;
-//         renderCardCollection(areaCardsContent);
-
-//         // Fill Card Collection
-//         // const othersArticleContent = JSON.parse(sessionStorage.getItem(`OtherCards-${docAreaTab.id}`));
-//         // if (othersArticleContent !== null) {
-//         //     renderCardCollection(othersArticleContent);
-//         // }
-//     });
-// });

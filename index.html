@@ -8,6 +8,9 @@
     <title>RA | Realtor</title>
     <link rel="icon" type="image/x-icon" href="./assets/logos/logo-ra.png">
 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./css/swiper-cards.css" />
+
     <link rel="stylesheet" href="./css/home.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,11 +18,10 @@
     <link href="https://fonts.googleapis.com/css2?&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-
 <body>
     <main>
         <header>
-            <div class="navbar">
+            <div class="navbar-desktop">
                 <div class="navbar-logo">
                     <a class="navbar-logo-a" href="./"></a>
                     <a class="navbar-logo-name" href="./">REAL STATE SIMPLIFIED</a>
@@ -36,6 +38,31 @@
                     <a class="btn-primary-ra fw-medium" href="./contact.html">Contact</a>
                 </div>
             </div>
+
+            <div class="navbar-mobile">
+                <div class="navbar-visible">
+                    <div class="navbar-logo">
+                        <a class="navbar-logo-a" href="./"></a>
+                        <a class="navbar-logo-name" href="./">REAL STATE SIMPLIFIED</a>
+                    </div>
+
+                    <div class="hamburguer-menu">
+                        <div class="icon nav-icon-4">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-menu-m">
+                    <a class="" href="./">Home</a>
+                    <a class="" href="./about.html">About</a>
+                    <a class="" href="./areas.html">Areas</a>
+                    <a class="" href="./news.html">News</a>
+                    <a class="" href="./contact.html">Contact</a>
+                </div>
+            </div>
         </header>
 
         <section class="section-banner">
@@ -45,6 +72,9 @@
         <section class="img-with-text">
             <div class="content">
                 <h1>Meet Ra</h1>
+
+                <div class="meet-ra-img-mobile"></div>
+
                 <p>
                     Ra Harris is a highly skilled and well-connected Realtor licensed with Samson Properties. Having
                     lived all over the DC, Maryland, and Virginia Metropolitan areas, Ra is a local real estate market
@@ -69,7 +99,10 @@
                 perfect property in a neighborhood that best suits your needs.
             </p>
 
-            <iframe width="983px" height="559px" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            <iframe class="iframe-01-desk" width="983px" height="559px" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+
+            <iframe class="iframe-01-mobile" width="" height="592px" src="https://www.youtube.com/embed/tgbNymZ7vqY">
             </iframe>
 
             <a class="btn-more-ra" href="./areas.html">
@@ -87,7 +120,12 @@
         <section class="card-collection">
             <h1 class="card-collection-h1">Latest news</h1>
 
-            <div id="card-collection" class="cards"></div>
+            <div class="card-collection-mobile swiper mySwiper">
+                <div id="card-collection-mobile" class="swiper-wrapper"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div id="card-collection-desk" class="card-collection-desk cards"></div>
 
             <a class="btn-more-ra" href="./news.html">
                 Read more news
@@ -121,8 +159,8 @@
         </section>
 
         <footer>
-            <div class="footer">
-                <div class="footer-subscribe">
+            <div class="footer-desk">
+                <div class="footer-desk-subscribe">
                     <h1>Subscribe to our newsletter</h1>
                     <div>
                         <input id="subscribe" type="text" placeholder="Enter your email">
@@ -135,7 +173,7 @@
                         company.</p>
                 </div>
 
-                <div class="footer-nav">
+                <div class="footer-desk-nav">
                     <div>
                         <a class="footer-nav-title" href="./about.html">About</a>
                         <a href="./about.html">Meet RA</a>
@@ -162,6 +200,49 @@
                     <p>Copyright © 2023 Mediaground.</p>
                 </div>
 
+                <div class="footer-desk-legal">
+                    <h1>Legal</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a
+                            href="./legal.html">Read more</a></p>
+                </div>
+            </div>
+
+            <div class="footer-mobile">
+                <div class="footer-social">
+                    <div class="footer-social-icons">
+                        <a class="icon-twitter" href='./'></a>
+                        <a class="icon-instagram" href='https://www.instagram.com/rarealtydmv/'></a>
+                        <a class="icon-youtube" href='https://www.youtube.com/channel/UCOiIRrCM9jWci5EaNLVp2-Q'></a>
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+                    <a href="./">Home</a>
+                    <a href="./areas.html">Areas</a>
+                    <a href="./news.html">News</a>
+                    <a href="./about.html">About</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+
+                <div class="footer-subscribe">
+                    <h1>Subscribe to our newsletter</h1>
+                    <div>
+                        <input id="subscribe" type="text" placeholder="Enter your email">
+
+                        <a class="btn-primary-ra btn-border-white" href="./contact.html">
+                            Subscribe
+                        </a>
+                    </div>
+                    <p>
+                        By subscribing you agree with our Privacy Policy and provide consent to receive updates from our
+                        company.
+                    </p>
+                </div>
+
                 <div class="footer-legal">
                     <h1>Legal</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -176,6 +257,25 @@
             <script src="./js/components/footer.js" type="module"></script>
         </footer>
     </main>
+
+    <script src="./js/components/navbar.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="./js/components/swiper-bundle.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: "auto",
+            centeredSlides: false,
+            spaceBetween: 28,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
 </body>
 
 </html>

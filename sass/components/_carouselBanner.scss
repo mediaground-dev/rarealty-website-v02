@@ -151,3 +151,55 @@ h1 {
 .dot--active {
   background-color: #F08D28;
 }
+
+
+.slide-m {
+  /* === TO CENTER TEXT === */
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: end !important;
+  align-items: end !important;
+  /* ====================== */
+  padding: 16px;
+
+  background-color: rgb(170, 170, 170);
+
+  width: 100%; //80rem;
+  height: 36rem;
+
+  transition: all 0.3s;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  a {
+
+    position: absolute !important;
+    left: 24px !important;
+    bottom: 40px !important;
+
+    text-decoration: none;
+
+    .slide-title {
+      width: 75vw;
+      font-family: 'sofia-pro';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 120%;
+      color: #ffffff;
+      text-align: start;
+    }
+
+    .slide-overscript {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 120%;
+      color: #ffffff;
+      margin: 12px 0px;
+    }
+  }
+}

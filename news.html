@@ -13,12 +13,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
+    <style>
+        .swiper-slide {
+            /* text-align: center; */
+            /* font-size: 18px; */
+            background: #fff;
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
+        }
+    </style>
+
 </head>
 
 <body>
     <main>
         <header>
-            <div class="navbar">
+            <div class="navbar-desktop">
                 <div class="navbar-logo">
                     <a class="navbar-logo-a" href="./"></a>
                     <a class="navbar-logo-name" href="./">REAL STATE SIMPLIFIED</a>
@@ -33,6 +50,31 @@
 
                 <div class="navbar-contact">
                     <a class="btn-primary-ra fw-medium" href="./contact.html">Contact</a>
+                </div>
+            </div>
+
+            <div class="navbar-mobile">
+                <div class="navbar-visible">
+                    <div class="navbar-logo">
+                        <a class="navbar-logo-a" href="./"></a>
+                        <a class="navbar-logo-name" href="./">REAL STATE SIMPLIFIED</a>
+                    </div>
+
+                    <div class="hamburguer-menu">
+                        <div class="icon nav-icon-4">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-menu-m">
+                    <a class="" href="./">Home</a>
+                    <a class="" href="./about.html">About</a>
+                    <a class="" href="./areas.html">Areas</a>
+                    <a class="" href="./news.html">News</a>
+                    <a class="" href="./contact.html">Contact</a>
                 </div>
             </div>
         </header>
@@ -60,15 +102,33 @@
                 </div>
                 <div class="dots"></div>
 
-                <script src="./js/components/carousel.js" type="module" defer></script>
+                <!-- <script src="./js/components/carousel.js" type="module" defer></script> -->
                 <!-- https://codepen.io/czesster -->
+            </div>
+
+            <div class="carousel-mobile">
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide-m slide-m-0"></div>
+                        <div class="swiper-slide slide-m slide-m-1"></div>
+                        <div class="swiper-slide slide-m slide-m-2"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <!-- <script src="./js/components/carouselNewsMobile.js" type="module" defer></script> -->
+            </div>
+
+            <script src="./js/components/carousel.js" type="module" defer></script>
         </section>
 
         <section id="section-news" class="section-news">
             <div class="section-news-intro">
                 <h1>Latest news</h1>
                 <p>
-                    Find all about the latest trends and insights on the market and discover our selected tips and strategies to help you navigate the ever-changing world of real estate with confidence and ease.
+                    Find all about the latest trends and insights on the market and discover our selected tips and
+                    strategies to help you navigate the ever-changing world of real estate with confidence and ease.
                 </p>
 
                 <div id="tagTabMenu" class="select-block-menu"></div>
@@ -86,7 +146,6 @@
                             d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008">
                         </path>
                     </svg>
-                    <!-- </a> -->
                 </div>
             </div>
         </section>
@@ -95,7 +154,8 @@
             <div class="section-videos-content">
                 <h1>Latests videos</h1>
                 <p>
-                    Take a sneak peek into the hottest neighborhoods and communities, get practical investing advice and explore the latest developments in the DMV real estate market with our exclusive video guides.
+                    Take a sneak peek into the hottest neighborhoods and communities, get practical investing advice and
+                    explore the latest developments in the DMV real estate market with our exclusive video guides.
                 </p>
 
                 <div class="videos-block">
@@ -134,8 +194,6 @@
                         </a>
                     </div>
                 </div>
-
-
             </div>
         </section>
 
@@ -144,22 +202,12 @@
 
             <div class="section-social-block">
                 <div class="social-instagram">
-                    <!-- <div class="social-instagram-post"></div>
-                    <div class="social-instagram-post"></div>
-                    <div class="social-instagram-post"></div>
-                    <div class="social-instagram-post"></div>
-                    <div class="social-instagram-post"></div>
-                    <div class="social-instagram-post"></div>
-                    <div class="social-instagram-post"></div>
-                    <div class="social-instagram-post"></div>
-                    <div class="social-instagram-post"></div> -->
-
                     <blockquote class="instagram-media" data-instgrm-captioned
                         data-instgrm-permalink="https://www.instagram.com/p/CpBEYRZu_VJ/?utm_source=ig_embed&amp;utm_campaign=loading"
                         data-instgrm-version="14" style=" 
                             background:#FFF; 
                             border:0; 
-                            border-radius:3px; 
+                            border-radius: 16px; 
                             box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); 
                             margin: 1px; 
                             max-width:540px; 
@@ -272,15 +320,15 @@
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
 
-                
+
             </div>
-            
+
             <div class="social-vector"></div>
         </section>
 
         <footer>
-            <div class="footer">
-                <div class="footer-subscribe">
+            <div class="footer-desk">
+                <div class="footer-desk-subscribe">
                     <h1>Subscribe to our newsletter</h1>
                     <div>
                         <input id="subscribe" type="text" placeholder="Enter your email">
@@ -293,7 +341,7 @@
                         company.</p>
                 </div>
 
-                <div class="footer-nav">
+                <div class="footer-desk-nav">
                     <div>
                         <a class="footer-nav-title" href="./about.html">About</a>
                         <a href="./about.html">Meet RA</a>
@@ -320,6 +368,49 @@
                     <p>Copyright © 2023 Mediaground.</p>
                 </div>
 
+                <div class="footer-desk-legal">
+                    <h1>Legal</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a
+                            href="./legal.html">Read more</a></p>
+                </div>
+            </div>
+
+            <div class="footer-mobile">
+                <div class="footer-social">
+                    <div class="footer-social-icons">
+                        <a class="icon-twitter" href='./'></a>
+                        <a class="icon-instagram" href='https://www.instagram.com/rarealtydmv/'></a>
+                        <a class="icon-youtube" href='https://www.youtube.com/channel/UCOiIRrCM9jWci5EaNLVp2-Q'></a>
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+                    <a href="./">Home</a>
+                    <a href="./areas.html">Areas</a>
+                    <a href="./news.html">News</a>
+                    <a href="./about.html">About</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+
+                <div class="footer-subscribe">
+                    <h1>Subscribe to our newsletter</h1>
+                    <div>
+                        <input id="subscribe" type="text" placeholder="Enter your email">
+
+                        <a class="btn-primary-ra btn-border-white" href="./contact.html">
+                            Subscribe
+                        </a>
+                    </div>
+                    <p>
+                        By subscribing you agree with our Privacy Policy and provide consent to receive updates from our
+                        company.
+                    </p>
+                </div>
+
                 <div class="footer-legal">
                     <h1>Legal</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -336,6 +427,20 @@
 
         <script src="./js/news.js" type="module"></script>
     </main>
+
+    <script src="./js/components/navbar.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
 </body>
 
 </html>

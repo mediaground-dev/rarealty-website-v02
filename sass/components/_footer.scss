@@ -1,21 +1,22 @@
 @use '../abstracts/colors' as *;
+@use '../abstracts/breakpoints' as *;
 
 footer {
   background-color: $PRIMARY_COLOR;
 }
 
-.footer {
+.footer-desk {
   position: relative;
   z-index: 4;
   background-color: $PRIMARY_COLOR;
-  max-width: 1440px; 
+  max-width: 1440px;
   margin: auto;
   padding: 80px;
   color: $TEXT_LIGHT;
 
   display: grid;
   grid-template-columns: 5fr 4fr;
-  row-gap : 64px;
+  row-gap: 64px;
   column-gap: 48px;
 
   &-subscribe {
@@ -49,7 +50,7 @@ footer {
         border: none;
         border-bottom: 1px solid #ffffff;
         outline: none;
-        
+
         font-family: 'Inter';
         font-size: 16px;
         font-weight: 400;
@@ -68,7 +69,7 @@ footer {
     }
   }
 
-  &-social {
+  .footer-social {
     align-self: end;
     justify-self: start;
 
@@ -194,6 +195,164 @@ footer {
       a:hover,
       a:active {
         color: inherit;
+      }
+    }
+  }
+}
+
+.footer-mobile {
+  display: none;
+}
+
+@media screen and (max-width: $BREAKPOINT_TABLET) {
+  .footer-desk {
+    display: none;
+  }
+
+  .footer-mobile {
+    display: block;
+    // background-color: red;
+    width: 100%;
+    padding: 16px 24px;
+
+    .footer-social {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &-icons {
+        width: 60%;
+        max-width: 250px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        a {
+          display: block;
+          width: 30px;
+          height: 30px;
+          margin: 36px 16px;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        .icon-twitter {
+          background-image: url('../../assets/icons/footer-twitter.svg');
+        }
+
+        .icon-instagram {
+          background-image: url('../../assets/icons/footer-insta.svg');
+        }
+
+        .icon-youtube {
+          background-image: url('../../assets/icons/footer-youtube.svg');
+        }
+      }
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      padding-bottom: 64px;
+
+      border-bottom: 2px solid #ffffff;
+
+      a {
+        text-decoration: none;
+        padding-bottom: 24px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #ffffff;
+      }
+    }
+
+    .footer-subscribe {
+      margin: 64px 0px;
+
+      h1 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        color: #ffffff;
+      }
+
+      div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 600px;
+
+        margin: 16px 0px;
+
+        input {
+          width: 100%;
+          margin-right: 16px;
+          padding-bottom: 16px;
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid #ffffff;
+          outline: none;
+
+          font-family: 'Inter';
+          font-size: 16px;
+          font-weight: 400;
+          color: #bababa;
+        }
+      }
+
+      p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 150%;
+        color: #ffffff;
+      }
+    }
+
+    .footer-legal {
+      align-self: end;
+      justify-self: start;
+
+      h1 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        color: #ffffff;
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: #f3f3f3;
+
+        a {
+          text-decoration: underline;
+          color: #f3f3f3;
+        }
+
+        a:visited,
+        a:hover,
+        a:active {
+          color: inherit;
+        }
       }
     }
   }

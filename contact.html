@@ -8,7 +8,7 @@
     <title>RA | Realtor</title>
     <link rel="icon" type="image/x-icon" href="./assets/logos/logo-mediaground.png">
 
-    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/contact.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
 <body>
     <main>
         <header>
-            <div class="navbar">
+            <div class="navbar-desktop">
                 <div class="navbar-logo">
                     <a class="navbar-logo-a" href="./"></a>
                     <a class="navbar-logo-name" href="./">REAL STATE SIMPLIFIED</a>
@@ -34,14 +34,40 @@
                 </div>
 
                 <div class="navbar-contact">
-                    <a class="btn-primary-ra fw-medium" href="./contact.html">Contact</a>
+                    <a class="btn-primary-ra fw-medium" href="">Contact</a>
+                </div>
+            </div>
+
+            <div class="navbar-mobile">
+                <div class="navbar-visible">
+                    <div class="navbar-logo">
+                        <a class="navbar-logo-a" href="./"></a>
+                        <a class="navbar-logo-name" href="./">REAL STATE SIMPLIFIED</a>
+                    </div>
+
+                    <div class="hamburguer-menu">
+                        <div class="icon nav-icon-4">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-menu-m">
+                    <a class="" href="./">Home</a>
+                    <a class="" href="./about.html">About</a>
+                    <a class="" href="./areas.html">Areas</a>
+                    <a class="" href="./news.html">News</a>
+                    <a class="" href="./contact.html">Contact</a>
                 </div>
             </div>
         </header>
 
-        <section class="contact-form">
-            <form class="contact-form-fields" action="https://mailthis.to/carlos@mediaground.org" method="POST"
-                encType="multipart/form-data">
+        <section class="contact-form-desk">
+            <!-- <form class="contact-form-desk-fields" action="https://mailthis.to/carlos@mediaground.org" method="POST"
+                encType="multipart/form-data"> -->
+            <form class="contact-form-desk-fields">
                 <h1>Contact</h1>
                 <p>
                     Are you interested in buying, selling, renting, or investing? Or are you curious to learn more about
@@ -61,7 +87,7 @@
                 </div>
             </form>
 
-            <div class="contact-form-blocks">
+            <div class="contact-form-desk-blocks">
                 <div>
                     <h1>Get in touch today</h1>
                     <p>Contact us for a quick consultation and let us assist you in finding the perfect real estate
@@ -74,19 +100,69 @@
 
                 <div>
                     <h1>Send an email</h1>
-                    <p>
-                        Old school, huh? No problem, we can start a converstation via<a
-                            href="mailto:ra@realtor.com">ra@realtor.com</a>
-                    </p>
+                    <p>Old school, huh? No problem, we can start a converstation via <a
+                            href="mailto:ra@realtor.com">ra@realtor.com</a></p>
                 </div>
             </div>
 
             <div class="contact-vector"></div>
         </section>
 
+        <section class="section-intro-mobile">
+            <h1>Contact</h1>
+
+            <p>
+                Are you interested in buying, selling, renting, or investing? Or are you curious to learn more about
+                the DMV real estate market? Connect with Ra today and subscribe for weekly updates!
+                <br><br>
+                You can fill in the contact form, email, or text Ra via WhatsApp and messenger.
+            </p>
+        </section>
+
+        <section class="contact-form-mobile">
+            <div class="contact-form-mobile-blocks">
+                <div>
+                    <h1>Get in touch today</h1>
+                    <p>Contact us for a quick consultation and let us assist you in finding the perfect real estate
+                        solution for your needs.</p>
+                    <a aria-label="Chat on WhatsApp"
+                        href="https://wa.me/5492944384813?text=I'm%20interested%20in%20your%20car%20for%20sale">
+                        <img alt="Chat on WhatsApp" src="./assets/icons/WhatsAppButtonGreenMedium.png" />
+                    </a>
+                </div>
+            </div>
+
+            <!-- <form class="contact-form-mobile-fields" action="https://mailthis.to/carlos@mediaground.org" method="POST"
+                encType="multipart/form-data"> -->
+            <form class="contact-form-mobile-fields">
+                <h1>Contact form</h1>
+
+                <input class="form-input" type="text" name="name" placeholder="Name">
+                <input class="form-input" type="text" name="mail" placeholder="Email">
+                <textarea name="msg" id="" cols="30" rows="10" placeholder="Write your message..."></textarea>
+
+                <div>
+                    <input class="btn-primary-ra" value="Submit" type="submit">
+                </div>
+
+                <div class="form-res-ok">
+                    <div class="icon-check"></div>
+                    <p>Great! We'll get back to you within 48 hours</p>
+                </div>
+            </form>
+
+            <div class="send-email-mobile">
+                <h1>Send an email</h1>
+                <p>Old school, huh? No problem, we can start a converstation via <a
+                        href="mailto:ra@realtor.com">ra@realtor.com</a></p>
+            </div>
+
+            <div class="contact-vector"></div>
+        </section>
+
         <footer>
-            <div class="footer">
-                <div class="footer-subscribe">
+            <div class="footer-desk">
+                <div class="footer-desk-subscribe">
                     <h1>Subscribe to our newsletter</h1>
                     <div>
                         <input id="subscribe" type="text" placeholder="Enter your email">
@@ -99,7 +175,7 @@
                         company.</p>
                 </div>
 
-                <div class="footer-nav">
+                <div class="footer-desk-nav">
                     <div>
                         <a class="footer-nav-title" href="./about.html">About</a>
                         <a href="./about.html">Meet RA</a>
@@ -126,6 +202,49 @@
                     <p>Copyright © 2023 Mediaground.</p>
                 </div>
 
+                <div class="footer-desk-legal">
+                    <h1>Legal</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a
+                            href="./legal.html">Read more</a></p>
+                </div>
+            </div>
+
+            <div class="footer-mobile">
+                <div class="footer-social">
+                    <div class="footer-social-icons">
+                        <a class="icon-twitter" href='./'></a>
+                        <a class="icon-instagram" href='https://www.instagram.com/rarealtydmv/'></a>
+                        <a class="icon-youtube" href='https://www.youtube.com/channel/UCOiIRrCM9jWci5EaNLVp2-Q'></a>
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+                    <a href="./">Home</a>
+                    <a href="./areas.html">Areas</a>
+                    <a href="./news.html">News</a>
+                    <a href="./about.html">About</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+
+                <div class="footer-subscribe">
+                    <h1>Subscribe to our newsletter</h1>
+                    <div>
+                        <input id="subscribe" type="text" placeholder="Enter your email">
+
+                        <a class="btn-primary-ra btn-border-white" href="./contact.html">
+                            Subscribe
+                        </a>
+                    </div>
+                    <p>
+                        By subscribing you agree with our Privacy Policy and provide consent to receive updates from our
+                        company.
+                    </p>
+                </div>
+
                 <div class="footer-legal">
                     <h1>Legal</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -140,6 +259,9 @@
             <script src="./js/components/footer.js" type="module"></script>
         </footer>
     </main>
+
+    <script src="./js/components/navbar.js"></script>
+
 </body>
 
 </html>

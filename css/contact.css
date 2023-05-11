@@ -1673,130 +1673,8 @@ main {
   font-family: "Inter", sans-serif;
   width: 100%;
 }
-main section {
-  max-width: 1440px;
-  margin: auto;
-}
-main .section-std {
-  max-width: 1440px;
-  margin: auto;
-  padding: 32px 130px;
-}
-main .padding-top-64d-0m {
-  padding-top: 64px;
-}
-main .quotation-marks {
-  position: relative;
-  margin-top: 64px;
-  left: -32px;
-  width: 53px;
-  height: 53px;
-  background-image: url("../assets/icons/quotation-marks-53x53px.png");
-}
-main .img-with-text h1 {
-  color: #1C4394;
-}
-main .about-meetra-img {
-  height: 613px;
-  background-image: url("../assets/images/about-meetra.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-}
-main .section-cards {
-  max-width: 1115px;
-  padding: 32px 0px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-main .section-cards div {
-  max-width: 282px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-}
-main .section-cards div .section-cards-img01 {
-  background-image: url("../assets/images/ra-transparency-icon.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-main .section-cards div .section-cards-img02 {
-  background-image: url("../assets/images/ra-integrity-icon.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-main .section-cards div .section-cards-img03 {
-  background-image: url("../assets/images/ra-commitment-icon.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-main .section-cards div div {
-  width: 181px;
-  height: 223px;
-  padding-bottom: 14px;
-}
-main .section-cards div h1 {
-  font-family: "sofia-pro";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 150%;
-  color: #1C4394;
-  padding-bottom: 7px;
-}
-main .section-cards div p {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  padding-bottom: 12px;
-  color: #3d3b40;
-}
-main .section-services {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main .section-services > h1 {
-  font-family: "sofia-pro";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 150%;
-  text-align: center;
-  color: #3d3b40;
-  margin-bottom: 32px;
-}
-main .section-services > p {
-  max-width: 786px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  text-align: center;
-  color: #3d3b40;
-  margin-bottom: 40px;
-}
-main .section-services .img-services-01,
-main .section-services .img-services-02 {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-main .section-services .img-services-01 {
-  background-image: url("../assets/images/ra-services-01-orange.png");
-}
-main .section-services .img-services-02 {
-  background-image: url("../assets/images/ra-services-02-blue.png");
+main .section-intro-mobile {
+  display: none;
 }
 
 @media screen and (max-width: 1199px) {
@@ -1804,67 +1682,26 @@ main .section-services .img-services-02 {
     width: auto;
     overflow: hidden;
   }
-  main .padding-top-64d-0m {
-    padding-top: 0px;
-  }
-  main .meet-ra-img-mobile {
+  main .section-intro-mobile {
     display: block;
-    align-self: center;
-    width: 312px;
-    height: 312px;
-    margin-bottom: 24px;
-    background-image: url("../assets/images/about-meetra.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top, center;
-    border-radius: 16px;
+    padding: 32px 24px 56px 24px;
   }
-  main .quotation-marks {
-    position: relative;
-    margin-top: 16px;
-    left: 0px;
-    width: 38px;
-    height: 31px;
-    background-image: url("../assets/icons/quotation-marks-53x53px.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+  main .section-intro-mobile > h1 {
+    font-family: "sofia-pro";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 150%;
+    color: #1c4394;
   }
-  main .quotation-text {
-    padding: 0px 23px;
-    font-style: italic !important;
-  }
-  main .section-cards {
-    flex-direction: column;
-  }
-  main .section-cards div {
-    width: 80%;
-    max-width: 440px;
-  }
-  main .section-std {
-    max-width: 1440px;
-    margin: auto;
-    padding: 32px 24px;
-  }
-  main .section-services {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  }
-  main .section-services > p {
-    text-align: start;
-  }
-  main .section-services .img-services-01,
-  main .section-services .img-services-02 {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  main .section-services .img-services-01 {
-    background-image: url("../assets/images/ra-services-01-orange.png");
-  }
-  main .section-services .img-services-02 {
-    background-image: url("../assets/images/ra-services-02-blue.png");
+  main .section-intro-mobile > p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #3d3b40;
   }
 }
 
-/*# sourceMappingURL=about.css.map */
+/*# sourceMappingURL=contact.css.map */
