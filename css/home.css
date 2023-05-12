@@ -1685,7 +1685,7 @@ main .section-banner-img {
   width: 1440px;
   margin: auto;
   height: 576px;
-  background-image: url("../assets/images/home-heroimage.png");
+  background-image: url("../assets/images/home/ra-home-image-hero-orange-1440px.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1743,9 +1743,10 @@ main .section-height .contact-banner-rh-img {
     overflow: hidden;
   }
   main .section-banner .section-banner-img {
-    height: 440px;
+    width: 100%;
+    height: 62vw;
     margin-bottom: 40px;
-    background-image: url("../assets/images/home-heroimage.png");
+    background-image: url("../assets/images/home/ra-home-image-hero-orange-1440px.png");
   }
   main .meet-ra-img-mobile {
     display: block;
