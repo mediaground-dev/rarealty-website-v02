@@ -55,7 +55,6 @@
         height: 166px;
         border-radius: 9px;
 
-        // background-color: rgb(170, 170, 170);
         background-repeat: no-repeat !important;
         background-size: cover !important;
         background-position: center !important;
@@ -94,7 +93,7 @@
   }
 }
 
-@media screen and (max-width: $BREAKPOINT_TABLET) {
+@media screen and (max-width: 1200px) {
   .card-collection-desk {
     display: none !important;
   }
@@ -112,9 +111,6 @@
         width: 100%;
         height: 115vw;
         max-height: 460px;
-        // max-width: 380px;
-        // height: 100vw;
-        // background-color: red;
 
         &-img {
           max-width: 100%;
@@ -201,7 +197,7 @@
   }
 }
 
-@media screen and (max-width: $BREAKPOINT_TABLET) {
+@media screen and (max-width: 1200px) {
   .card-collection02 {
     &-grid {
       display: flex;

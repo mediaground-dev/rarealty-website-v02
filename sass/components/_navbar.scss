@@ -27,7 +27,6 @@ header {
 
       &-a {
         display: block;
-        // background-color: $PRIMARY_COLOR;
         background-image: url('../../assets/logos/logo-ra.png');
         background-repeat: no-repeat;
         background-position: center;
@@ -78,7 +77,7 @@ header {
   }
 }
 
-@media screen and (max-width: $BREAKPOINT_TABLET) {
+@media screen and (max-width: 1200px) {
   header {
     position: relative;
     width: 100%;
