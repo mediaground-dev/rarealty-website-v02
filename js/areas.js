@@ -58,8 +58,7 @@ const renderAreaContent = (areaContent) => {
     // const HighlightImage01 = areaContent.attributes.HighlightImage01.data.attributes.url;
     // const HighlightImage02 = areaContent.attributes.HighlightImage02.data.attributes.url;
 
-   
-     docAreaSelectedContent.innerHTML =
+    docAreaSelectedContent.innerHTML =
        `<h1 class="area-title">${AreaTitle}</h1>
         <div class="areas-block">
             <div id="area-content-block-01" class="areas-img-text mb-80">
@@ -257,47 +256,3 @@ if (!areaNames) {
         });
     });
 }
-
-// //---- AREA SELECTED CONTENT ----//
-// const areaFirstContent = await fetchAreaById(areaNames[0].id);
-// renderAreaContent(areaFirstContent);
-
-// //---- AREA CARD RELATED CONTENT ----//
-// const areaCardsContent = areaFirstContent.attributes.Articles.data;
-// renderCardCollection(areaCardsContent);
-
-// // Fill Card Collection
-// // if (areaCardsContent.length < 4) {
-// //     const pageSize = 4 - areaCardsContent.length;
-// //     const articleIds = [];
-
-// //     areaCardsContent.forEach(article => {
-// //         articleIds.push(article.id);
-// //     })
-
-// //     const othersArticleContent = await fetchFillCardCollection(articleIds, pageSize);
-// //     renderCardCollection(othersArticleContent);
-// // }
-
-// document.querySelectorAll('.area-tab').forEach(docAreaTab => {
-//     docAreaTab.addEventListener('click', () => {
-//         docAreaSelectedContent.innerHTML = '';
-//         docCardCollection.innerHTML = '';
-
-//         document.querySelector('.area-tab-selected').classList.remove('area-tab-selected');
-//         docAreaTab.classList.add('area-tab-selected');
-
-//         const areaContent = JSON.parse(sessionStorage.getItem(`AreaContent-${docAreaTab.id}`));
-//         renderAreaContent(areaContent);
-
-//         // Card Collection Related News
-//         const areaCardsContent = areaContent.attributes.Articles.data;
-//         renderCardCollection(areaCardsContent);
-
-//         // Fill Card Collection
-//         // const othersArticleContent = JSON.parse(sessionStorage.getItem(`OtherCards-${docAreaTab.id}`));
-//         // if (othersArticleContent !== null) {
-//         //     renderCardCollection(othersArticleContent);
-//         // }
-//     });
-// });

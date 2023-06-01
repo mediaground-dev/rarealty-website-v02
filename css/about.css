@@ -399,7 +399,7 @@ footer {
   display: none;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .footer-desk {
     display: none;
   }
@@ -589,7 +589,7 @@ header .navbar-mobile {
   display: none;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   header {
     position: relative;
     width: 100%;
@@ -784,7 +784,7 @@ header .navbar-mobile {
   width: 48%;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .img-with-text {
     width: 100%;
     padding: 16px 24px;
@@ -844,7 +844,7 @@ header .navbar-mobile {
   background-repeat: no-repeat !important;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .img-with-text2 {
     flex-direction: column;
     gap: 0px;
@@ -915,7 +915,7 @@ header .navbar-mobile {
   align-self: center;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .video-with-text {
     width: 100%;
     padding: 16px 14px;
@@ -1020,7 +1020,7 @@ header .navbar-mobile {
   display: none;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .card-collection-desk {
     display: none !important;
   }
@@ -1109,7 +1109,7 @@ header .navbar-mobile {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .card-collection02-grid {
     display: flex;
     flex-wrap: wrap;
@@ -1165,7 +1165,7 @@ header .navbar-mobile {
   line-height: 150%;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .contact-banner-section .contact-banner-block {
     width: 80%;
     max-width: 480px;
@@ -1313,7 +1313,7 @@ header .navbar-mobile {
   display: none;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .contact-form-desk {
     display: none;
   }
@@ -1654,7 +1654,7 @@ h1 {
   flex-shrink: 1;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .swiper-slide {
     flex-shrink: 0;
     width: 80%;
@@ -1799,7 +1799,7 @@ main .section-services .img-services-02 {
   background-image: url("../assets/images/ra-services-02-blue.png");
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   main {
     width: auto;
     overflow: hidden;

@@ -9,7 +9,7 @@
   flex-shrink: 1;
 }
 
-@media screen and (max-width: $BREAKPOINT_TABLET) {
+@media screen and (max-width: 1200px) {
   .swiper-slide {
     flex-shrink: 0;
     width: 80%;

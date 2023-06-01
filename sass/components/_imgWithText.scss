@@ -15,7 +15,6 @@
 
   .content {
     width: 48%;
-    // margin-right: 80px;
 
     h1 {
       margin-bottom: 32px;
@@ -37,13 +36,12 @@
   }
 
   .image {
-    // background-color: rgb(170, 170, 170);
     height: 490px;
     width: 48%;
   }
 }
 
-@media screen and (max-width: $BREAKPOINT_TABLET) {
+@media screen and (max-width: 1200px) {
   .img-with-text {
     width: 100%;
     padding: 16px 24px;
@@ -76,7 +74,6 @@
   .content {
     flex-basis: 520px;
     flex-shrink: 1;
-    // width: 48%;
     padding: 32px 0px;
 
     display: flex;
@@ -107,7 +104,6 @@
     flex-shrink: 1;
     background-color: rgb(170, 170, 170);
     height: 490px;
-    // width: 48%;
     border-radius: 16px;
     background-size: cover !important;
     background-position: center !important;
@@ -115,7 +111,7 @@
   }
 }
 
-@media screen and (max-width: $BREAKPOINT_TABLET) {
+@media screen and (max-width: 1200px) {
   .img-with-text2 {
     flex-direction: column;
     gap: 0px;

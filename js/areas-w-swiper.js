@@ -59,8 +59,7 @@ const renderAreaContent = (areaContent) => {
     // const HighlightImage01 = areaContent.attributes.HighlightImage01.data.attributes.url;
     // const HighlightImage02 = areaContent.attributes.HighlightImage02.data.attributes.url;
 
-   
-     docAreaSelectedContent.innerHTML =
+    docAreaSelectedContent.innerHTML =
        `<h1 class="area-title">${AreaTitle}</h1>
         <div class="areas-block">
             <div id="area-content-block-01" class="areas-img-text mb-80">
