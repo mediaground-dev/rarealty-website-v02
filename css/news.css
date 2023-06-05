@@ -305,14 +305,14 @@ footer {
   background-repeat: no-repeat;
   background-position: center;
 }
-.footer-desk .footer-social-icons .icon-twitter {
-  background-image: url("../../assets/icons/footer-twitter.svg");
-}
 .footer-desk .footer-social-icons .icon-instagram {
   background-image: url("../../assets/icons/footer-insta.svg");
 }
 .footer-desk .footer-social-icons .icon-youtube {
   background-image: url("../../assets/icons/footer-youtube.svg");
+}
+.footer-desk .footer-social-icons .icon-facebook {
+  background-image: url("../../assets/icons/postshare-facebook.svg");
 }
 .footer-desk .footer-social p {
   font-family: "Inter";
@@ -429,14 +429,14 @@ footer {
     background-repeat: no-repeat;
     background-position: center;
   }
-  .footer-mobile .footer-social-icons .icon-twitter {
-    background-image: url("../../assets/icons/footer-twitter.svg");
-  }
   .footer-mobile .footer-social-icons .icon-instagram {
     background-image: url("../../assets/icons/footer-insta.svg");
   }
   .footer-mobile .footer-social-icons .icon-youtube {
     background-image: url("../../assets/icons/footer-youtube.svg");
+  }
+  .footer-mobile .footer-social-icons .icon-facebook {
+    background-image: url("../../assets/icons/postshare-facebook.svg");
   }
   .footer-mobile .footer-nav {
     display: flex;

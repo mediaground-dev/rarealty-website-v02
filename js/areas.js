@@ -160,6 +160,8 @@ const renderFakeCardCollection = () => {
 //---- AREAS MENU TAB ----//
 const areaNames = await fetchAreaNames();
 
+console.log(areaNames)
+
 if (!areaNames) {
     docAreaTabMenu.innerHTML += `<div id="0" class="area-tab area-tab-selected btn-navbar-ra">Areas Not Found</div>`;
 

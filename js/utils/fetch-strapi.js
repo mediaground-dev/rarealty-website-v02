@@ -1,5 +1,7 @@
-const STRAPI_URL = 'https://strapi-production-74d1.up.railway.app';
+// const STRAPI_URL = 'https://strapi-production-74d1.up.railway.app';
 // const STRAPI_URL = 'https://strapi-production-74wwd1.up.railway.app';
+const STRAPI_URL = 'https://rarealty-strapi-v02-production.up.railway.app';
+
 
 export const fetchCardsByDate = async (pageSize = 4, page = 1) => {
     try {
@@ -16,6 +18,8 @@ export const fetchAreaNames = async () => {
     try {
         const res = await fetch(`${STRAPI_URL}/api/areas?sort[0]=Name&fields[0]=Name`);
         const resObject = await res.json();
+
+        console.log(resObject)
 
         return resObject.data;
     } catch (error) {
