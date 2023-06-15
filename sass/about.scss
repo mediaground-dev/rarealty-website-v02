@@ -150,15 +150,26 @@ main {
     .img-services-02 {
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center;
     }
 
     .img-services-01 {
-      background-image: url('../assets/images/ra-services-01-orange.png');
+      background-image: url(../assets/images/ra-services-01-v02-orange.jpg);
+      background-position: top;
     }
    
     .img-services-02 {
-      background-image: url('../assets/images/ra-services-02-blue.png');
+      background-image: url(../assets/images/ra-services-02-v02-blue.jpg);
+      background-position: top;
+    }
+    
+    .img-services-03 {
+      background-image: url(../assets/images/ra-services-03.jpg);
+      background-position: top;
+    }
+    
+    .img-services-04 {
+      background-image: url(../assets/images/ra-services-04.jpg);
+      background-position: top;
     }
   }
 }
