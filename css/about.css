@@ -1787,7 +1787,9 @@ main .section-services > p {
   margin-bottom: 40px;
 }
 main .section-services .img-services-01,
-main .section-services .img-services-02 {
+main .section-services .img-services-02,
+main .section-services .img-services-03,
+main .section-services .img-services-04 {
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1863,16 +1865,12 @@ main .section-services .img-services-04 {
     text-align: start;
   }
   main .section-services .img-services-01,
-  main .section-services .img-services-02 {
+  main .section-services .img-services-02,
+  main .section-services .img-services-03,
+  main .section-services .img-services-04 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-  }
-  main .section-services .img-services-01 {
-    background-image: url("../assets/images/ra-services-01-orange.png");
-  }
-  main .section-services .img-services-02 {
-    background-image: url("../assets/images/ra-services-02-blue.png");
   }
 }
 

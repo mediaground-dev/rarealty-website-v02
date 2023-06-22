@@ -1,10 +1,7 @@
 // const STRAPI_URL = 'https://strapi-production-74d1.up.railway.app';
 // const STRAPI_URL = 'https://strapi-production-74wwd1.up.railway.app';
 const STRAPI_URL = 'https://rarealty-strapi-v02-production.up.railway.app';
-
 const STRAPI_TOKEN = 'b44ccdf57a60ebe2077f59b8d385c6d66de5a2c548cfd6563aa23b593a747222a737b6dfdd9272316adfd588c91782172f45dff6202dec6e74567c90fe11d71b7662d26fe73a84aed85156f2c5fccff3c010e300a0024601ef15e2628fdca64b678f356d0c39eca2a7508c2bd53059ec335d07d2f9299e0311e94e7bbcdeeb35';
-
-// https://www.freecodecamp.org/news/how-to-use-environment-variables-in-vanillajs/
 
 export const fetchCardsByDate = async (pageSize = 4, page = 1) => {
     try {
@@ -27,9 +24,6 @@ export const fetchAreaNames = async () => {
             headers: {'Authorization': `Bearer ${STRAPI_TOKEN}`}
         });
         const resObject = await res.json();
-
-        console.log(resObject)
-
         return resObject.data;
     } catch (error) {
         console.log('STRAPI-ERROR', error);
