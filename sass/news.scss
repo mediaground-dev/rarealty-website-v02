@@ -25,7 +25,6 @@ main {
     width: 1440px;
     padding: 32px 130px;
     margin: auto;
-    // padding: 32px 0px;
 
     &-intro {
       > h1 {
@@ -184,7 +183,7 @@ main {
   }
 }
 
-@media screen and (max-width: $BREAKPOINT_TABLET) {
+@media screen and (max-width: 1200px) {
   main {
     width: auto;
     overflow: hidden;

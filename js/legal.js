@@ -1,5 +1,5 @@
-const docTabTerm = document.querySelector('#legal-tab-term');
-const docTabPolicy = document.querySelector('#legal-tab-policy');
+const docTabTerm    = document.querySelector('#legal-tab-term');
+const docTabPolicy  = document.querySelector('#legal-tab-policy');
 const docTabImprint = document.querySelector('#legal-tab-imprint');
 const docTabContent = document.querySelector('#legal-tab-content');
 

@@ -31,7 +31,6 @@ const renderCardCollectionFake = (() => {
 const renderCardCollection = (allTagsContent => {
     allTagsContent.forEach((article, index) => {
 
-
         // IF CARD IMAGE HAS NOT BEEN LOADED
         if (article.attributes.CardImage.data === null) {
             docCardCollection.innerHTML +=
