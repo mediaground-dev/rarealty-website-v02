@@ -1413,6 +1413,7 @@ header .navbar-mobile {
   .contact-form-mobile-fields div input {
     width: 100%;
     margin-bottom: 40px;
+    justify-content: center;
   }
   .contact-form-mobile-fields .form-res-ok p {
     font-family: "Inter";
