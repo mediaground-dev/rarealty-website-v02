@@ -162,6 +162,14 @@ main {
       z-index: 2;
     }
   }
+
+  .iframe-01-desk {
+    display: block;
+  }
+
+  .iframe-01-mobile {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -257,6 +265,14 @@ main {
         height: 182px;
         z-index: 2;
       }
+    }
+
+    .iframe-01-desk {
+      display: none;
+    }
+
+    .iframe-01-mobile {
+      display: block;
     }
   }
 }

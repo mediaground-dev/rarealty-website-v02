@@ -197,7 +197,6 @@ main {
 
         a {
           display: block;
-          // background-color: $PRIMARY_COLOR;
           width: 42px;
           height: 42px;
           border-radius: 50%;
@@ -205,8 +204,8 @@ main {
           background-position: center;
         }
 
-        .icon-twitter {
-          background-image: url('../assets/icons/footer-twitter.svg');
+        .icon-facebook {
+          background-image: url('../assets/icons/postshare-facebook.svg');
         }
         .icon-instagram {
           background-image: url('../assets/icons/footer-insta.svg');
