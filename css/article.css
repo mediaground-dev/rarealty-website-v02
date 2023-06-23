@@ -1843,8 +1843,8 @@ main .section-share .article-share-icons a {
   background-repeat: no-repeat;
   background-position: center;
 }
-main .section-share .article-share-icons .icon-twitter {
-  background-image: url("../assets/icons/footer-twitter.svg");
+main .section-share .article-share-icons .icon-facebook {
+  background-image: url("../assets/icons/postshare-facebook.svg");
 }
 main .section-share .article-share-icons .icon-instagram {
   background-image: url("../assets/icons/footer-insta.svg");
